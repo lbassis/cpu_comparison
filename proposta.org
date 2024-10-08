@@ -1,0 +1,54 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+#+TITLE:  Analisando o impacto dos processadores na programação com aceleradores
+#+AUTHOR: Lucas Barros de Assis
+#+EMAIL: lbassis@inf.ufrgs.br
+#+DATE:
+#+OPTIONS: toc:nil
+
+* Contexto do trabalho e motivação
+
+Os computadores tupi do PCAD estão equipados com aceleradores NVIDIA RTX 4090, porém com processadores diferentes.
+Diante do paralelismo dos aceleradores, muito superior ao dos processadores de uso geral, é possível questionar até que ponto a
+capacidade dos processadores influencia no desempenho dessas máquinas.
+
+A partir disso, queremos responder qual o impacto do desempenho dos processadores na programação com aceleradores.
+
+* Metodologia
+
+Para fins de comparação, a biblioteca de álgebra linear densa Chameleon será utilizada para realizar a fatoração de Cholesky.
+Inicialmente serão criados alguns conjuntos de matrizes, cada um composto por matrizes de um dado tamanho, que serão utilizadas nos experimentos.
+Em seguida, uma aplicação será desenvolvida para realizar a fatoração da biblioteca Chameleon em conjunto com o suporte de
+execução StarPU, através do qual será possível definir um balanceamento de carga de maneira que apenas os aceleradores
+realizem os cálculos propriamente ditos, deixando os processadores responsáveis apenas pelo escalonamento das tarefas.
+
+A partir das matrizes previamente criadas, diversas execuções com matrizes de tamanhos e partições diferentes serão realizadas em cada um dos computadores,
+registrando o seu tempo total de execução, o tempo de cálculo nos aceleradores e também o seu rastro de execução.
+
+* Resultados esperados
+
+Intuitivamente é esperado que os tempos de execução totais sejam ligeiramente diferentes, já que a transferência dos dados para os aceleradores deve ser
+afetada pela sua tecnologia. No entanto, o tempo de cálculo nos aceleradores deve ser muito similar, já que tratam-se dos mesmos equipamentos realizando
+os mesmos cálculos. Os traços de execução também não devem apresentar grandes diferenças entre os dois processadores já que, independente do tamanho
+da tarefa, a quantidade de trabalho desempenhada pelos aceleradores deve ser a mesma.
+
+* Cronograma
+
+O cronograma da elaboração desse trabalho é apresentado na Tabela [[tab.cronograma]].
+
+#+name: tab.cronograma
+#+caption: Cronograma de atividades.
+| Atividade                                                             | Quinzena |
+|-----------------------------------------------------------------------+----------|
+| Desenvolvimento da aplicação para criação e armazenamento de matrizes | Junho/2  |
+| Desenvolvimento da aplicação da fatoração usando StarPU               | Junho/2  |
+| Desenvolvimento dos scripts para realização dos experimentos          | Julho/1  |
+| Execução dos experimentos                                             | Julho/2  |
+| Análise dos resultados                                                | Agosto/1 |
+| Elaboração do relatório e apresentação                                | Agosto/1 |
+|-----------------------------------------------------------------------+----------|
+
+
+* Ambiente de programação
+
+Os experimentos serão realizados no PCAD utilizando as máquinas tupi.

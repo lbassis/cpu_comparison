@@ -1,0 +1,84 @@
+% Created 2024-07-02 Tue 09:12
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Lucas Barros de Assis}
+\date{}
+\title{Analisando o impacto dos processadores na programação com aceleradores}
+\hypersetup{
+ pdfauthor={Lucas Barros de Assis},
+ pdftitle={Analisando o impacto dos processadores na programação com aceleradores},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.2 (Org mode 9.5.5)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+
+\section{Contexto do trabalho e motivação}
+\label{sec:org59c17aa}
+
+Os computadores tupi do PCAD estão equipados com aceleradores NVIDIA RTX 4090, porém com processadores diferentes.
+Diante do paralelismo dos aceleradores, muito superior ao dos processadores de uso geral, é possível questionar até que ponto a
+capacidade dos processadores influencia no desempenho dessas máquinas.
+
+A partir disso, queremos responder qual o impacto do desempenho dos processadores na programação com aceleradores.
+
+\section{Metodologia}
+\label{sec:org2ebf95f}
+
+Para fins de comparação, a biblioteca de álgebra linear densa Chameleon será utilizada para realizar a fatoração de Cholesky.
+Inicialmente serão criados alguns conjuntos de matrizes, cada um composto por matrizes de um dado tamanho, que serão utilizadas nos experimentos.
+Em seguida, uma aplicação será desenvolvida para realizar a fatoração da biblioteca Chameleon em conjunto com o suporte de
+execução StarPU, através do qual será possível definir um balanceamento de carga de maneira que apenas os aceleradores
+realizem os cálculos propriamente ditos, deixando os processadores responsáveis apenas pelo escalonamento das tarefas.
+
+A partir das matrizes previamente criadas, diversas execuções com matrizes de tamanhos e partições diferentes serão realizadas em cada um dos computadores,
+registrando o seu tempo total de execução, o tempo de cálculo nos aceleradores e também o seu rastro de execução.
+
+\section{Resultados esperados}
+\label{sec:org64397c2}
+
+Intuitivamente é esperado que os tempos de execução totais sejam ligeiramente diferentes, já que a transferência dos dados para os aceleradores deve ser
+afetada pela sua tecnologia. No entanto, o tempo de cálculo nos aceleradores deve ser muito similar, já que tratam-se dos mesmos equipamentos realizando
+os mesmos cálculos. Os traços de execução também não devem apresentar grandes diferenças entre os dois processadores já que, independente do tamanho
+da tarefa, a quantidade de trabalho desempenhada pelos aceleradores deve ser a mesma.
+
+\section{Cronograma}
+\label{sec:orgd6ca91e}
+
+O cronograma da elaboração desse trabalho é apresentado na Tabela \ref{tab:orgbac04de}.
+
+\begin{table}[htbp]
+\caption{\label{tab:orgbac04de}Cronograma de atividades.}
+\centering
+\begin{tabular}{ll}
+Atividade & Quinzena\\
+\hline
+Desenvolvimento da aplicação para criação e armazenamento de matrizes & Junho/2\\
+Desenvolvimento da aplicação da fatoração usando StarPU & Junho/2\\
+Desenvolvimento dos scripts para realização dos experimentos & Julho/1\\
+Execução dos experimentos & Julho/2\\
+Análise dos resultados & Agosto/1\\
+Elaboração do relatório e apresentação & Agosto/1\\
+\hline
+\end{tabular}
+\end{table}
+
+
+\section{Ambiente de programação}
+\label{sec:org411a596}
+
+Os experimentos serão realizados no PCAD utilizando as máquinas tupi.
+\end{document}

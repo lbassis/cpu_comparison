@@ -1,0 +1,4078 @@
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2943762	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2943762	0xffffffff		chameleon_stest
+ 2943764	0xffffffff		chameleon_stest
+ 2943765	0xffffffff		cuda0000380000f
+ 2943769	0x00000001		CPU 0
+ 2943770	0x00000004		CPU 1
+ 2943771	0x00000010		CPU 2
+ 2943772	0x00000040		CPU 3
+ 2943773	0x00000100		CPU 4
+ 2943774	0x00000400		CPU 5
+ 2943775	0x00001000		CPU 6
+ 2943776	0x00004000		CPU 7
+ 2943777	0x00008000		CPU 8
+ 2943778	0x00010000		CPU 9
+ 2943779	0x00020000		CPU 10
+ 2943780	0x00040000		CPU 11
+ 2943781	0x00080000		CPU 12
+ 2943782	0x00100000		CPU 13
+ 2943783	0x00200000		CPU 14
+ 2943784	0x00400000		CPU 15
+ 2943785	0x00800000		CPU 16
+ 2943786	0x01000000		CPU 17
+ 2943787	0x02000000		CPU 18
+ 2943788	0x04000000		CPU 19
+ 2943789	0x08000000		CPU 20
+ 2943790	0x10000000		CPU 21
+ 2943791	0x20000000		CPU 22
+ 2943792	0x40000000		CPU 23
+ 2943793	0x80000000		MPI
+2943794	0xffffffff		sh
+2943795	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;24;0;1;1;0;512;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.033881e+02;1.814985e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2943803	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2943803	0xffffffff		chameleon_stest
+ 2943804	0xffffffff		chameleon_stest
+ 2943805	0xffffffff		cuda0000380000f
+ 2943809	0x00000001		CPU 0
+ 2943810	0x00000004		CPU 1
+ 2943811	0x00000010		CPU 2
+ 2943812	0x00000040		CPU 3
+ 2943813	0x00000100		CPU 4
+ 2943814	0x00000400		CPU 5
+ 2943815	0x00001000		CPU 6
+ 2943816	0x00004000		CPU 7
+ 2943817	0x00000001		MPI
+2943818	0xffffffff		sh
+2943819	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;8;0;1;1;0;1024;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.498935e+02;1.251874e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2943851	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2943851	0xffffffff		chameleon_stest
+ 2943852	0xffffffff		chameleon_stest
+ 2943853	0xffffffff		cuda0000380000f
+ 2943857	0x00000001		CPU 0
+ 2943858	0x00000004		CPU 1
+ 2943859	0x00000010		CPU 2
+ 2943860	0x00000040		CPU 3
+ 2943861	0x00000100		CPU 4
+ 2943862	0x00000400		CPU 5
+ 2943863	0x00001000		CPU 6
+ 2943864	0x00004000		CPU 7
+ 2943865	0x00008000		CPU 8
+ 2943866	0x00010000		CPU 9
+ 2943867	0x00020000		CPU 10
+ 2943868	0x00040000		CPU 11
+ 2943869	0x00080000		CPU 12
+ 2943870	0x00100000		CPU 13
+ 2943871	0x00200000		CPU 14
+ 2943872	0x00400000		CPU 15
+ 2943873	0x00800000		CPU 16
+ 2943874	0x01000000		CPU 17
+ 2943875	0x02000000		CPU 18
+ 2943876	0x04000000		CPU 19
+ 2943877	0x08000000		CPU 20
+ 2943878	0x10000000		CPU 21
+ 2943879	0x20000000		CPU 22
+ 2943880	0x40000000		CPU 23
+ 2943881	0x80000000		MPI
+2943882	0xffffffff		sh
+2943883	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;24;0;1;1;0;2048;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.172125e+02;1.600920e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2943890	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2943890	0xffffffff		chameleon_stest
+ 2943891	0xffffffff		chameleon_stest
+ 2943892	0xffffffff		cuda0000380000f
+ 2943896	0x00000001		CPU 0
+ 2943897	0x00000002		CPU 1
+ 2943898	0x00000004		CPU 2
+ 2943899	0x00000008		CPU 3
+ 2943900	0x00000010		CPU 4
+ 2943901	0x00000020		CPU 5
+ 2943902	0x00000040		CPU 6
+ 2943903	0x00000080		CPU 7
+ 2943904	0x00000100		CPU 8
+ 2943905	0x00000200		CPU 9
+ 2943906	0x00000400		CPU 10
+ 2943907	0x00000800		CPU 11
+ 2943908	0x00001000		CPU 12
+ 2943909	0x00002000		CPU 13
+ 2943910	0x00004000		CPU 14
+ 2943911	0x00008000		CPU 15
+ 2943912	0x00000001		MPI
+2943913	0xffffffff		sh
+2943914	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;16;0;1;1;0;256;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.582901e+02;1.185468e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2943924	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2943924	0xffffffff		chameleon_stest
+ 2943925	0xffffffff		chameleon_stest
+ 2943926	0xffffffff		cuda0000380000f
+ 2943930	0x00000001		CPU 0
+ 2943931	0x00000004		CPU 1
+ 2943932	0x00000010		CPU 2
+ 2943933	0x00000040		CPU 3
+ 2943934	0x00000100		CPU 4
+ 2943935	0x00000400		CPU 5
+ 2943936	0x00001000		CPU 6
+ 2943937	0x00004000		CPU 7
+ 2943938	0x00008000		CPU 8
+ 2943939	0x00010000		CPU 9
+ 2943940	0x00020000		CPU 10
+ 2943941	0x00040000		CPU 11
+ 2943942	0x00080000		CPU 12
+ 2943943	0x00100000		CPU 13
+ 2943944	0x00200000		CPU 14
+ 2943945	0x00400000		CPU 15
+ 2943946	0x00800000		CPU 16
+ 2943947	0x01000000		CPU 17
+ 2943948	0x02000000		CPU 18
+ 2943949	0x04000000		CPU 19
+ 2943950	0x08000000		CPU 20
+ 2943951	0x10000000		CPU 21
+ 2943952	0x20000000		CPU 22
+ 2943953	0x40000000		CPU 23
+ 2943954	0x80000000		MPI
+2943955	0xffffffff		sh
+2943956	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;24;0;1;1;0;256;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.161820e+02;1.615120e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2943965	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2943965	0xffffffff		chameleon_stest
+ 2943966	0xffffffff		chameleon_stest
+ 2943967	0xffffffff		cuda0000380000f
+ 2943971	0x00000001		CPU 0
+ 2943972	0x00000002		CPU 1
+ 2943973	0x00000004		CPU 2
+ 2943974	0x00000008		CPU 3
+ 2943975	0x00000010		CPU 4
+ 2943976	0x00000020		CPU 5
+ 2943977	0x00000040		CPU 6
+ 2943978	0x00000080		CPU 7
+ 2943979	0x00000100		CPU 8
+ 2943980	0x00000200		CPU 9
+ 2943981	0x00000400		CPU 10
+ 2943982	0x00000800		CPU 11
+ 2943983	0x00001000		CPU 12
+ 2943984	0x00002000		CPU 13
+ 2943985	0x00004000		CPU 14
+ 2943986	0x00008000		CPU 15
+ 2943987	0x00000001		MPI
+2943988	0xffffffff		sh
+2943989	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;16;0;1;1;0;4096;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.563608e+02;1.200095e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2943999	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2943999	0xffffffff		chameleon_stest
+ 2944000	0xffffffff		chameleon_stest
+ 2944001	0xffffffff		cuda0000380000f
+ 2944005	0x00000001		CPU 0
+ 2944006	0x00000004		CPU 1
+ 2944007	0x00000010		CPU 2
+ 2944008	0x00000040		CPU 3
+ 2944009	0x00000100		CPU 4
+ 2944010	0x00000400		CPU 5
+ 2944011	0x00001000		CPU 6
+ 2944012	0x00004000		CPU 7
+ 2944013	0x00000001		MPI
+2944014	0xffffffff		sh
+2944015	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;8;0;1;1;0;1024;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.514077e+02;1.239354e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2944025	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2944025	0xffffffff		chameleon_stest
+ 2944026	0xffffffff		chameleon_stest
+ 2944027	0xffffffff		cuda0000380000f
+ 2944031	0x00000001		CPU 0
+ 2944032	0x00000004		CPU 1
+ 2944033	0x00000010		CPU 2
+ 2944034	0x00000040		CPU 3
+ 2944035	0x00000100		CPU 4
+ 2944036	0x00000400		CPU 5
+ 2944037	0x00001000		CPU 6
+ 2944038	0x00004000		CPU 7
+ 2944039	0x00008000		CPU 8
+ 2944040	0x00010000		CPU 9
+ 2944041	0x00020000		CPU 10
+ 2944042	0x00040000		CPU 11
+ 2944043	0x00080000		CPU 12
+ 2944044	0x00100000		CPU 13
+ 2944045	0x00200000		CPU 14
+ 2944046	0x00400000		CPU 15
+ 2944047	0x00800000		CPU 16
+ 2944048	0x01000000		CPU 17
+ 2944049	0x02000000		CPU 18
+ 2944050	0x04000000		CPU 19
+ 2944051	0x08000000		CPU 20
+ 2944052	0x10000000		CPU 21
+ 2944053	0x20000000		CPU 22
+ 2944054	0x40000000		CPU 23
+ 2944055	0x80000000		MPI
+2944056	0xffffffff		sh
+2944057	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;24;0;1;1;0;512;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.043305e+02;1.798590e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2944081	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2944081	0xffffffff		chameleon_stest
+ 2944082	0xffffffff		chameleon_stest
+ 2944083	0xffffffff		cuda0000380000f
+ 2944087	0x00000001		CPU 0
+ 2944088	0x00000004		CPU 1
+ 2944089	0x00000010		CPU 2
+ 2944090	0x00000040		CPU 3
+ 2944091	0x00000100		CPU 4
+ 2944092	0x00000400		CPU 5
+ 2944093	0x00001000		CPU 6
+ 2944094	0x00004000		CPU 7
+ 2944095	0x00000001		MPI
+2944096	0xffffffff		sh
+2944097	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;8;0;1;1;0;4096;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;3.106052e+02;6.041363e+02
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2944114	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2944114	0xffffffff		chameleon_stest
+ 2944115	0xffffffff		chameleon_stest
+ 2944116	0xffffffff		cuda0000380000f
+ 2944120	0x00000001		CPU 0
+ 2944121	0x00000004		CPU 1
+ 2944122	0x00000010		CPU 2
+ 2944123	0x00000040		CPU 3
+ 2944124	0x00000100		CPU 4
+ 2944125	0x00000400		CPU 5
+ 2944126	0x00001000		CPU 6
+ 2944127	0x00004000		CPU 7
+ 2944128	0x00008000		CPU 8
+ 2944129	0x00010000		CPU 9
+ 2944130	0x00020000		CPU 10
+ 2944131	0x00040000		CPU 11
+ 2944132	0x00080000		CPU 12
+ 2944133	0x00100000		CPU 13
+ 2944134	0x00200000		CPU 14
+ 2944135	0x00400000		CPU 15
+ 2944136	0x00800000		CPU 16
+ 2944137	0x01000000		CPU 17
+ 2944138	0x02000000		CPU 18
+ 2944139	0x04000000		CPU 19
+ 2944140	0x08000000		CPU 20
+ 2944141	0x10000000		CPU 21
+ 2944142	0x20000000		CPU 22
+ 2944143	0x40000000		CPU 23
+ 2944144	0x80000000		MPI
+2944145	0xffffffff		sh
+2944146	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;24;0;1;1;0;1024;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.181694e+02;1.587957e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2944153	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2944153	0xffffffff		chameleon_stest
+ 2944154	0xffffffff		chameleon_stest
+ 2944155	0xffffffff		cuda0000380000f
+ 2944159	0x00000001		CPU 0
+ 2944160	0x00000004		CPU 1
+ 2944161	0x00000010		CPU 2
+ 2944162	0x00000040		CPU 3
+ 2944163	0x00000100		CPU 4
+ 2944164	0x00000400		CPU 5
+ 2944165	0x00001000		CPU 6
+ 2944166	0x00004000		CPU 7
+ 2944167	0x00008000		CPU 8
+ 2944168	0x00010000		CPU 9
+ 2944169	0x00020000		CPU 10
+ 2944170	0x00040000		CPU 11
+ 2944171	0x00080000		CPU 12
+ 2944172	0x00100000		CPU 13
+ 2944173	0x00200000		CPU 14
+ 2944174	0x00400000		CPU 15
+ 2944175	0x00800000		CPU 16
+ 2944176	0x01000000		CPU 17
+ 2944177	0x02000000		CPU 18
+ 2944178	0x04000000		CPU 19
+ 2944179	0x08000000		CPU 20
+ 2944180	0x10000000		CPU 21
+ 2944181	0x20000000		CPU 22
+ 2944182	0x40000000		CPU 23
+ 2944183	0x80000000		MPI
+2944184	0xffffffff		sh
+2944185	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;24;0;1;1;0;1024;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.179248e+02;1.591250e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2944193	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2944193	0xffffffff		chameleon_stest
+ 2944194	0xffffffff		chameleon_stest
+ 2944195	0xffffffff		cuda0000380000f
+ 2944199	0x00000001		CPU 0
+ 2944200	0x00000004		CPU 1
+ 2944201	0x00000010		CPU 2
+ 2944202	0x00000040		CPU 3
+ 2944203	0x00000100		CPU 4
+ 2944204	0x00000400		CPU 5
+ 2944205	0x00001000		CPU 6
+ 2944206	0x00004000		CPU 7
+ 2944207	0x00000001		MPI
+2944208	0xffffffff		sh
+2944209	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;8;0;1;1;0;2048;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.483736e+02;1.264698e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2944216	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2944216	0xffffffff		chameleon_stest
+ 2944217	0xffffffff		chameleon_stest
+ 2944218	0xffffffff		cuda0000380000f
+ 2944222	0x00000001		CPU 0
+ 2944223	0x00000002		CPU 1
+ 2944224	0x00000004		CPU 2
+ 2944225	0x00000008		CPU 3
+ 2944226	0x00000010		CPU 4
+ 2944227	0x00000020		CPU 5
+ 2944228	0x00000040		CPU 6
+ 2944229	0x00000080		CPU 7
+ 2944230	0x00000100		CPU 8
+ 2944231	0x00000200		CPU 9
+ 2944232	0x00000400		CPU 10
+ 2944233	0x00000800		CPU 11
+ 2944234	0x00001000		CPU 12
+ 2944235	0x00002000		CPU 13
+ 2944236	0x00004000		CPU 14
+ 2944237	0x00008000		CPU 15
+ 2944238	0x00010000		CPU 16
+ 2944239	0x00020000		CPU 17
+ 2944240	0x00040000		CPU 18
+ 2944241	0x00080000		CPU 19
+ 2944242	0x00100000		CPU 20
+ 2944243	0x00200000		CPU 21
+ 2944244	0x00400000		CPU 22
+ 2944245	0x00800000		CPU 23
+ 2944246	0x01000000		CPU 24
+ 2944247	0x02000000		CPU 25
+ 2944248	0x04000000		CPU 26
+ 2944249	0x08000000		CPU 27
+ 2944250	0x10000000		CPU 28
+ 2944251	0x20000000		CPU 29
+ 2944252	0x40000000		CPU 30
+ 2944253	0x80000000		CPU 31
+ 2944254	0x00000001		MPI
+2944255	0xffffffff		sh
+2944256	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;32;0;1;1;0;4096;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.529592e+02;1.226784e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2944284	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2944284	0xffffffff		chameleon_stest
+ 2944285	0xffffffff		chameleon_stest
+ 2944286	0xffffffff		cuda0000380000f
+ 2944290	0x00000001		CPU 0
+ 2944291	0x00000004		CPU 1
+ 2944292	0x00000010		CPU 2
+ 2944293	0x00000040		CPU 3
+ 2944294	0x00000100		CPU 4
+ 2944295	0x00000400		CPU 5
+ 2944296	0x00001000		CPU 6
+ 2944297	0x00004000		CPU 7
+ 2944298	0x00000001		MPI
+2944299	0xffffffff		sh
+2944300	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;8;0;1;1;0;4096;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.504742e+02;1.247043e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2944314	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2944314	0xffffffff		chameleon_stest
+ 2944315	0xffffffff		chameleon_stest
+ 2944316	0xffffffff		cuda0000380000f
+ 2944320	0x00000001		CPU 0
+ 2944321	0x00000004		CPU 1
+ 2944322	0x00000010		CPU 2
+ 2944323	0x00000040		CPU 3
+ 2944324	0x00000100		CPU 4
+ 2944325	0x00000400		CPU 5
+ 2944326	0x00001000		CPU 6
+ 2944327	0x00004000		CPU 7
+ 2944328	0x00008000		CPU 8
+ 2944329	0x00010000		CPU 9
+ 2944330	0x00020000		CPU 10
+ 2944331	0x00040000		CPU 11
+ 2944332	0x00080000		CPU 12
+ 2944333	0x00100000		CPU 13
+ 2944334	0x00200000		CPU 14
+ 2944335	0x00400000		CPU 15
+ 2944336	0x00800000		CPU 16
+ 2944337	0x01000000		CPU 17
+ 2944338	0x02000000		CPU 18
+ 2944339	0x04000000		CPU 19
+ 2944340	0x08000000		CPU 20
+ 2944341	0x10000000		CPU 21
+ 2944342	0x20000000		CPU 22
+ 2944343	0x40000000		CPU 23
+ 2944344	0x80000000		MPI
+2944345	0xffffffff		sh
+2944346	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;24;0;1;1;0;1024;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.178414e+02;1.592376e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2944352	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2944352	0xffffffff		chameleon_stest
+ 2944353	0xffffffff		chameleon_stest
+ 2944354	0xffffffff		cuda0000380000f
+ 2944358	0x00000001		CPU 0
+ 2944359	0x00000004		CPU 1
+ 2944360	0x00000010		CPU 2
+ 2944361	0x00000040		CPU 3
+ 2944362	0x00000100		CPU 4
+ 2944363	0x00000400		CPU 5
+ 2944364	0x00001000		CPU 6
+ 2944365	0x00004000		CPU 7
+ 2944366	0x00008000		CPU 8
+ 2944367	0x00010000		CPU 9
+ 2944368	0x00020000		CPU 10
+ 2944369	0x00040000		CPU 11
+ 2944370	0x00080000		CPU 12
+ 2944371	0x00100000		CPU 13
+ 2944372	0x00200000		CPU 14
+ 2944373	0x00400000		CPU 15
+ 2944374	0x00800000		CPU 16
+ 2944375	0x01000000		CPU 17
+ 2944376	0x02000000		CPU 18
+ 2944377	0x04000000		CPU 19
+ 2944378	0x08000000		CPU 20
+ 2944379	0x10000000		CPU 21
+ 2944380	0x20000000		CPU 22
+ 2944381	0x40000000		CPU 23
+ 2944382	0x80000000		MPI
+2944383	0xffffffff		sh
+2944384	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;24;0;1;1;0;4096;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.150013e+02;1.631702e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2944393	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2944393	0xffffffff		chameleon_stest
+ 2944394	0xffffffff		chameleon_stest
+ 2944395	0xffffffff		cuda0000380000f
+ 2944399	0x00000001		CPU 0
+ 2944400	0x00000002		CPU 1
+ 2944401	0x00000004		CPU 2
+ 2944402	0x00000008		CPU 3
+ 2944403	0x00000010		CPU 4
+ 2944404	0x00000020		CPU 5
+ 2944405	0x00000040		CPU 6
+ 2944406	0x00000080		CPU 7
+ 2944407	0x00000100		CPU 8
+ 2944408	0x00000200		CPU 9
+ 2944409	0x00000400		CPU 10
+ 2944410	0x00000800		CPU 11
+ 2944411	0x00001000		CPU 12
+ 2944412	0x00002000		CPU 13
+ 2944413	0x00004000		CPU 14
+ 2944414	0x00008000		CPU 15
+ 2944415	0x00010000		CPU 16
+ 2944416	0x00020000		CPU 17
+ 2944417	0x00040000		CPU 18
+ 2944418	0x00080000		CPU 19
+ 2944419	0x00100000		CPU 20
+ 2944420	0x00200000		CPU 21
+ 2944421	0x00400000		CPU 22
+ 2944422	0x00800000		CPU 23
+ 2944423	0x01000000		CPU 24
+ 2944424	0x02000000		CPU 25
+ 2944425	0x04000000		CPU 26
+ 2944426	0x08000000		CPU 27
+ 2944427	0x10000000		CPU 28
+ 2944428	0x20000000		CPU 29
+ 2944429	0x40000000		CPU 30
+ 2944430	0x80000000		CPU 31
+ 2944431	0x00000001		MPI
+2944432	0xffffffff		sh
+2944433	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2944436	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2944436	0xffffffff		chameleon_stest
+ 2944437	0xffffffff		chameleon_stest
+ 2944438	0xffffffff		cuda0000380000f
+ 2944442	0x00000001		CPU 0
+ 2944443	0x00000004		CPU 1
+ 2944444	0x00000010		CPU 2
+ 2944445	0x00000040		CPU 3
+ 2944446	0x00000100		CPU 4
+ 2944447	0x00000400		CPU 5
+ 2944448	0x00001000		CPU 6
+ 2944449	0x00004000		CPU 7
+ 2944450	0x00000001		MPI
+2944451	0xffffffff		sh
+2944452	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;8;0;1;1;0;1024;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.520648e+02;1.233999e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2944460	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2944460	0xffffffff		chameleon_stest
+ 2944461	0xffffffff		chameleon_stest
+ 2944462	0xffffffff		cuda0000380000f
+ 2944466	0x00000001		CPU 0
+ 2944467	0x00000002		CPU 1
+ 2944468	0x00000004		CPU 2
+ 2944469	0x00000008		CPU 3
+ 2944470	0x00000010		CPU 4
+ 2944471	0x00000020		CPU 5
+ 2944472	0x00000040		CPU 6
+ 2944473	0x00000080		CPU 7
+ 2944474	0x00000100		CPU 8
+ 2944475	0x00000200		CPU 9
+ 2944476	0x00000400		CPU 10
+ 2944477	0x00000800		CPU 11
+ 2944478	0x00001000		CPU 12
+ 2944479	0x00002000		CPU 13
+ 2944480	0x00004000		CPU 14
+ 2944481	0x00008000		CPU 15
+ 2944482	0x00010000		CPU 16
+ 2944483	0x00020000		CPU 17
+ 2944484	0x00040000		CPU 18
+ 2944485	0x00080000		CPU 19
+ 2944486	0x00100000		CPU 20
+ 2944487	0x00200000		CPU 21
+ 2944488	0x00400000		CPU 22
+ 2944489	0x00800000		CPU 23
+ 2944490	0x01000000		CPU 24
+ 2944491	0x02000000		CPU 25
+ 2944492	0x04000000		CPU 26
+ 2944493	0x08000000		CPU 27
+ 2944494	0x10000000		CPU 28
+ 2944495	0x20000000		CPU 29
+ 2944496	0x40000000		CPU 30
+ 2944497	0x80000000		CPU 31
+ 2944498	0x00000001		MPI
+2944499	0xffffffff		sh
+2944500	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;32;0;1;1;0;256;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.139018e+02;1.647453e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2944528	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2944528	0xffffffff		chameleon_stest
+ 2944529	0xffffffff		chameleon_stest
+ 2944530	0xffffffff		cuda0000380000f
+ 2944534	0x00000001		CPU 0
+ 2944535	0x00000002		CPU 1
+ 2944536	0x00000004		CPU 2
+ 2944537	0x00000008		CPU 3
+ 2944538	0x00000010		CPU 4
+ 2944539	0x00000020		CPU 5
+ 2944540	0x00000040		CPU 6
+ 2944541	0x00000080		CPU 7
+ 2944542	0x00000100		CPU 8
+ 2944543	0x00000200		CPU 9
+ 2944544	0x00000400		CPU 10
+ 2944545	0x00000800		CPU 11
+ 2944546	0x00001000		CPU 12
+ 2944547	0x00002000		CPU 13
+ 2944548	0x00004000		CPU 14
+ 2944549	0x00008000		CPU 15
+ 2944550	0x00010000		CPU 16
+ 2944551	0x00020000		CPU 17
+ 2944552	0x00040000		CPU 18
+ 2944553	0x00080000		CPU 19
+ 2944554	0x00100000		CPU 20
+ 2944555	0x00200000		CPU 21
+ 2944556	0x00400000		CPU 22
+ 2944557	0x00800000		CPU 23
+ 2944558	0x01000000		CPU 24
+ 2944559	0x02000000		CPU 25
+ 2944560	0x04000000		CPU 26
+ 2944561	0x08000000		CPU 27
+ 2944562	0x10000000		CPU 28
+ 2944563	0x20000000		CPU 29
+ 2944564	0x40000000		CPU 30
+ 2944565	0x80000000		CPU 31
+ 2944566	0x00000001		MPI
+2944567	0xffffffff		sh
+2944568	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;32;0;1;1;0;1024;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.265004e+02;1.483377e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2944577	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2944577	0xffffffff		chameleon_stest
+ 2944578	0xffffffff		chameleon_stest
+ 2944579	0xffffffff		cuda0000380000f
+ 2944583	0x00000001		CPU 0
+ 2944584	0x00000004		CPU 1
+ 2944585	0x00000010		CPU 2
+ 2944586	0x00000040		CPU 3
+ 2944587	0x00000100		CPU 4
+ 2944588	0x00000400		CPU 5
+ 2944589	0x00001000		CPU 6
+ 2944590	0x00004000		CPU 7
+ 2944591	0x00008000		CPU 8
+ 2944592	0x00010000		CPU 9
+ 2944593	0x00020000		CPU 10
+ 2944594	0x00040000		CPU 11
+ 2944595	0x00080000		CPU 12
+ 2944596	0x00100000		CPU 13
+ 2944597	0x00200000		CPU 14
+ 2944598	0x00400000		CPU 15
+ 2944599	0x00800000		CPU 16
+ 2944600	0x01000000		CPU 17
+ 2944601	0x02000000		CPU 18
+ 2944602	0x04000000		CPU 19
+ 2944603	0x08000000		CPU 20
+ 2944604	0x10000000		CPU 21
+ 2944605	0x20000000		CPU 22
+ 2944606	0x40000000		CPU 23
+ 2944607	0x80000000		MPI
+2944608	0xffffffff		sh
+2944609	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;24;0;1;1;0;1024;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.207689e+02;1.553777e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2944617	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2944617	0xffffffff		chameleon_stest
+ 2944618	0xffffffff		chameleon_stest
+ 2944619	0xffffffff		cuda0000380000f
+ 2944623	0x00000001		CPU 0
+ 2944624	0x00000004		CPU 1
+ 2944625	0x00000010		CPU 2
+ 2944626	0x00000040		CPU 3
+ 2944627	0x00000100		CPU 4
+ 2944628	0x00000400		CPU 5
+ 2944629	0x00001000		CPU 6
+ 2944630	0x00004000		CPU 7
+ 2944631	0x00000001		MPI
+2944632	0xffffffff		sh
+2944633	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;8;0;1;1;0;256;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.684353e+02;1.114065e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2944645	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2944645	0xffffffff		chameleon_stest
+ 2944646	0xffffffff		chameleon_stest
+ 2944647	0xffffffff		cuda0000380000f
+ 2944651	0x00000001		CPU 0
+ 2944652	0x00000004		CPU 1
+ 2944653	0x00000010		CPU 2
+ 2944654	0x00000040		CPU 3
+ 2944655	0x00000100		CPU 4
+ 2944656	0x00000400		CPU 5
+ 2944657	0x00001000		CPU 6
+ 2944658	0x00004000		CPU 7
+ 2944659	0x00008000		CPU 8
+ 2944660	0x00010000		CPU 9
+ 2944661	0x00020000		CPU 10
+ 2944662	0x00040000		CPU 11
+ 2944663	0x00080000		CPU 12
+ 2944664	0x00100000		CPU 13
+ 2944665	0x00200000		CPU 14
+ 2944666	0x00400000		CPU 15
+ 2944667	0x00800000		CPU 16
+ 2944668	0x01000000		CPU 17
+ 2944669	0x02000000		CPU 18
+ 2944670	0x04000000		CPU 19
+ 2944671	0x08000000		CPU 20
+ 2944672	0x10000000		CPU 21
+ 2944673	0x20000000		CPU 22
+ 2944674	0x40000000		CPU 23
+ 2944675	0x80000000		MPI
+2944676	0xffffffff		sh
+2944677	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;24;0;1;1;0;4096;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.342960e+02;1.397270e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2944684	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2944684	0xffffffff		chameleon_stest
+ 2944685	0xffffffff		chameleon_stest
+ 2944686	0xffffffff		cuda0000380000f
+ 2944690	0x00000001		CPU 0
+ 2944691	0x00000004		CPU 1
+ 2944692	0x00000010		CPU 2
+ 2944693	0x00000040		CPU 3
+ 2944694	0x00000100		CPU 4
+ 2944695	0x00000400		CPU 5
+ 2944696	0x00001000		CPU 6
+ 2944697	0x00004000		CPU 7
+ 2944698	0x00008000		CPU 8
+ 2944699	0x00010000		CPU 9
+ 2944700	0x00020000		CPU 10
+ 2944701	0x00040000		CPU 11
+ 2944702	0x00080000		CPU 12
+ 2944703	0x00100000		CPU 13
+ 2944704	0x00200000		CPU 14
+ 2944705	0x00400000		CPU 15
+ 2944706	0x00800000		CPU 16
+ 2944707	0x01000000		CPU 17
+ 2944708	0x02000000		CPU 18
+ 2944709	0x04000000		CPU 19
+ 2944710	0x08000000		CPU 20
+ 2944711	0x10000000		CPU 21
+ 2944712	0x20000000		CPU 22
+ 2944713	0x40000000		CPU 23
+ 2944714	0x80000000		MPI
+2944715	0xffffffff		sh
+2944716	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;24;0;1;1;0;512;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.048373e+02;1.789895e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2944723	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2944723	0xffffffff		chameleon_stest
+ 2944724	0xffffffff		chameleon_stest
+ 2944725	0xffffffff		cuda0000380000f
+ 2944729	0x00000001		CPU 0
+ 2944730	0x00000004		CPU 1
+ 2944731	0x00000010		CPU 2
+ 2944732	0x00000040		CPU 3
+ 2944733	0x00000100		CPU 4
+ 2944734	0x00000400		CPU 5
+ 2944735	0x00001000		CPU 6
+ 2944736	0x00004000		CPU 7
+ 2944737	0x00008000		CPU 8
+ 2944738	0x00010000		CPU 9
+ 2944739	0x00020000		CPU 10
+ 2944740	0x00040000		CPU 11
+ 2944741	0x00080000		CPU 12
+ 2944742	0x00100000		CPU 13
+ 2944743	0x00200000		CPU 14
+ 2944744	0x00400000		CPU 15
+ 2944745	0x00800000		CPU 16
+ 2944746	0x01000000		CPU 17
+ 2944747	0x02000000		CPU 18
+ 2944748	0x04000000		CPU 19
+ 2944749	0x08000000		CPU 20
+ 2944750	0x10000000		CPU 21
+ 2944751	0x20000000		CPU 22
+ 2944752	0x40000000		CPU 23
+ 2944753	0x80000000		MPI
+2944754	0xffffffff		sh
+2944755	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;24;0;1;1;0;256;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.130786e+02;1.659446e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2944778	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2944778	0xffffffff		chameleon_stest
+ 2944779	0xffffffff		chameleon_stest
+ 2944780	0xffffffff		cuda0000380000f
+ 2944784	0x00000001		CPU 0
+ 2944785	0x00000002		CPU 1
+ 2944786	0x00000004		CPU 2
+ 2944787	0x00000008		CPU 3
+ 2944788	0x00000010		CPU 4
+ 2944789	0x00000020		CPU 5
+ 2944790	0x00000040		CPU 6
+ 2944791	0x00000080		CPU 7
+ 2944792	0x00000100		CPU 8
+ 2944793	0x00000200		CPU 9
+ 2944794	0x00000400		CPU 10
+ 2944795	0x00000800		CPU 11
+ 2944796	0x00001000		CPU 12
+ 2944797	0x00002000		CPU 13
+ 2944798	0x00004000		CPU 14
+ 2944799	0x00008000		CPU 15
+ 2944800	0x00010000		CPU 16
+ 2944801	0x00020000		CPU 17
+ 2944802	0x00040000		CPU 18
+ 2944803	0x00080000		CPU 19
+ 2944804	0x00100000		CPU 20
+ 2944805	0x00200000		CPU 21
+ 2944806	0x00400000		CPU 22
+ 2944807	0x00800000		CPU 23
+ 2944808	0x01000000		CPU 24
+ 2944809	0x02000000		CPU 25
+ 2944810	0x04000000		CPU 26
+ 2944811	0x08000000		CPU 27
+ 2944812	0x10000000		CPU 28
+ 2944813	0x20000000		CPU 29
+ 2944814	0x40000000		CPU 30
+ 2944815	0x80000000		CPU 31
+ 2944816	0x00000001		MPI
+2944817	0xffffffff		sh
+2944818	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;32;0;1;1;0;512;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.100803e+02;1.704644e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2944825	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2944825	0xffffffff		chameleon_stest
+ 2944826	0xffffffff		chameleon_stest
+ 2944827	0xffffffff		cuda0000380000f
+ 2944831	0x00000001		CPU 0
+ 2944832	0x00000004		CPU 1
+ 2944833	0x00000010		CPU 2
+ 2944834	0x00000040		CPU 3
+ 2944835	0x00000100		CPU 4
+ 2944836	0x00000400		CPU 5
+ 2944837	0x00001000		CPU 6
+ 2944838	0x00004000		CPU 7
+ 2944839	0x00008000		CPU 8
+ 2944840	0x00010000		CPU 9
+ 2944841	0x00020000		CPU 10
+ 2944842	0x00040000		CPU 11
+ 2944843	0x00080000		CPU 12
+ 2944844	0x00100000		CPU 13
+ 2944845	0x00200000		CPU 14
+ 2944846	0x00400000		CPU 15
+ 2944847	0x00800000		CPU 16
+ 2944848	0x01000000		CPU 17
+ 2944849	0x02000000		CPU 18
+ 2944850	0x04000000		CPU 19
+ 2944851	0x08000000		CPU 20
+ 2944852	0x10000000		CPU 21
+ 2944853	0x20000000		CPU 22
+ 2944854	0x40000000		CPU 23
+ 2944855	0x80000000		MPI
+2944856	0xffffffff		sh
+2944857	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;24;0;1;1;0;512;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.049614e+02;1.787780e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2944865	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2944865	0xffffffff		chameleon_stest
+ 2944866	0xffffffff		chameleon_stest
+ 2944867	0xffffffff		cuda0000380000f
+ 2944871	0x00000001		CPU 0
+ 2944872	0x00000002		CPU 1
+ 2944873	0x00000004		CPU 2
+ 2944874	0x00000008		CPU 3
+ 2944875	0x00000010		CPU 4
+ 2944876	0x00000020		CPU 5
+ 2944877	0x00000040		CPU 6
+ 2944878	0x00000080		CPU 7
+ 2944879	0x00000100		CPU 8
+ 2944880	0x00000200		CPU 9
+ 2944881	0x00000400		CPU 10
+ 2944882	0x00000800		CPU 11
+ 2944883	0x00001000		CPU 12
+ 2944884	0x00002000		CPU 13
+ 2944885	0x00004000		CPU 14
+ 2944886	0x00008000		CPU 15
+ 2944887	0x00000001		MPI
+2944888	0xffffffff		sh
+2944889	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;16;0;1;1;0;512;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.497416e+02;1.253144e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2944896	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2944896	0xffffffff		chameleon_stest
+ 2944897	0xffffffff		chameleon_stest
+ 2944898	0xffffffff		cuda0000380000f
+ 2944902	0x00000001		CPU 0
+ 2944903	0x00000004		CPU 1
+ 2944904	0x00000010		CPU 2
+ 2944905	0x00000040		CPU 3
+ 2944906	0x00000100		CPU 4
+ 2944907	0x00000400		CPU 5
+ 2944908	0x00001000		CPU 6
+ 2944909	0x00004000		CPU 7
+ 2944910	0x00000001		MPI
+2944911	0xffffffff		sh
+2944912	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;8;0;1;1;0;256;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.682992e+02;1.114966e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2944930	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2944930	0xffffffff		chameleon_stest
+ 2944931	0xffffffff		chameleon_stest
+ 2944932	0xffffffff		cuda0000380000f
+ 2944936	0x00000001		CPU 0
+ 2944937	0x00000004		CPU 1
+ 2944938	0x00000010		CPU 2
+ 2944939	0x00000040		CPU 3
+ 2944940	0x00000100		CPU 4
+ 2944941	0x00000400		CPU 5
+ 2944942	0x00001000		CPU 6
+ 2944943	0x00004000		CPU 7
+ 2944944	0x00008000		CPU 8
+ 2944945	0x00010000		CPU 9
+ 2944946	0x00020000		CPU 10
+ 2944947	0x00040000		CPU 11
+ 2944948	0x00080000		CPU 12
+ 2944949	0x00100000		CPU 13
+ 2944950	0x00200000		CPU 14
+ 2944951	0x00400000		CPU 15
+ 2944952	0x00800000		CPU 16
+ 2944953	0x01000000		CPU 17
+ 2944954	0x02000000		CPU 18
+ 2944955	0x04000000		CPU 19
+ 2944956	0x08000000		CPU 20
+ 2944957	0x10000000		CPU 21
+ 2944958	0x20000000		CPU 22
+ 2944959	0x40000000		CPU 23
+ 2944960	0x80000000		MPI
+2944961	0xffffffff		sh
+2944962	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;24;0;1;1;0;256;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.143034e+02;1.641665e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2944991	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2944991	0xffffffff		chameleon_stest
+ 2944992	0xffffffff		chameleon_stest
+ 2944993	0xffffffff		cuda0000380000f
+ 2944997	0x00000001		CPU 0
+ 2944998	0x00000002		CPU 1
+ 2944999	0x00000004		CPU 2
+ 2945000	0x00000008		CPU 3
+ 2945001	0x00000010		CPU 4
+ 2945002	0x00000020		CPU 5
+ 2945003	0x00000040		CPU 6
+ 2945004	0x00000080		CPU 7
+ 2945005	0x00000100		CPU 8
+ 2945006	0x00000200		CPU 9
+ 2945007	0x00000400		CPU 10
+ 2945008	0x00000800		CPU 11
+ 2945009	0x00001000		CPU 12
+ 2945010	0x00002000		CPU 13
+ 2945011	0x00004000		CPU 14
+ 2945012	0x00008000		CPU 15
+ 2945013	0x00000001		MPI
+2945014	0xffffffff		sh
+2945015	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;16;0;1;1;0;4096;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.540161e+02;1.218365e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2945025	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2945025	0xffffffff		chameleon_stest
+ 2945026	0xffffffff		chameleon_stest
+ 2945027	0xffffffff		cuda0000380000f
+ 2945031	0x00000001		CPU 0
+ 2945032	0x00000002		CPU 1
+ 2945033	0x00000004		CPU 2
+ 2945034	0x00000008		CPU 3
+ 2945035	0x00000010		CPU 4
+ 2945036	0x00000020		CPU 5
+ 2945037	0x00000040		CPU 6
+ 2945038	0x00000080		CPU 7
+ 2945039	0x00000100		CPU 8
+ 2945040	0x00000200		CPU 9
+ 2945041	0x00000400		CPU 10
+ 2945042	0x00000800		CPU 11
+ 2945043	0x00001000		CPU 12
+ 2945044	0x00002000		CPU 13
+ 2945045	0x00004000		CPU 14
+ 2945046	0x00008000		CPU 15
+ 2945047	0x00010000		CPU 16
+ 2945048	0x00020000		CPU 17
+ 2945049	0x00040000		CPU 18
+ 2945050	0x00080000		CPU 19
+ 2945051	0x00100000		CPU 20
+ 2945052	0x00200000		CPU 21
+ 2945053	0x00400000		CPU 22
+ 2945054	0x00800000		CPU 23
+ 2945055	0x01000000		CPU 24
+ 2945056	0x02000000		CPU 25
+ 2945057	0x04000000		CPU 26
+ 2945058	0x08000000		CPU 27
+ 2945059	0x10000000		CPU 28
+ 2945060	0x20000000		CPU 29
+ 2945061	0x40000000		CPU 30
+ 2945062	0x80000000		CPU 31
+ 2945063	0x00000001		MPI
+2945064	0xffffffff		sh
+2945065	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;32;0;1;1;0;2048;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.140871e+02;1.644777e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2945071	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2945071	0xffffffff		chameleon_stest
+ 2945072	0xffffffff		chameleon_stest
+ 2945073	0xffffffff		cuda0000380000f
+ 2945077	0x00000001		CPU 0
+ 2945078	0x00000004		CPU 1
+ 2945079	0x00000010		CPU 2
+ 2945080	0x00000040		CPU 3
+ 2945081	0x00000100		CPU 4
+ 2945082	0x00000400		CPU 5
+ 2945083	0x00001000		CPU 6
+ 2945084	0x00004000		CPU 7
+ 2945085	0x00000001		MPI
+2945086	0xffffffff		sh
+2945087	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;8;0;1;1;0;512;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.540409e+02;1.218169e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2945097	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2945097	0xffffffff		chameleon_stest
+ 2945098	0xffffffff		chameleon_stest
+ 2945099	0xffffffff		cuda0000380000f
+ 2945103	0x00000001		CPU 0
+ 2945104	0x00000002		CPU 1
+ 2945105	0x00000004		CPU 2
+ 2945106	0x00000008		CPU 3
+ 2945107	0x00000010		CPU 4
+ 2945108	0x00000020		CPU 5
+ 2945109	0x00000040		CPU 6
+ 2945110	0x00000080		CPU 7
+ 2945111	0x00000100		CPU 8
+ 2945112	0x00000200		CPU 9
+ 2945113	0x00000400		CPU 10
+ 2945114	0x00000800		CPU 11
+ 2945115	0x00001000		CPU 12
+ 2945116	0x00002000		CPU 13
+ 2945117	0x00004000		CPU 14
+ 2945118	0x00008000		CPU 15
+ 2945119	0x00010000		CPU 16
+ 2945120	0x00020000		CPU 17
+ 2945121	0x00040000		CPU 18
+ 2945122	0x00080000		CPU 19
+ 2945123	0x00100000		CPU 20
+ 2945124	0x00200000		CPU 21
+ 2945125	0x00400000		CPU 22
+ 2945126	0x00800000		CPU 23
+ 2945127	0x01000000		CPU 24
+ 2945128	0x02000000		CPU 25
+ 2945129	0x04000000		CPU 26
+ 2945130	0x08000000		CPU 27
+ 2945131	0x10000000		CPU 28
+ 2945132	0x20000000		CPU 29
+ 2945133	0x40000000		CPU 30
+ 2945134	0x80000000		CPU 31
+ 2945135	0x00000001		MPI
+2945136	0xffffffff		sh
+2945137	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;32;0;1;1;0;4096;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.239864e+02;1.513455e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2945147	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2945147	0xffffffff		chameleon_stest
+ 2945148	0xffffffff		chameleon_stest
+ 2945149	0xffffffff		cuda0000380000f
+ 2945153	0x00000001		CPU 0
+ 2945154	0x00000004		CPU 1
+ 2945155	0x00000010		CPU 2
+ 2945156	0x00000040		CPU 3
+ 2945157	0x00000100		CPU 4
+ 2945158	0x00000400		CPU 5
+ 2945159	0x00001000		CPU 6
+ 2945160	0x00004000		CPU 7
+ 2945161	0x00000001		MPI
+2945162	0xffffffff		sh
+2945163	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;8;0;1;1;0;2048;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.504561e+02;1.247193e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2945172	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2945172	0xffffffff		chameleon_stest
+ 2945173	0xffffffff		chameleon_stest
+ 2945174	0xffffffff		cuda0000380000f
+ 2945178	0x00000001		CPU 0
+ 2945179	0x00000004		CPU 1
+ 2945180	0x00000010		CPU 2
+ 2945181	0x00000040		CPU 3
+ 2945182	0x00000100		CPU 4
+ 2945183	0x00000400		CPU 5
+ 2945184	0x00001000		CPU 6
+ 2945185	0x00004000		CPU 7
+ 2945186	0x00008000		CPU 8
+ 2945187	0x00010000		CPU 9
+ 2945188	0x00020000		CPU 10
+ 2945189	0x00040000		CPU 11
+ 2945190	0x00080000		CPU 12
+ 2945191	0x00100000		CPU 13
+ 2945192	0x00200000		CPU 14
+ 2945193	0x00400000		CPU 15
+ 2945194	0x00800000		CPU 16
+ 2945195	0x01000000		CPU 17
+ 2945196	0x02000000		CPU 18
+ 2945197	0x04000000		CPU 19
+ 2945198	0x08000000		CPU 20
+ 2945199	0x10000000		CPU 21
+ 2945200	0x20000000		CPU 22
+ 2945201	0x40000000		CPU 23
+ 2945202	0x80000000		MPI
+2945203	0xffffffff		sh
+2945204	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;24;0;1;1;0;256;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.133166e+02;1.655960e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2945230	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2945230	0xffffffff		chameleon_stest
+ 2945231	0xffffffff		chameleon_stest
+ 2945232	0xffffffff		cuda0000380000f
+ 2945236	0x00000001		CPU 0
+ 2945237	0x00000004		CPU 1
+ 2945238	0x00000010		CPU 2
+ 2945239	0x00000040		CPU 3
+ 2945240	0x00000100		CPU 4
+ 2945241	0x00000400		CPU 5
+ 2945242	0x00001000		CPU 6
+ 2945243	0x00004000		CPU 7
+ 2945244	0x00008000		CPU 8
+ 2945245	0x00010000		CPU 9
+ 2945246	0x00020000		CPU 10
+ 2945247	0x00040000		CPU 11
+ 2945248	0x00080000		CPU 12
+ 2945249	0x00100000		CPU 13
+ 2945250	0x00200000		CPU 14
+ 2945251	0x00400000		CPU 15
+ 2945252	0x00800000		CPU 16
+ 2945253	0x01000000		CPU 17
+ 2945254	0x02000000		CPU 18
+ 2945255	0x04000000		CPU 19
+ 2945256	0x08000000		CPU 20
+ 2945257	0x10000000		CPU 21
+ 2945258	0x20000000		CPU 22
+ 2945259	0x40000000		CPU 23
+ 2945260	0x80000000		MPI
+2945261	0xffffffff		sh
+2945262	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;24;0;1;1;0;4096;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.205089e+02;1.557128e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2945270	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2945270	0xffffffff		chameleon_stest
+ 2945271	0xffffffff		chameleon_stest
+ 2945272	0xffffffff		cuda0000380000f
+ 2945276	0x00000001		CPU 0
+ 2945277	0x00000004		CPU 1
+ 2945278	0x00000010		CPU 2
+ 2945279	0x00000040		CPU 3
+ 2945280	0x00000100		CPU 4
+ 2945281	0x00000400		CPU 5
+ 2945282	0x00001000		CPU 6
+ 2945283	0x00004000		CPU 7
+ 2945284	0x00008000		CPU 8
+ 2945285	0x00010000		CPU 9
+ 2945286	0x00020000		CPU 10
+ 2945287	0x00040000		CPU 11
+ 2945288	0x00080000		CPU 12
+ 2945289	0x00100000		CPU 13
+ 2945290	0x00200000		CPU 14
+ 2945291	0x00400000		CPU 15
+ 2945292	0x00800000		CPU 16
+ 2945293	0x01000000		CPU 17
+ 2945294	0x02000000		CPU 18
+ 2945295	0x04000000		CPU 19
+ 2945296	0x08000000		CPU 20
+ 2945297	0x10000000		CPU 21
+ 2945298	0x20000000		CPU 22
+ 2945299	0x40000000		CPU 23
+ 2945300	0x80000000		MPI
+2945301	0xffffffff		sh
+2945302	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;24;0;1;1;0;1024;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.194205e+02;1.571320e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2945308	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2945308	0xffffffff		chameleon_stest
+ 2945309	0xffffffff		chameleon_stest
+ 2945310	0xffffffff		cuda0000380000f
+ 2945314	0x00000001		CPU 0
+ 2945315	0x00000002		CPU 1
+ 2945316	0x00000004		CPU 2
+ 2945317	0x00000008		CPU 3
+ 2945318	0x00000010		CPU 4
+ 2945319	0x00000020		CPU 5
+ 2945320	0x00000040		CPU 6
+ 2945321	0x00000080		CPU 7
+ 2945322	0x00000100		CPU 8
+ 2945323	0x00000200		CPU 9
+ 2945324	0x00000400		CPU 10
+ 2945325	0x00000800		CPU 11
+ 2945326	0x00001000		CPU 12
+ 2945327	0x00002000		CPU 13
+ 2945328	0x00004000		CPU 14
+ 2945329	0x00008000		CPU 15
+ 2945330	0x00010000		CPU 16
+ 2945331	0x00020000		CPU 17
+ 2945332	0x00040000		CPU 18
+ 2945333	0x00080000		CPU 19
+ 2945334	0x00100000		CPU 20
+ 2945335	0x00200000		CPU 21
+ 2945336	0x00400000		CPU 22
+ 2945337	0x00800000		CPU 23
+ 2945338	0x01000000		CPU 24
+ 2945339	0x02000000		CPU 25
+ 2945340	0x04000000		CPU 26
+ 2945341	0x08000000		CPU 27
+ 2945342	0x10000000		CPU 28
+ 2945343	0x20000000		CPU 29
+ 2945344	0x40000000		CPU 30
+ 2945345	0x80000000		CPU 31
+ 2945346	0x00000001		MPI
+2945347	0xffffffff		sh
+2945348	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;32;0;1;1;0;2048;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.188829e+02;1.578426e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2945354	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2945354	0xffffffff		chameleon_stest
+ 2945355	0xffffffff		chameleon_stest
+ 2945356	0xffffffff		cuda0000380000f
+ 2945360	0x00000001		CPU 0
+ 2945361	0x00000002		CPU 1
+ 2945362	0x00000004		CPU 2
+ 2945363	0x00000008		CPU 3
+ 2945364	0x00000010		CPU 4
+ 2945365	0x00000020		CPU 5
+ 2945366	0x00000040		CPU 6
+ 2945367	0x00000080		CPU 7
+ 2945368	0x00000100		CPU 8
+ 2945369	0x00000200		CPU 9
+ 2945370	0x00000400		CPU 10
+ 2945371	0x00000800		CPU 11
+ 2945372	0x00001000		CPU 12
+ 2945373	0x00002000		CPU 13
+ 2945374	0x00004000		CPU 14
+ 2945375	0x00008000		CPU 15
+ 2945376	0x00010000		CPU 16
+ 2945377	0x00020000		CPU 17
+ 2945378	0x00040000		CPU 18
+ 2945379	0x00080000		CPU 19
+ 2945380	0x00100000		CPU 20
+ 2945381	0x00200000		CPU 21
+ 2945382	0x00400000		CPU 22
+ 2945383	0x00800000		CPU 23
+ 2945384	0x01000000		CPU 24
+ 2945385	0x02000000		CPU 25
+ 2945386	0x04000000		CPU 26
+ 2945387	0x08000000		CPU 27
+ 2945388	0x10000000		CPU 28
+ 2945389	0x20000000		CPU 29
+ 2945390	0x40000000		CPU 30
+ 2945391	0x80000000		CPU 31
+ 2945392	0x00000001		MPI
+2945393	0xffffffff		sh
+2945394	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;32;0;1;1;0;1024;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.300956e+02;1.442385e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2945407	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2945407	0xffffffff		chameleon_stest
+ 2945408	0xffffffff		chameleon_stest
+ 2945409	0xffffffff		cuda0000380000f
+ 2945413	0x00000001		CPU 0
+ 2945414	0x00000002		CPU 1
+ 2945415	0x00000004		CPU 2
+ 2945416	0x00000008		CPU 3
+ 2945417	0x00000010		CPU 4
+ 2945418	0x00000020		CPU 5
+ 2945419	0x00000040		CPU 6
+ 2945420	0x00000080		CPU 7
+ 2945421	0x00000100		CPU 8
+ 2945422	0x00000200		CPU 9
+ 2945423	0x00000400		CPU 10
+ 2945424	0x00000800		CPU 11
+ 2945425	0x00001000		CPU 12
+ 2945426	0x00002000		CPU 13
+ 2945427	0x00004000		CPU 14
+ 2945428	0x00008000		CPU 15
+ 2945429	0x00000001		MPI
+2945430	0xffffffff		sh
+2945431	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;16;0;1;1;0;256;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.562931e+02;1.200615e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2945441	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2945441	0xffffffff		chameleon_stest
+ 2945442	0xffffffff		chameleon_stest
+ 2945443	0xffffffff		cuda0000380000f
+ 2945447	0x00000001		CPU 0
+ 2945448	0x00000002		CPU 1
+ 2945449	0x00000004		CPU 2
+ 2945450	0x00000008		CPU 3
+ 2945451	0x00000010		CPU 4
+ 2945452	0x00000020		CPU 5
+ 2945453	0x00000040		CPU 6
+ 2945454	0x00000080		CPU 7
+ 2945455	0x00000100		CPU 8
+ 2945456	0x00000200		CPU 9
+ 2945457	0x00000400		CPU 10
+ 2945458	0x00000800		CPU 11
+ 2945459	0x00001000		CPU 12
+ 2945460	0x00002000		CPU 13
+ 2945461	0x00004000		CPU 14
+ 2945462	0x00008000		CPU 15
+ 2945463	0x00000001		MPI
+2945464	0xffffffff		sh
+2945465	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;16;0;1;1;0;4096;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.543205e+02;1.215962e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2945480	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2945480	0xffffffff		chameleon_stest
+ 2945481	0xffffffff		chameleon_stest
+ 2945482	0xffffffff		cuda0000380000f
+ 2945486	0x00000001		CPU 0
+ 2945487	0x00000002		CPU 1
+ 2945488	0x00000004		CPU 2
+ 2945489	0x00000008		CPU 3
+ 2945490	0x00000010		CPU 4
+ 2945491	0x00000020		CPU 5
+ 2945492	0x00000040		CPU 6
+ 2945493	0x00000080		CPU 7
+ 2945494	0x00000100		CPU 8
+ 2945495	0x00000200		CPU 9
+ 2945496	0x00000400		CPU 10
+ 2945497	0x00000800		CPU 11
+ 2945498	0x00001000		CPU 12
+ 2945499	0x00002000		CPU 13
+ 2945500	0x00004000		CPU 14
+ 2945501	0x00008000		CPU 15
+ 2945502	0x00010000		CPU 16
+ 2945503	0x00020000		CPU 17
+ 2945504	0x00040000		CPU 18
+ 2945505	0x00080000		CPU 19
+ 2945506	0x00100000		CPU 20
+ 2945507	0x00200000		CPU 21
+ 2945508	0x00400000		CPU 22
+ 2945509	0x00800000		CPU 23
+ 2945510	0x01000000		CPU 24
+ 2945511	0x02000000		CPU 25
+ 2945512	0x04000000		CPU 26
+ 2945513	0x08000000		CPU 27
+ 2945514	0x10000000		CPU 28
+ 2945515	0x20000000		CPU 29
+ 2945516	0x40000000		CPU 30
+ 2945517	0x80000000		CPU 31
+ 2945518	0x00000001		MPI
+2945519	0xffffffff		sh
+2945520	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;32;0;1;1;0;512;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.129577e+02;1.661222e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2945546	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2945546	0xffffffff		chameleon_stest
+ 2945547	0xffffffff		chameleon_stest
+ 2945548	0xffffffff		cuda0000380000f
+ 2945552	0x00000001		CPU 0
+ 2945553	0x00000004		CPU 1
+ 2945554	0x00000010		CPU 2
+ 2945555	0x00000040		CPU 3
+ 2945556	0x00000100		CPU 4
+ 2945557	0x00000400		CPU 5
+ 2945558	0x00001000		CPU 6
+ 2945559	0x00004000		CPU 7
+ 2945560	0x00008000		CPU 8
+ 2945561	0x00010000		CPU 9
+ 2945562	0x00020000		CPU 10
+ 2945563	0x00040000		CPU 11
+ 2945564	0x00080000		CPU 12
+ 2945565	0x00100000		CPU 13
+ 2945566	0x00200000		CPU 14
+ 2945567	0x00400000		CPU 15
+ 2945568	0x00800000		CPU 16
+ 2945569	0x01000000		CPU 17
+ 2945570	0x02000000		CPU 18
+ 2945571	0x04000000		CPU 19
+ 2945572	0x08000000		CPU 20
+ 2945573	0x10000000		CPU 21
+ 2945574	0x20000000		CPU 22
+ 2945575	0x40000000		CPU 23
+ 2945576	0x80000000		MPI
+2945577	0xffffffff		sh
+2945578	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;24;0;1;1;0;512;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.061837e+02;1.767201e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2945584	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2945584	0xffffffff		chameleon_stest
+ 2945585	0xffffffff		chameleon_stest
+ 2945586	0xffffffff		cuda0000380000f
+ 2945590	0x00000001		CPU 0
+ 2945591	0x00000004		CPU 1
+ 2945592	0x00000010		CPU 2
+ 2945593	0x00000040		CPU 3
+ 2945594	0x00000100		CPU 4
+ 2945595	0x00000400		CPU 5
+ 2945596	0x00001000		CPU 6
+ 2945597	0x00004000		CPU 7
+ 2945598	0x00008000		CPU 8
+ 2945599	0x00010000		CPU 9
+ 2945600	0x00020000		CPU 10
+ 2945601	0x00040000		CPU 11
+ 2945602	0x00080000		CPU 12
+ 2945603	0x00100000		CPU 13
+ 2945604	0x00200000		CPU 14
+ 2945605	0x00400000		CPU 15
+ 2945606	0x00800000		CPU 16
+ 2945607	0x01000000		CPU 17
+ 2945608	0x02000000		CPU 18
+ 2945609	0x04000000		CPU 19
+ 2945610	0x08000000		CPU 20
+ 2945611	0x10000000		CPU 21
+ 2945612	0x20000000		CPU 22
+ 2945613	0x40000000		CPU 23
+ 2945614	0x80000000		MPI
+2945615	0xffffffff		sh
+2945616	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;24;0;1;1;0;1024;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.228843e+02;1.527029e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2945627	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2945627	0xffffffff		chameleon_stest
+ 2945628	0xffffffff		chameleon_stest
+ 2945629	0xffffffff		cuda0000380000f
+ 2945633	0x00000001		CPU 0
+ 2945634	0x00000004		CPU 1
+ 2945635	0x00000010		CPU 2
+ 2945636	0x00000040		CPU 3
+ 2945637	0x00000100		CPU 4
+ 2945638	0x00000400		CPU 5
+ 2945639	0x00001000		CPU 6
+ 2945640	0x00004000		CPU 7
+ 2945641	0x00008000		CPU 8
+ 2945642	0x00010000		CPU 9
+ 2945643	0x00020000		CPU 10
+ 2945644	0x00040000		CPU 11
+ 2945645	0x00080000		CPU 12
+ 2945646	0x00100000		CPU 13
+ 2945647	0x00200000		CPU 14
+ 2945648	0x00400000		CPU 15
+ 2945649	0x00800000		CPU 16
+ 2945650	0x01000000		CPU 17
+ 2945651	0x02000000		CPU 18
+ 2945652	0x04000000		CPU 19
+ 2945653	0x08000000		CPU 20
+ 2945654	0x10000000		CPU 21
+ 2945655	0x20000000		CPU 22
+ 2945656	0x40000000		CPU 23
+ 2945657	0x80000000		MPI
+2945658	0xffffffff		sh
+2945659	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;24;0;1;1;0;2048;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.163756e+02;1.612433e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2945664	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2945664	0xffffffff		chameleon_stest
+ 2945665	0xffffffff		chameleon_stest
+ 2945666	0xffffffff		cuda0000380000f
+ 2945670	0x00000001		CPU 0
+ 2945671	0x00000002		CPU 1
+ 2945672	0x00000004		CPU 2
+ 2945673	0x00000008		CPU 3
+ 2945674	0x00000010		CPU 4
+ 2945675	0x00000020		CPU 5
+ 2945676	0x00000040		CPU 6
+ 2945677	0x00000080		CPU 7
+ 2945678	0x00000100		CPU 8
+ 2945679	0x00000200		CPU 9
+ 2945680	0x00000400		CPU 10
+ 2945681	0x00000800		CPU 11
+ 2945682	0x00001000		CPU 12
+ 2945683	0x00002000		CPU 13
+ 2945684	0x00004000		CPU 14
+ 2945685	0x00008000		CPU 15
+ 2945686	0x00010000		CPU 16
+ 2945687	0x00020000		CPU 17
+ 2945688	0x00040000		CPU 18
+ 2945689	0x00080000		CPU 19
+ 2945690	0x00100000		CPU 20
+ 2945691	0x00200000		CPU 21
+ 2945692	0x00400000		CPU 22
+ 2945693	0x00800000		CPU 23
+ 2945694	0x01000000		CPU 24
+ 2945695	0x02000000		CPU 25
+ 2945696	0x04000000		CPU 26
+ 2945697	0x08000000		CPU 27
+ 2945698	0x10000000		CPU 28
+ 2945699	0x20000000		CPU 29
+ 2945700	0x40000000		CPU 30
+ 2945701	0x80000000		CPU 31
+ 2945702	0x00000001		MPI
+2945703	0xffffffff		sh
+2945704	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;32;0;1;1;0;2048;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.188720e+02;1.578571e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2945712	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2945712	0xffffffff		chameleon_stest
+ 2945713	0xffffffff		chameleon_stest
+ 2945714	0xffffffff		cuda0000380000f
+ 2945718	0x00000001		CPU 0
+ 2945719	0x00000002		CPU 1
+ 2945720	0x00000004		CPU 2
+ 2945721	0x00000008		CPU 3
+ 2945722	0x00000010		CPU 4
+ 2945723	0x00000020		CPU 5
+ 2945724	0x00000040		CPU 6
+ 2945725	0x00000080		CPU 7
+ 2945726	0x00000100		CPU 8
+ 2945727	0x00000200		CPU 9
+ 2945728	0x00000400		CPU 10
+ 2945729	0x00000800		CPU 11
+ 2945730	0x00001000		CPU 12
+ 2945731	0x00002000		CPU 13
+ 2945732	0x00004000		CPU 14
+ 2945733	0x00008000		CPU 15
+ 2945734	0x00000001		MPI
+2945735	0xffffffff		sh
+2945736	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;16;0;1;1;0;1024;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.498603e+02;1.252152e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2945763	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2945763	0xffffffff		chameleon_stest
+ 2945764	0xffffffff		chameleon_stest
+ 2945765	0xffffffff		cuda0000380000f
+ 2945769	0x00000001		CPU 0
+ 2945770	0x00000002		CPU 1
+ 2945771	0x00000004		CPU 2
+ 2945772	0x00000008		CPU 3
+ 2945773	0x00000010		CPU 4
+ 2945774	0x00000020		CPU 5
+ 2945775	0x00000040		CPU 6
+ 2945776	0x00000080		CPU 7
+ 2945777	0x00000100		CPU 8
+ 2945778	0x00000200		CPU 9
+ 2945779	0x00000400		CPU 10
+ 2945780	0x00000800		CPU 11
+ 2945781	0x00001000		CPU 12
+ 2945782	0x00002000		CPU 13
+ 2945783	0x00004000		CPU 14
+ 2945784	0x00008000		CPU 15
+ 2945785	0x00000001		MPI
+2945786	0xffffffff		sh
+2945787	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;16;0;1;1;0;256;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.553072e+02;1.208236e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2945804	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2945804	0xffffffff		chameleon_stest
+ 2945805	0xffffffff		chameleon_stest
+ 2945806	0xffffffff		cuda0000380000f
+ 2945810	0x00000001		CPU 0
+ 2945811	0x00000004		CPU 1
+ 2945812	0x00000010		CPU 2
+ 2945813	0x00000040		CPU 3
+ 2945814	0x00000100		CPU 4
+ 2945815	0x00000400		CPU 5
+ 2945816	0x00001000		CPU 6
+ 2945817	0x00004000		CPU 7
+ 2945818	0x00008000		CPU 8
+ 2945819	0x00010000		CPU 9
+ 2945820	0x00020000		CPU 10
+ 2945821	0x00040000		CPU 11
+ 2945822	0x00080000		CPU 12
+ 2945823	0x00100000		CPU 13
+ 2945824	0x00200000		CPU 14
+ 2945825	0x00400000		CPU 15
+ 2945826	0x00800000		CPU 16
+ 2945827	0x01000000		CPU 17
+ 2945828	0x02000000		CPU 18
+ 2945829	0x04000000		CPU 19
+ 2945830	0x08000000		CPU 20
+ 2945831	0x10000000		CPU 21
+ 2945832	0x20000000		CPU 22
+ 2945833	0x40000000		CPU 23
+ 2945834	0x80000000		MPI
+2945835	0xffffffff		sh
+2945836	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;24;0;1;1;0;4096;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.195512e+02;1.569602e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2945841	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2945841	0xffffffff		chameleon_stest
+ 2945842	0xffffffff		chameleon_stest
+ 2945843	0xffffffff		cuda0000380000f
+ 2945847	0x00000001		CPU 0
+ 2945848	0x00000002		CPU 1
+ 2945849	0x00000004		CPU 2
+ 2945850	0x00000008		CPU 3
+ 2945851	0x00000010		CPU 4
+ 2945852	0x00000020		CPU 5
+ 2945853	0x00000040		CPU 6
+ 2945854	0x00000080		CPU 7
+ 2945855	0x00000100		CPU 8
+ 2945856	0x00000200		CPU 9
+ 2945857	0x00000400		CPU 10
+ 2945858	0x00000800		CPU 11
+ 2945859	0x00001000		CPU 12
+ 2945860	0x00002000		CPU 13
+ 2945861	0x00004000		CPU 14
+ 2945862	0x00008000		CPU 15
+ 2945863	0x00010000		CPU 16
+ 2945864	0x00020000		CPU 17
+ 2945865	0x00040000		CPU 18
+ 2945866	0x00080000		CPU 19
+ 2945867	0x00100000		CPU 20
+ 2945868	0x00200000		CPU 21
+ 2945869	0x00400000		CPU 22
+ 2945870	0x00800000		CPU 23
+ 2945871	0x01000000		CPU 24
+ 2945872	0x02000000		CPU 25
+ 2945873	0x04000000		CPU 26
+ 2945874	0x08000000		CPU 27
+ 2945875	0x10000000		CPU 28
+ 2945876	0x20000000		CPU 29
+ 2945877	0x40000000		CPU 30
+ 2945878	0x80000000		CPU 31
+ 2945879	0x00000001		MPI
+2945880	0xffffffff		sh
+2945881	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;32;0;1;1;0;1024;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.277421e+02;1.468958e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2945890	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2945890	0xffffffff		chameleon_stest
+ 2945891	0xffffffff		chameleon_stest
+ 2945892	0xffffffff		cuda0000380000f
+ 2945896	0x00000001		CPU 0
+ 2945897	0x00000002		CPU 1
+ 2945898	0x00000004		CPU 2
+ 2945899	0x00000008		CPU 3
+ 2945900	0x00000010		CPU 4
+ 2945901	0x00000020		CPU 5
+ 2945902	0x00000040		CPU 6
+ 2945903	0x00000080		CPU 7
+ 2945904	0x00000100		CPU 8
+ 2945905	0x00000200		CPU 9
+ 2945906	0x00000400		CPU 10
+ 2945907	0x00000800		CPU 11
+ 2945908	0x00001000		CPU 12
+ 2945909	0x00002000		CPU 13
+ 2945910	0x00004000		CPU 14
+ 2945911	0x00008000		CPU 15
+ 2945912	0x00000001		MPI
+2945913	0xffffffff		sh
+2945914	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;16;0;1;1;0;512;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.504466e+02;1.247272e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2945923	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2945923	0xffffffff		chameleon_stest
+ 2945924	0xffffffff		chameleon_stest
+ 2945925	0xffffffff		cuda0000380000f
+ 2945929	0x00000001		CPU 0
+ 2945930	0x00000002		CPU 1
+ 2945931	0x00000004		CPU 2
+ 2945932	0x00000008		CPU 3
+ 2945933	0x00000010		CPU 4
+ 2945934	0x00000020		CPU 5
+ 2945935	0x00000040		CPU 6
+ 2945936	0x00000080		CPU 7
+ 2945937	0x00000100		CPU 8
+ 2945938	0x00000200		CPU 9
+ 2945939	0x00000400		CPU 10
+ 2945940	0x00000800		CPU 11
+ 2945941	0x00001000		CPU 12
+ 2945942	0x00002000		CPU 13
+ 2945943	0x00004000		CPU 14
+ 2945944	0x00008000		CPU 15
+ 2945945	0x00000001		MPI
+2945946	0xffffffff		sh
+2945947	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;16;0;1;1;0;2048;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.476631e+02;1.270783e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2945955	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2945955	0xffffffff		chameleon_stest
+ 2945956	0xffffffff		chameleon_stest
+ 2945957	0xffffffff		cuda0000380000f
+ 2945961	0x00000001		CPU 0
+ 2945962	0x00000002		CPU 1
+ 2945963	0x00000004		CPU 2
+ 2945964	0x00000008		CPU 3
+ 2945965	0x00000010		CPU 4
+ 2945966	0x00000020		CPU 5
+ 2945967	0x00000040		CPU 6
+ 2945968	0x00000080		CPU 7
+ 2945969	0x00000100		CPU 8
+ 2945970	0x00000200		CPU 9
+ 2945971	0x00000400		CPU 10
+ 2945972	0x00000800		CPU 11
+ 2945973	0x00001000		CPU 12
+ 2945974	0x00002000		CPU 13
+ 2945975	0x00004000		CPU 14
+ 2945976	0x00008000		CPU 15
+ 2945977	0x00010000		CPU 16
+ 2945978	0x00020000		CPU 17
+ 2945979	0x00040000		CPU 18
+ 2945980	0x00080000		CPU 19
+ 2945981	0x00100000		CPU 20
+ 2945982	0x00200000		CPU 21
+ 2945983	0x00400000		CPU 22
+ 2945984	0x00800000		CPU 23
+ 2945985	0x01000000		CPU 24
+ 2945986	0x02000000		CPU 25
+ 2945987	0x04000000		CPU 26
+ 2945988	0x08000000		CPU 27
+ 2945989	0x10000000		CPU 28
+ 2945990	0x20000000		CPU 29
+ 2945991	0x40000000		CPU 30
+ 2945992	0x80000000		CPU 31
+ 2945993	0x00000001		MPI
+2945994	0xffffffff		sh
+2945995	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;32;0;1;1;0;2048;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.140195e+02;1.645752e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2946005	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2946005	0xffffffff		chameleon_stest
+ 2946006	0xffffffff		chameleon_stest
+ 2946007	0xffffffff		cuda0000380000f
+ 2946011	0x00000001		CPU 0
+ 2946012	0x00000002		CPU 1
+ 2946013	0x00000004		CPU 2
+ 2946014	0x00000008		CPU 3
+ 2946015	0x00000010		CPU 4
+ 2946016	0x00000020		CPU 5
+ 2946017	0x00000040		CPU 6
+ 2946018	0x00000080		CPU 7
+ 2946019	0x00000100		CPU 8
+ 2946020	0x00000200		CPU 9
+ 2946021	0x00000400		CPU 10
+ 2946022	0x00000800		CPU 11
+ 2946023	0x00001000		CPU 12
+ 2946024	0x00002000		CPU 13
+ 2946025	0x00004000		CPU 14
+ 2946026	0x00008000		CPU 15
+ 2946027	0x00010000		CPU 16
+ 2946028	0x00020000		CPU 17
+ 2946029	0x00040000		CPU 18
+ 2946030	0x00080000		CPU 19
+ 2946031	0x00100000		CPU 20
+ 2946032	0x00200000		CPU 21
+ 2946033	0x00400000		CPU 22
+ 2946034	0x00800000		CPU 23
+ 2946035	0x01000000		CPU 24
+ 2946036	0x02000000		CPU 25
+ 2946037	0x04000000		CPU 26
+ 2946038	0x08000000		CPU 27
+ 2946039	0x10000000		CPU 28
+ 2946040	0x20000000		CPU 29
+ 2946041	0x40000000		CPU 30
+ 2946042	0x80000000		CPU 31
+ 2946043	0x00000001		MPI
+2946044	0xffffffff		sh
+2946045	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;32;0;1;1;0;1024;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.289737e+02;1.454931e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2946076	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2946076	0xffffffff		chameleon_stest
+ 2946077	0xffffffff		chameleon_stest
+ 2946078	0xffffffff		cuda0000380000f
+ 2946082	0x00000001		CPU 0
+ 2946083	0x00000002		CPU 1
+ 2946084	0x00000004		CPU 2
+ 2946085	0x00000008		CPU 3
+ 2946086	0x00000010		CPU 4
+ 2946087	0x00000020		CPU 5
+ 2946088	0x00000040		CPU 6
+ 2946089	0x00000080		CPU 7
+ 2946090	0x00000100		CPU 8
+ 2946091	0x00000200		CPU 9
+ 2946092	0x00000400		CPU 10
+ 2946093	0x00000800		CPU 11
+ 2946094	0x00001000		CPU 12
+ 2946095	0x00002000		CPU 13
+ 2946096	0x00004000		CPU 14
+ 2946097	0x00008000		CPU 15
+ 2946098	0x00000001		MPI
+2946099	0xffffffff		sh
+2946100	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;16;0;1;1;0;1024;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.481377e+02;1.266712e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2946108	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2946108	0xffffffff		chameleon_stest
+ 2946109	0xffffffff		chameleon_stest
+ 2946110	0xffffffff		cuda0000380000f
+ 2946114	0x00000001		CPU 0
+ 2946115	0x00000002		CPU 1
+ 2946116	0x00000004		CPU 2
+ 2946117	0x00000008		CPU 3
+ 2946118	0x00000010		CPU 4
+ 2946119	0x00000020		CPU 5
+ 2946120	0x00000040		CPU 6
+ 2946121	0x00000080		CPU 7
+ 2946122	0x00000100		CPU 8
+ 2946123	0x00000200		CPU 9
+ 2946124	0x00000400		CPU 10
+ 2946125	0x00000800		CPU 11
+ 2946126	0x00001000		CPU 12
+ 2946127	0x00002000		CPU 13
+ 2946128	0x00004000		CPU 14
+ 2946129	0x00008000		CPU 15
+ 2946130	0x00010000		CPU 16
+ 2946131	0x00020000		CPU 17
+ 2946132	0x00040000		CPU 18
+ 2946133	0x00080000		CPU 19
+ 2946134	0x00100000		CPU 20
+ 2946135	0x00200000		CPU 21
+ 2946136	0x00400000		CPU 22
+ 2946137	0x00800000		CPU 23
+ 2946138	0x01000000		CPU 24
+ 2946139	0x02000000		CPU 25
+ 2946140	0x04000000		CPU 26
+ 2946141	0x08000000		CPU 27
+ 2946142	0x10000000		CPU 28
+ 2946143	0x20000000		CPU 29
+ 2946144	0x40000000		CPU 30
+ 2946145	0x80000000		CPU 31
+ 2946146	0x00000001		MPI
+2946147	0xffffffff		sh
+2946148	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;32;0;1;1;0;256;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.099219e+02;1.707102e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2946155	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2946155	0xffffffff		chameleon_stest
+ 2946156	0xffffffff		chameleon_stest
+ 2946157	0xffffffff		cuda0000380000f
+ 2946161	0x00000001		CPU 0
+ 2946162	0x00000002		CPU 1
+ 2946163	0x00000004		CPU 2
+ 2946164	0x00000008		CPU 3
+ 2946165	0x00000010		CPU 4
+ 2946166	0x00000020		CPU 5
+ 2946167	0x00000040		CPU 6
+ 2946168	0x00000080		CPU 7
+ 2946169	0x00000100		CPU 8
+ 2946170	0x00000200		CPU 9
+ 2946171	0x00000400		CPU 10
+ 2946172	0x00000800		CPU 11
+ 2946173	0x00001000		CPU 12
+ 2946174	0x00002000		CPU 13
+ 2946175	0x00004000		CPU 14
+ 2946176	0x00008000		CPU 15
+ 2946177	0x00000001		MPI
+2946178	0xffffffff		sh
+2946179	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;16;0;1;1;0;4096;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.518425e+02;1.235806e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2946190	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2946190	0xffffffff		chameleon_stest
+ 2946191	0xffffffff		chameleon_stest
+ 2946192	0xffffffff		cuda0000380000f
+ 2946196	0x00000001		CPU 0
+ 2946197	0x00000004		CPU 1
+ 2946198	0x00000010		CPU 2
+ 2946199	0x00000040		CPU 3
+ 2946200	0x00000100		CPU 4
+ 2946201	0x00000400		CPU 5
+ 2946202	0x00001000		CPU 6
+ 2946203	0x00004000		CPU 7
+ 2946204	0x00008000		CPU 8
+ 2946205	0x00010000		CPU 9
+ 2946206	0x00020000		CPU 10
+ 2946207	0x00040000		CPU 11
+ 2946208	0x00080000		CPU 12
+ 2946209	0x00100000		CPU 13
+ 2946210	0x00200000		CPU 14
+ 2946211	0x00400000		CPU 15
+ 2946212	0x00800000		CPU 16
+ 2946213	0x01000000		CPU 17
+ 2946214	0x02000000		CPU 18
+ 2946215	0x04000000		CPU 19
+ 2946216	0x08000000		CPU 20
+ 2946217	0x10000000		CPU 21
+ 2946218	0x20000000		CPU 22
+ 2946219	0x40000000		CPU 23
+ 2946220	0x80000000		MPI
+2946221	0xffffffff		sh
+2946222	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;24;0;1;1;0;4096;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.174382e+02;1.597844e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2946230	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2946230	0xffffffff		chameleon_stest
+ 2946231	0xffffffff		chameleon_stest
+ 2946232	0xffffffff		cuda0000380000f
+ 2946236	0x00000001		CPU 0
+ 2946237	0x00000004		CPU 1
+ 2946238	0x00000010		CPU 2
+ 2946239	0x00000040		CPU 3
+ 2946240	0x00000100		CPU 4
+ 2946241	0x00000400		CPU 5
+ 2946242	0x00001000		CPU 6
+ 2946243	0x00004000		CPU 7
+ 2946244	0x00000001		MPI
+2946245	0xffffffff		sh
+2946246	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;8;0;1;1;0;4096;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.491964e+02;1.257723e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2946271	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2946271	0xffffffff		chameleon_stest
+ 2946272	0xffffffff		chameleon_stest
+ 2946273	0xffffffff		cuda0000380000f
+ 2946277	0x00000001		CPU 0
+ 2946278	0x00000004		CPU 1
+ 2946279	0x00000010		CPU 2
+ 2946280	0x00000040		CPU 3
+ 2946281	0x00000100		CPU 4
+ 2946282	0x00000400		CPU 5
+ 2946283	0x00001000		CPU 6
+ 2946284	0x00004000		CPU 7
+ 2946285	0x00008000		CPU 8
+ 2946286	0x00010000		CPU 9
+ 2946287	0x00020000		CPU 10
+ 2946288	0x00040000		CPU 11
+ 2946289	0x00080000		CPU 12
+ 2946290	0x00100000		CPU 13
+ 2946291	0x00200000		CPU 14
+ 2946292	0x00400000		CPU 15
+ 2946293	0x00800000		CPU 16
+ 2946294	0x01000000		CPU 17
+ 2946295	0x02000000		CPU 18
+ 2946296	0x04000000		CPU 19
+ 2946297	0x08000000		CPU 20
+ 2946298	0x10000000		CPU 21
+ 2946299	0x20000000		CPU 22
+ 2946300	0x40000000		CPU 23
+ 2946301	0x80000000		MPI
+2946302	0xffffffff		sh
+2946303	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;24;0;1;1;0;256;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.146685e+02;1.636437e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2946310	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2946310	0xffffffff		chameleon_stest
+ 2946311	0xffffffff		chameleon_stest
+ 2946312	0xffffffff		cuda0000380000f
+ 2946316	0x00000001		CPU 0
+ 2946317	0x00000002		CPU 1
+ 2946318	0x00000004		CPU 2
+ 2946319	0x00000008		CPU 3
+ 2946320	0x00000010		CPU 4
+ 2946321	0x00000020		CPU 5
+ 2946322	0x00000040		CPU 6
+ 2946323	0x00000080		CPU 7
+ 2946324	0x00000100		CPU 8
+ 2946325	0x00000200		CPU 9
+ 2946326	0x00000400		CPU 10
+ 2946327	0x00000800		CPU 11
+ 2946328	0x00001000		CPU 12
+ 2946329	0x00002000		CPU 13
+ 2946330	0x00004000		CPU 14
+ 2946331	0x00008000		CPU 15
+ 2946332	0x00000001		MPI
+2946333	0xffffffff		sh
+2946334	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;16;0;1;1;0;2048;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.456819e+02;1.288066e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2946346	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2946346	0xffffffff		chameleon_stest
+ 2946347	0xffffffff		chameleon_stest
+ 2946348	0xffffffff		cuda0000380000f
+ 2946352	0x00000001		CPU 0
+ 2946353	0x00000004		CPU 1
+ 2946354	0x00000010		CPU 2
+ 2946355	0x00000040		CPU 3
+ 2946356	0x00000100		CPU 4
+ 2946357	0x00000400		CPU 5
+ 2946358	0x00001000		CPU 6
+ 2946359	0x00004000		CPU 7
+ 2946360	0x00000001		MPI
+2946361	0xffffffff		sh
+2946362	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;8;0;1;1;0;1024;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.530430e+02;1.226112e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2946370	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2946370	0xffffffff		chameleon_stest
+ 2946371	0xffffffff		chameleon_stest
+ 2946372	0xffffffff		cuda0000380000f
+ 2946376	0x00000001		CPU 0
+ 2946377	0x00000002		CPU 1
+ 2946378	0x00000004		CPU 2
+ 2946379	0x00000008		CPU 3
+ 2946380	0x00000010		CPU 4
+ 2946381	0x00000020		CPU 5
+ 2946382	0x00000040		CPU 6
+ 2946383	0x00000080		CPU 7
+ 2946384	0x00000100		CPU 8
+ 2946385	0x00000200		CPU 9
+ 2946386	0x00000400		CPU 10
+ 2946387	0x00000800		CPU 11
+ 2946388	0x00001000		CPU 12
+ 2946389	0x00002000		CPU 13
+ 2946390	0x00004000		CPU 14
+ 2946391	0x00008000		CPU 15
+ 2946392	0x00010000		CPU 16
+ 2946393	0x00020000		CPU 17
+ 2946394	0x00040000		CPU 18
+ 2946395	0x00080000		CPU 19
+ 2946396	0x00100000		CPU 20
+ 2946397	0x00200000		CPU 21
+ 2946398	0x00400000		CPU 22
+ 2946399	0x00800000		CPU 23
+ 2946400	0x01000000		CPU 24
+ 2946401	0x02000000		CPU 25
+ 2946402	0x04000000		CPU 26
+ 2946403	0x08000000		CPU 27
+ 2946404	0x10000000		CPU 28
+ 2946405	0x20000000		CPU 29
+ 2946406	0x40000000		CPU 30
+ 2946407	0x80000000		CPU 31
+ 2946408	0x00000001		MPI
+2946409	0xffffffff		sh
+2946410	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;32;0;1;1;0;512;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.106236e+02;1.696273e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2946420	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2946420	0xffffffff		chameleon_stest
+ 2946421	0xffffffff		chameleon_stest
+ 2946422	0xffffffff		cuda0000380000f
+ 2946426	0x00000001		CPU 0
+ 2946427	0x00000002		CPU 1
+ 2946428	0x00000004		CPU 2
+ 2946429	0x00000008		CPU 3
+ 2946430	0x00000010		CPU 4
+ 2946431	0x00000020		CPU 5
+ 2946432	0x00000040		CPU 6
+ 2946433	0x00000080		CPU 7
+ 2946434	0x00000100		CPU 8
+ 2946435	0x00000200		CPU 9
+ 2946436	0x00000400		CPU 10
+ 2946437	0x00000800		CPU 11
+ 2946438	0x00001000		CPU 12
+ 2946439	0x00002000		CPU 13
+ 2946440	0x00004000		CPU 14
+ 2946441	0x00008000		CPU 15
+ 2946442	0x00000001		MPI
+2946443	0xffffffff		sh
+2946444	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;16;0;1;1;0;512;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.490710e+02;1.258782e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2946453	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2946453	0xffffffff		chameleon_stest
+ 2946454	0xffffffff		chameleon_stest
+ 2946455	0xffffffff		cuda0000380000f
+ 2946459	0x00000001		CPU 0
+ 2946460	0x00000004		CPU 1
+ 2946461	0x00000010		CPU 2
+ 2946462	0x00000040		CPU 3
+ 2946463	0x00000100		CPU 4
+ 2946464	0x00000400		CPU 5
+ 2946465	0x00001000		CPU 6
+ 2946466	0x00004000		CPU 7
+ 2946467	0x00000001		MPI
+2946468	0xffffffff		sh
+2946469	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;8;0;1;1;0;2048;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.477792e+02;1.269786e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2946495	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2946495	0xffffffff		chameleon_stest
+ 2946496	0xffffffff		chameleon_stest
+ 2946497	0xffffffff		cuda0000380000f
+ 2946501	0x00000001		CPU 0
+ 2946502	0x00000004		CPU 1
+ 2946503	0x00000010		CPU 2
+ 2946504	0x00000040		CPU 3
+ 2946505	0x00000100		CPU 4
+ 2946506	0x00000400		CPU 5
+ 2946507	0x00001000		CPU 6
+ 2946508	0x00004000		CPU 7
+ 2946509	0x00000001		MPI
+2946510	0xffffffff		sh
+2946511	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;8;0;1;1;0;512;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.532299e+02;1.224616e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2946520	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2946520	0xffffffff		chameleon_stest
+ 2946521	0xffffffff		chameleon_stest
+ 2946522	0xffffffff		cuda0000380000f
+ 2946526	0x00000001		CPU 0
+ 2946527	0x00000002		CPU 1
+ 2946528	0x00000004		CPU 2
+ 2946529	0x00000008		CPU 3
+ 2946530	0x00000010		CPU 4
+ 2946531	0x00000020		CPU 5
+ 2946532	0x00000040		CPU 6
+ 2946533	0x00000080		CPU 7
+ 2946534	0x00000100		CPU 8
+ 2946535	0x00000200		CPU 9
+ 2946536	0x00000400		CPU 10
+ 2946537	0x00000800		CPU 11
+ 2946538	0x00001000		CPU 12
+ 2946539	0x00002000		CPU 13
+ 2946540	0x00004000		CPU 14
+ 2946541	0x00008000		CPU 15
+ 2946542	0x00000001		MPI
+2946543	0xffffffff		sh
+2946544	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;16;0;1;1;0;2048;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.458223e+02;1.286825e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2946560	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2946560	0xffffffff		chameleon_stest
+ 2946561	0xffffffff		chameleon_stest
+ 2946562	0xffffffff		cuda0000380000f
+ 2946566	0x00000001		CPU 0
+ 2946567	0x00000004		CPU 1
+ 2946568	0x00000010		CPU 2
+ 2946569	0x00000040		CPU 3
+ 2946570	0x00000100		CPU 4
+ 2946571	0x00000400		CPU 5
+ 2946572	0x00001000		CPU 6
+ 2946573	0x00004000		CPU 7
+ 2946574	0x00000001		MPI
+2946575	0xffffffff		sh
+2946576	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;8;0;1;1;0;1024;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.516482e+02;1.237390e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2946583	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2946583	0xffffffff		chameleon_stest
+ 2946584	0xffffffff		chameleon_stest
+ 2946585	0xffffffff		cuda0000380000f
+ 2946589	0x00000001		CPU 0
+ 2946590	0x00000002		CPU 1
+ 2946591	0x00000004		CPU 2
+ 2946592	0x00000008		CPU 3
+ 2946593	0x00000010		CPU 4
+ 2946594	0x00000020		CPU 5
+ 2946595	0x00000040		CPU 6
+ 2946596	0x00000080		CPU 7
+ 2946597	0x00000100		CPU 8
+ 2946598	0x00000200		CPU 9
+ 2946599	0x00000400		CPU 10
+ 2946600	0x00000800		CPU 11
+ 2946601	0x00001000		CPU 12
+ 2946602	0x00002000		CPU 13
+ 2946603	0x00004000		CPU 14
+ 2946604	0x00008000		CPU 15
+ 2946605	0x00000001		MPI
+2946606	0xffffffff		sh
+2946607	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;16;0;1;1;0;4096;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.560790e+02;1.202262e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2946616	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2946616	0xffffffff		chameleon_stest
+ 2946617	0xffffffff		chameleon_stest
+ 2946618	0xffffffff		cuda0000380000f
+ 2946622	0x00000001		CPU 0
+ 2946623	0x00000002		CPU 1
+ 2946624	0x00000004		CPU 2
+ 2946625	0x00000008		CPU 3
+ 2946626	0x00000010		CPU 4
+ 2946627	0x00000020		CPU 5
+ 2946628	0x00000040		CPU 6
+ 2946629	0x00000080		CPU 7
+ 2946630	0x00000100		CPU 8
+ 2946631	0x00000200		CPU 9
+ 2946632	0x00000400		CPU 10
+ 2946633	0x00000800		CPU 11
+ 2946634	0x00001000		CPU 12
+ 2946635	0x00002000		CPU 13
+ 2946636	0x00004000		CPU 14
+ 2946637	0x00008000		CPU 15
+ 2946638	0x00010000		CPU 16
+ 2946639	0x00020000		CPU 17
+ 2946640	0x00040000		CPU 18
+ 2946641	0x00080000		CPU 19
+ 2946642	0x00100000		CPU 20
+ 2946643	0x00200000		CPU 21
+ 2946644	0x00400000		CPU 22
+ 2946645	0x00800000		CPU 23
+ 2946646	0x01000000		CPU 24
+ 2946647	0x02000000		CPU 25
+ 2946648	0x04000000		CPU 26
+ 2946649	0x08000000		CPU 27
+ 2946650	0x10000000		CPU 28
+ 2946651	0x20000000		CPU 29
+ 2946652	0x40000000		CPU 30
+ 2946653	0x80000000		CPU 31
+ 2946654	0x00000001		MPI
+2946655	0xffffffff		sh
+2946656	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;32;0;1;1;0;512;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.133853e+02;1.654958e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2946663	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2946663	0xffffffff		chameleon_stest
+ 2946664	0xffffffff		chameleon_stest
+ 2946665	0xffffffff		cuda0000380000f
+ 2946669	0x00000001		CPU 0
+ 2946670	0x00000004		CPU 1
+ 2946671	0x00000010		CPU 2
+ 2946672	0x00000040		CPU 3
+ 2946673	0x00000100		CPU 4
+ 2946674	0x00000400		CPU 5
+ 2946675	0x00001000		CPU 6
+ 2946676	0x00004000		CPU 7
+ 2946677	0x00000001		MPI
+2946678	0xffffffff		sh
+2946679	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;8;0;1;1;0;512;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.535041e+02;1.222429e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2946706	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2946706	0xffffffff		chameleon_stest
+ 2946707	0xffffffff		chameleon_stest
+ 2946708	0xffffffff		cuda0000380000f
+ 2946712	0x00000001		CPU 0
+ 2946713	0x00000004		CPU 1
+ 2946714	0x00000010		CPU 2
+ 2946715	0x00000040		CPU 3
+ 2946716	0x00000100		CPU 4
+ 2946717	0x00000400		CPU 5
+ 2946718	0x00001000		CPU 6
+ 2946719	0x00004000		CPU 7
+ 2946720	0x00008000		CPU 8
+ 2946721	0x00010000		CPU 9
+ 2946722	0x00020000		CPU 10
+ 2946723	0x00040000		CPU 11
+ 2946724	0x00080000		CPU 12
+ 2946725	0x00100000		CPU 13
+ 2946726	0x00200000		CPU 14
+ 2946727	0x00400000		CPU 15
+ 2946728	0x00800000		CPU 16
+ 2946729	0x01000000		CPU 17
+ 2946730	0x02000000		CPU 18
+ 2946731	0x04000000		CPU 19
+ 2946732	0x08000000		CPU 20
+ 2946733	0x10000000		CPU 21
+ 2946734	0x20000000		CPU 22
+ 2946735	0x40000000		CPU 23
+ 2946736	0x80000000		MPI
+2946737	0xffffffff		sh
+2946738	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;24;0;1;1;0;256;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.153282e+02;1.627077e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2946746	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2946746	0xffffffff		chameleon_stest
+ 2946747	0xffffffff		chameleon_stest
+ 2946748	0xffffffff		cuda0000380000f
+ 2946752	0x00000001		CPU 0
+ 2946753	0x00000002		CPU 1
+ 2946754	0x00000004		CPU 2
+ 2946755	0x00000008		CPU 3
+ 2946756	0x00000010		CPU 4
+ 2946757	0x00000020		CPU 5
+ 2946758	0x00000040		CPU 6
+ 2946759	0x00000080		CPU 7
+ 2946760	0x00000100		CPU 8
+ 2946761	0x00000200		CPU 9
+ 2946762	0x00000400		CPU 10
+ 2946763	0x00000800		CPU 11
+ 2946764	0x00001000		CPU 12
+ 2946765	0x00002000		CPU 13
+ 2946766	0x00004000		CPU 14
+ 2946767	0x00008000		CPU 15
+ 2946768	0x00000001		MPI
+2946769	0xffffffff		sh
+2946770	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;16;0;1;1;0;256;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.557523e+02;1.204784e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2946783	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2946783	0xffffffff		chameleon_stest
+ 2946784	0xffffffff		chameleon_stest
+ 2946785	0xffffffff		cuda0000380000f
+ 2946789	0x00000001		CPU 0
+ 2946790	0x00000004		CPU 1
+ 2946791	0x00000010		CPU 2
+ 2946792	0x00000040		CPU 3
+ 2946793	0x00000100		CPU 4
+ 2946794	0x00000400		CPU 5
+ 2946795	0x00001000		CPU 6
+ 2946796	0x00004000		CPU 7
+ 2946797	0x00008000		CPU 8
+ 2946798	0x00010000		CPU 9
+ 2946799	0x00020000		CPU 10
+ 2946800	0x00040000		CPU 11
+ 2946801	0x00080000		CPU 12
+ 2946802	0x00100000		CPU 13
+ 2946803	0x00200000		CPU 14
+ 2946804	0x00400000		CPU 15
+ 2946805	0x00800000		CPU 16
+ 2946806	0x01000000		CPU 17
+ 2946807	0x02000000		CPU 18
+ 2946808	0x04000000		CPU 19
+ 2946809	0x08000000		CPU 20
+ 2946810	0x10000000		CPU 21
+ 2946811	0x20000000		CPU 22
+ 2946812	0x40000000		CPU 23
+ 2946813	0x80000000		MPI
+2946814	0xffffffff		sh
+2946815	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;24;0;1;1;0;4096;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.140245e+02;1.645679e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2946823	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2946823	0xffffffff		chameleon_stest
+ 2946824	0xffffffff		chameleon_stest
+ 2946825	0xffffffff		cuda0000380000f
+ 2946829	0x00000001		CPU 0
+ 2946830	0x00000002		CPU 1
+ 2946831	0x00000004		CPU 2
+ 2946832	0x00000008		CPU 3
+ 2946833	0x00000010		CPU 4
+ 2946834	0x00000020		CPU 5
+ 2946835	0x00000040		CPU 6
+ 2946836	0x00000080		CPU 7
+ 2946837	0x00000100		CPU 8
+ 2946838	0x00000200		CPU 9
+ 2946839	0x00000400		CPU 10
+ 2946840	0x00000800		CPU 11
+ 2946841	0x00001000		CPU 12
+ 2946842	0x00002000		CPU 13
+ 2946843	0x00004000		CPU 14
+ 2946844	0x00008000		CPU 15
+ 2946845	0x00010000		CPU 16
+ 2946846	0x00020000		CPU 17
+ 2946847	0x00040000		CPU 18
+ 2946848	0x00080000		CPU 19
+ 2946849	0x00100000		CPU 20
+ 2946850	0x00200000		CPU 21
+ 2946851	0x00400000		CPU 22
+ 2946852	0x00800000		CPU 23
+ 2946853	0x01000000		CPU 24
+ 2946854	0x02000000		CPU 25
+ 2946855	0x04000000		CPU 26
+ 2946856	0x08000000		CPU 27
+ 2946857	0x10000000		CPU 28
+ 2946858	0x20000000		CPU 29
+ 2946859	0x40000000		CPU 30
+ 2946860	0x80000000		CPU 31
+ 2946861	0x00000001		MPI
+2946862	0xffffffff		sh
+2946863	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;32;0;1;1;0;256;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.104344e+02;1.699179e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2946868	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2946868	0xffffffff		chameleon_stest
+ 2946869	0xffffffff		chameleon_stest
+ 2946870	0xffffffff		cuda0000380000f
+ 2946874	0x00000001		CPU 0
+ 2946875	0x00000002		CPU 1
+ 2946876	0x00000004		CPU 2
+ 2946877	0x00000008		CPU 3
+ 2946878	0x00000010		CPU 4
+ 2946879	0x00000020		CPU 5
+ 2946880	0x00000040		CPU 6
+ 2946881	0x00000080		CPU 7
+ 2946882	0x00000100		CPU 8
+ 2946883	0x00000200		CPU 9
+ 2946884	0x00000400		CPU 10
+ 2946885	0x00000800		CPU 11
+ 2946886	0x00001000		CPU 12
+ 2946887	0x00002000		CPU 13
+ 2946888	0x00004000		CPU 14
+ 2946889	0x00008000		CPU 15
+ 2946890	0x00000001		MPI
+2946891	0xffffffff		sh
+2946892	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;16;0;1;1;0;512;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.498988e+02;1.251830e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2946919	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2946919	0xffffffff		chameleon_stest
+ 2946920	0xffffffff		chameleon_stest
+ 2946921	0xffffffff		cuda0000380000f
+ 2946925	0x00000001		CPU 0
+ 2946926	0x00000004		CPU 1
+ 2946927	0x00000010		CPU 2
+ 2946928	0x00000040		CPU 3
+ 2946929	0x00000100		CPU 4
+ 2946930	0x00000400		CPU 5
+ 2946931	0x00001000		CPU 6
+ 2946932	0x00004000		CPU 7
+ 2946933	0x00000001		MPI
+2946934	0xffffffff		sh
+2946935	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;8;0;1;1;0;1024;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.515373e+02;1.238295e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2947011	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2947011	0xffffffff		chameleon_stest
+ 2947012	0xffffffff		chameleon_stest
+ 2947013	0xffffffff		cuda0000380000f
+ 2947017	0x00000001		CPU 0
+ 2947018	0x00000002		CPU 1
+ 2947019	0x00000004		CPU 2
+ 2947020	0x00000008		CPU 3
+ 2947021	0x00000010		CPU 4
+ 2947022	0x00000020		CPU 5
+ 2947023	0x00000040		CPU 6
+ 2947024	0x00000080		CPU 7
+ 2947025	0x00000100		CPU 8
+ 2947026	0x00000200		CPU 9
+ 2947027	0x00000400		CPU 10
+ 2947028	0x00000800		CPU 11
+ 2947029	0x00001000		CPU 12
+ 2947030	0x00002000		CPU 13
+ 2947031	0x00004000		CPU 14
+ 2947032	0x00008000		CPU 15
+ 2947033	0x00000001		MPI
+2947034	0xffffffff		sh
+2947035	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;16;0;1;1;0;1024;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.481709e+02;1.266429e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2947044	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2947044	0xffffffff		chameleon_stest
+ 2947045	0xffffffff		chameleon_stest
+ 2947046	0xffffffff		cuda0000380000f
+ 2947050	0x00000001		CPU 0
+ 2947051	0x00000002		CPU 1
+ 2947052	0x00000004		CPU 2
+ 2947053	0x00000008		CPU 3
+ 2947054	0x00000010		CPU 4
+ 2947055	0x00000020		CPU 5
+ 2947056	0x00000040		CPU 6
+ 2947057	0x00000080		CPU 7
+ 2947058	0x00000100		CPU 8
+ 2947059	0x00000200		CPU 9
+ 2947060	0x00000400		CPU 10
+ 2947061	0x00000800		CPU 11
+ 2947062	0x00001000		CPU 12
+ 2947063	0x00002000		CPU 13
+ 2947064	0x00004000		CPU 14
+ 2947065	0x00008000		CPU 15
+ 2947066	0x00010000		CPU 16
+ 2947067	0x00020000		CPU 17
+ 2947068	0x00040000		CPU 18
+ 2947069	0x00080000		CPU 19
+ 2947070	0x00100000		CPU 20
+ 2947071	0x00200000		CPU 21
+ 2947072	0x00400000		CPU 22
+ 2947073	0x00800000		CPU 23
+ 2947074	0x01000000		CPU 24
+ 2947075	0x02000000		CPU 25
+ 2947076	0x04000000		CPU 26
+ 2947077	0x08000000		CPU 27
+ 2947078	0x10000000		CPU 28
+ 2947079	0x20000000		CPU 29
+ 2947080	0x40000000		CPU 30
+ 2947081	0x80000000		CPU 31
+ 2947082	0x00000001		MPI
+2947083	0xffffffff		sh
+2947084	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;32;0;1;1;0;4096;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.218963e+02;1.539405e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2947091	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2947091	0xffffffff		chameleon_stest
+ 2947092	0xffffffff		chameleon_stest
+ 2947093	0xffffffff		cuda0000380000f
+ 2947097	0x00000001		CPU 0
+ 2947098	0x00000004		CPU 1
+ 2947099	0x00000010		CPU 2
+ 2947100	0x00000040		CPU 3
+ 2947101	0x00000100		CPU 4
+ 2947102	0x00000400		CPU 5
+ 2947103	0x00001000		CPU 6
+ 2947104	0x00004000		CPU 7
+ 2947105	0x00008000		CPU 8
+ 2947106	0x00010000		CPU 9
+ 2947107	0x00020000		CPU 10
+ 2947108	0x00040000		CPU 11
+ 2947109	0x00080000		CPU 12
+ 2947110	0x00100000		CPU 13
+ 2947111	0x00200000		CPU 14
+ 2947112	0x00400000		CPU 15
+ 2947113	0x00800000		CPU 16
+ 2947114	0x01000000		CPU 17
+ 2947115	0x02000000		CPU 18
+ 2947116	0x04000000		CPU 19
+ 2947117	0x08000000		CPU 20
+ 2947118	0x10000000		CPU 21
+ 2947119	0x20000000		CPU 22
+ 2947120	0x40000000		CPU 23
+ 2947121	0x80000000		MPI
+2947122	0xffffffff		sh
+2947123	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;24;0;1;1;0;2048;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.150365e+02;1.631202e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2947135	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2947135	0xffffffff		chameleon_stest
+ 2947136	0xffffffff		chameleon_stest
+ 2947137	0xffffffff		cuda0000380000f
+ 2947141	0x00000001		CPU 0
+ 2947142	0x00000004		CPU 1
+ 2947143	0x00000010		CPU 2
+ 2947144	0x00000040		CPU 3
+ 2947145	0x00000100		CPU 4
+ 2947146	0x00000400		CPU 5
+ 2947147	0x00001000		CPU 6
+ 2947148	0x00004000		CPU 7
+ 2947149	0x00008000		CPU 8
+ 2947150	0x00010000		CPU 9
+ 2947151	0x00020000		CPU 10
+ 2947152	0x00040000		CPU 11
+ 2947153	0x00080000		CPU 12
+ 2947154	0x00100000		CPU 13
+ 2947155	0x00200000		CPU 14
+ 2947156	0x00400000		CPU 15
+ 2947157	0x00800000		CPU 16
+ 2947158	0x01000000		CPU 17
+ 2947159	0x02000000		CPU 18
+ 2947160	0x04000000		CPU 19
+ 2947161	0x08000000		CPU 20
+ 2947162	0x10000000		CPU 21
+ 2947163	0x20000000		CPU 22
+ 2947164	0x40000000		CPU 23
+ 2947165	0x80000000		MPI
+2947166	0xffffffff		sh
+2947167	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;24;0;1;1;0;2048;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.143477e+02;1.641029e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2947174	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2947174	0xffffffff		chameleon_stest
+ 2947175	0xffffffff		chameleon_stest
+ 2947176	0xffffffff		cuda0000380000f
+ 2947180	0x00000001		CPU 0
+ 2947181	0x00000004		CPU 1
+ 2947182	0x00000010		CPU 2
+ 2947183	0x00000040		CPU 3
+ 2947184	0x00000100		CPU 4
+ 2947185	0x00000400		CPU 5
+ 2947186	0x00001000		CPU 6
+ 2947187	0x00004000		CPU 7
+ 2947188	0x00000001		MPI
+2947189	0xffffffff		sh
+2947190	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;8;0;1;1;0;256;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.685715e+02;1.113165e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2947229	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2947229	0xffffffff		chameleon_stest
+ 2947230	0xffffffff		chameleon_stest
+ 2947231	0xffffffff		cuda0000380000f
+ 2947235	0x00000001		CPU 0
+ 2947236	0x00000004		CPU 1
+ 2947237	0x00000010		CPU 2
+ 2947238	0x00000040		CPU 3
+ 2947239	0x00000100		CPU 4
+ 2947240	0x00000400		CPU 5
+ 2947241	0x00001000		CPU 6
+ 2947242	0x00004000		CPU 7
+ 2947243	0x00000001		MPI
+2947244	0xffffffff		sh
+2947245	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;8;0;1;1;0;4096;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.500640e+02;1.250452e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2947304	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2947304	0xffffffff		chameleon_stest
+ 2947305	0xffffffff		chameleon_stest
+ 2947306	0xffffffff		cuda0000380000f
+ 2947310	0x00000001		CPU 0
+ 2947311	0x00000002		CPU 1
+ 2947312	0x00000004		CPU 2
+ 2947313	0x00000008		CPU 3
+ 2947314	0x00000010		CPU 4
+ 2947315	0x00000020		CPU 5
+ 2947316	0x00000040		CPU 6
+ 2947317	0x00000080		CPU 7
+ 2947318	0x00000100		CPU 8
+ 2947319	0x00000200		CPU 9
+ 2947320	0x00000400		CPU 10
+ 2947321	0x00000800		CPU 11
+ 2947322	0x00001000		CPU 12
+ 2947323	0x00002000		CPU 13
+ 2947324	0x00004000		CPU 14
+ 2947325	0x00008000		CPU 15
+ 2947326	0x00010000		CPU 16
+ 2947327	0x00020000		CPU 17
+ 2947328	0x00040000		CPU 18
+ 2947329	0x00080000		CPU 19
+ 2947330	0x00100000		CPU 20
+ 2947331	0x00200000		CPU 21
+ 2947332	0x00400000		CPU 22
+ 2947333	0x00800000		CPU 23
+ 2947334	0x01000000		CPU 24
+ 2947335	0x02000000		CPU 25
+ 2947336	0x04000000		CPU 26
+ 2947337	0x08000000		CPU 27
+ 2947338	0x10000000		CPU 28
+ 2947339	0x20000000		CPU 29
+ 2947340	0x40000000		CPU 30
+ 2947341	0x80000000		CPU 31
+ 2947342	0x00000001		MPI
+2947343	0xffffffff		sh
+2947344	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;32;0;1;1;0;1024;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.279255e+02;1.466853e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2947355	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2947355	0xffffffff		chameleon_stest
+ 2947356	0xffffffff		chameleon_stest
+ 2947357	0xffffffff		cuda0000380000f
+ 2947361	0x00000001		CPU 0
+ 2947362	0x00000002		CPU 1
+ 2947363	0x00000004		CPU 2
+ 2947364	0x00000008		CPU 3
+ 2947365	0x00000010		CPU 4
+ 2947366	0x00000020		CPU 5
+ 2947367	0x00000040		CPU 6
+ 2947368	0x00000080		CPU 7
+ 2947369	0x00000100		CPU 8
+ 2947370	0x00000200		CPU 9
+ 2947371	0x00000400		CPU 10
+ 2947372	0x00000800		CPU 11
+ 2947373	0x00001000		CPU 12
+ 2947374	0x00002000		CPU 13
+ 2947375	0x00004000		CPU 14
+ 2947376	0x00008000		CPU 15
+ 2947377	0x00000001		MPI
+2947378	0xffffffff		sh
+2947379	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;16;0;1;1;0;1024;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.501649e+02;1.249612e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2947390	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2947390	0xffffffff		chameleon_stest
+ 2947391	0xffffffff		chameleon_stest
+ 2947392	0xffffffff		cuda0000380000f
+ 2947396	0x00000001		CPU 0
+ 2947397	0x00000004		CPU 1
+ 2947398	0x00000010		CPU 2
+ 2947399	0x00000040		CPU 3
+ 2947400	0x00000100		CPU 4
+ 2947401	0x00000400		CPU 5
+ 2947402	0x00001000		CPU 6
+ 2947403	0x00004000		CPU 7
+ 2947404	0x00000001		MPI
+2947405	0xffffffff		sh
+2947406	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;8;0;1;1;0;512;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.532091e+02;1.224783e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2947421	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2947421	0xffffffff		chameleon_stest
+ 2947422	0xffffffff		chameleon_stest
+ 2947423	0xffffffff		cuda0000380000f
+ 2947427	0x00000001		CPU 0
+ 2947428	0x00000002		CPU 1
+ 2947429	0x00000004		CPU 2
+ 2947430	0x00000008		CPU 3
+ 2947431	0x00000010		CPU 4
+ 2947432	0x00000020		CPU 5
+ 2947433	0x00000040		CPU 6
+ 2947434	0x00000080		CPU 7
+ 2947435	0x00000100		CPU 8
+ 2947436	0x00000200		CPU 9
+ 2947437	0x00000400		CPU 10
+ 2947438	0x00000800		CPU 11
+ 2947439	0x00001000		CPU 12
+ 2947440	0x00002000		CPU 13
+ 2947441	0x00004000		CPU 14
+ 2947442	0x00008000		CPU 15
+ 2947443	0x00010000		CPU 16
+ 2947444	0x00020000		CPU 17
+ 2947445	0x00040000		CPU 18
+ 2947446	0x00080000		CPU 19
+ 2947447	0x00100000		CPU 20
+ 2947448	0x00200000		CPU 21
+ 2947449	0x00400000		CPU 22
+ 2947450	0x00800000		CPU 23
+ 2947451	0x01000000		CPU 24
+ 2947452	0x02000000		CPU 25
+ 2947453	0x04000000		CPU 26
+ 2947454	0x08000000		CPU 27
+ 2947455	0x10000000		CPU 28
+ 2947456	0x20000000		CPU 29
+ 2947457	0x40000000		CPU 30
+ 2947458	0x80000000		CPU 31
+ 2947459	0x00000001		MPI
+2947460	0xffffffff		sh
+2947461	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;32;0;1;1;0;512;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.140732e+02;1.644978e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2947487	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2947487	0xffffffff		chameleon_stest
+ 2947488	0xffffffff		chameleon_stest
+ 2947489	0xffffffff		cuda0000380000f
+ 2947493	0x00000001		CPU 0
+ 2947494	0x00000002		CPU 1
+ 2947495	0x00000004		CPU 2
+ 2947496	0x00000008		CPU 3
+ 2947497	0x00000010		CPU 4
+ 2947498	0x00000020		CPU 5
+ 2947499	0x00000040		CPU 6
+ 2947500	0x00000080		CPU 7
+ 2947501	0x00000100		CPU 8
+ 2947502	0x00000200		CPU 9
+ 2947503	0x00000400		CPU 10
+ 2947504	0x00000800		CPU 11
+ 2947505	0x00001000		CPU 12
+ 2947506	0x00002000		CPU 13
+ 2947507	0x00004000		CPU 14
+ 2947508	0x00008000		CPU 15
+ 2947509	0x00000001		MPI
+2947510	0xffffffff		sh
+2947511	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;16;0;1;1;0;4096;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.525859e+02;1.229785e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2947531	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2947531	0xffffffff		chameleon_stest
+ 2947532	0xffffffff		chameleon_stest
+ 2947533	0xffffffff		cuda0000380000f
+ 2947537	0x00000001		CPU 0
+ 2947538	0x00000004		CPU 1
+ 2947539	0x00000010		CPU 2
+ 2947540	0x00000040		CPU 3
+ 2947541	0x00000100		CPU 4
+ 2947542	0x00000400		CPU 5
+ 2947543	0x00001000		CPU 6
+ 2947544	0x00004000		CPU 7
+ 2947545	0x00000001		MPI
+2947546	0xffffffff		sh
+2947547	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;8;0;1;1;0;2048;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.491560e+02;1.258064e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2947556	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2947556	0xffffffff		chameleon_stest
+ 2947557	0xffffffff		chameleon_stest
+ 2947558	0xffffffff		cuda0000380000f
+ 2947562	0x00000001		CPU 0
+ 2947563	0x00000002		CPU 1
+ 2947564	0x00000004		CPU 2
+ 2947565	0x00000008		CPU 3
+ 2947566	0x00000010		CPU 4
+ 2947567	0x00000020		CPU 5
+ 2947568	0x00000040		CPU 6
+ 2947569	0x00000080		CPU 7
+ 2947570	0x00000100		CPU 8
+ 2947571	0x00000200		CPU 9
+ 2947572	0x00000400		CPU 10
+ 2947573	0x00000800		CPU 11
+ 2947574	0x00001000		CPU 12
+ 2947575	0x00002000		CPU 13
+ 2947576	0x00004000		CPU 14
+ 2947577	0x00008000		CPU 15
+ 2947578	0x00000001		MPI
+2947579	0xffffffff		sh
+2947580	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;16;0;1;1;0;2048;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.484651e+02;1.263919e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2947589	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2947589	0xffffffff		chameleon_stest
+ 2947590	0xffffffff		chameleon_stest
+ 2947591	0xffffffff		cuda0000380000f
+ 2947595	0x00000001		CPU 0
+ 2947596	0x00000002		CPU 1
+ 2947597	0x00000004		CPU 2
+ 2947598	0x00000008		CPU 3
+ 2947599	0x00000010		CPU 4
+ 2947600	0x00000020		CPU 5
+ 2947601	0x00000040		CPU 6
+ 2947602	0x00000080		CPU 7
+ 2947603	0x00000100		CPU 8
+ 2947604	0x00000200		CPU 9
+ 2947605	0x00000400		CPU 10
+ 2947606	0x00000800		CPU 11
+ 2947607	0x00001000		CPU 12
+ 2947608	0x00002000		CPU 13
+ 2947609	0x00004000		CPU 14
+ 2947610	0x00008000		CPU 15
+ 2947611	0x00010000		CPU 16
+ 2947612	0x00020000		CPU 17
+ 2947613	0x00040000		CPU 18
+ 2947614	0x00080000		CPU 19
+ 2947615	0x00100000		CPU 20
+ 2947616	0x00200000		CPU 21
+ 2947617	0x00400000		CPU 22
+ 2947618	0x00800000		CPU 23
+ 2947619	0x01000000		CPU 24
+ 2947620	0x02000000		CPU 25
+ 2947621	0x04000000		CPU 26
+ 2947622	0x08000000		CPU 27
+ 2947623	0x10000000		CPU 28
+ 2947624	0x20000000		CPU 29
+ 2947625	0x40000000		CPU 30
+ 2947626	0x80000000		CPU 31
+ 2947627	0x00000001		MPI
+2947628	0xffffffff		sh
+2947629	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;32;0;1;1;0;2048;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.147902e+02;1.634702e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2947640	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2947640	0xffffffff		chameleon_stest
+ 2947641	0xffffffff		chameleon_stest
+ 2947642	0xffffffff		cuda0000380000f
+ 2947646	0x00000001		CPU 0
+ 2947647	0x00000002		CPU 1
+ 2947648	0x00000004		CPU 2
+ 2947649	0x00000008		CPU 3
+ 2947650	0x00000010		CPU 4
+ 2947651	0x00000020		CPU 5
+ 2947652	0x00000040		CPU 6
+ 2947653	0x00000080		CPU 7
+ 2947654	0x00000100		CPU 8
+ 2947655	0x00000200		CPU 9
+ 2947656	0x00000400		CPU 10
+ 2947657	0x00000800		CPU 11
+ 2947658	0x00001000		CPU 12
+ 2947659	0x00002000		CPU 13
+ 2947660	0x00004000		CPU 14
+ 2947661	0x00008000		CPU 15
+ 2947662	0x00010000		CPU 16
+ 2947663	0x00020000		CPU 17
+ 2947664	0x00040000		CPU 18
+ 2947665	0x00080000		CPU 19
+ 2947666	0x00100000		CPU 20
+ 2947667	0x00200000		CPU 21
+ 2947668	0x00400000		CPU 22
+ 2947669	0x00800000		CPU 23
+ 2947670	0x01000000		CPU 24
+ 2947671	0x02000000		CPU 25
+ 2947672	0x04000000		CPU 26
+ 2947673	0x08000000		CPU 27
+ 2947674	0x10000000		CPU 28
+ 2947675	0x20000000		CPU 29
+ 2947676	0x40000000		CPU 30
+ 2947677	0x80000000		CPU 31
+ 2947678	0x00000001		MPI
+2947679	0xffffffff		sh
+2947680	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;32;0;1;1;0;256;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.108317e+02;1.693088e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2947703	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2947703	0xffffffff		chameleon_stest
+ 2947704	0xffffffff		chameleon_stest
+ 2947705	0xffffffff		cuda0000380000f
+ 2947709	0x00000001		CPU 0
+ 2947710	0x00000004		CPU 1
+ 2947711	0x00000010		CPU 2
+ 2947712	0x00000040		CPU 3
+ 2947713	0x00000100		CPU 4
+ 2947714	0x00000400		CPU 5
+ 2947715	0x00001000		CPU 6
+ 2947716	0x00004000		CPU 7
+ 2947717	0x00000001		MPI
+2947718	0xffffffff		sh
+2947719	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;8;0;1;1;0;4096;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.499689e+02;1.251245e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2947734	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2947734	0xffffffff		chameleon_stest
+ 2947735	0xffffffff		chameleon_stest
+ 2947736	0xffffffff		cuda0000380000f
+ 2947740	0x00000001		CPU 0
+ 2947741	0x00000002		CPU 1
+ 2947742	0x00000004		CPU 2
+ 2947743	0x00000008		CPU 3
+ 2947744	0x00000010		CPU 4
+ 2947745	0x00000020		CPU 5
+ 2947746	0x00000040		CPU 6
+ 2947747	0x00000080		CPU 7
+ 2947748	0x00000100		CPU 8
+ 2947749	0x00000200		CPU 9
+ 2947750	0x00000400		CPU 10
+ 2947751	0x00000800		CPU 11
+ 2947752	0x00001000		CPU 12
+ 2947753	0x00002000		CPU 13
+ 2947754	0x00004000		CPU 14
+ 2947755	0x00008000		CPU 15
+ 2947756	0x00000001		MPI
+2947757	0xffffffff		sh
+2947758	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;16;0;1;1;0;512;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.488656e+02;1.260518e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2947769	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2947769	0xffffffff		chameleon_stest
+ 2947770	0xffffffff		chameleon_stest
+ 2947771	0xffffffff		cuda0000380000f
+ 2947775	0x00000001		CPU 0
+ 2947776	0x00000004		CPU 1
+ 2947777	0x00000010		CPU 2
+ 2947778	0x00000040		CPU 3
+ 2947779	0x00000100		CPU 4
+ 2947780	0x00000400		CPU 5
+ 2947781	0x00001000		CPU 6
+ 2947782	0x00004000		CPU 7
+ 2947783	0x00008000		CPU 8
+ 2947784	0x00010000		CPU 9
+ 2947785	0x00020000		CPU 10
+ 2947786	0x00040000		CPU 11
+ 2947787	0x00080000		CPU 12
+ 2947788	0x00100000		CPU 13
+ 2947789	0x00200000		CPU 14
+ 2947790	0x00400000		CPU 15
+ 2947791	0x00800000		CPU 16
+ 2947792	0x01000000		CPU 17
+ 2947793	0x02000000		CPU 18
+ 2947794	0x04000000		CPU 19
+ 2947795	0x08000000		CPU 20
+ 2947796	0x10000000		CPU 21
+ 2947797	0x20000000		CPU 22
+ 2947798	0x40000000		CPU 23
+ 2947799	0x80000000		MPI
+2947800	0xffffffff		sh
+2947801	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;24;0;1;1;0;2048;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.149344e+02;1.632652e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2947810	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2947810	0xffffffff		chameleon_stest
+ 2947811	0xffffffff		chameleon_stest
+ 2947812	0xffffffff		cuda0000380000f
+ 2947816	0x00000001		CPU 0
+ 2947817	0x00000002		CPU 1
+ 2947818	0x00000004		CPU 2
+ 2947819	0x00000008		CPU 3
+ 2947820	0x00000010		CPU 4
+ 2947821	0x00000020		CPU 5
+ 2947822	0x00000040		CPU 6
+ 2947823	0x00000080		CPU 7
+ 2947824	0x00000100		CPU 8
+ 2947825	0x00000200		CPU 9
+ 2947826	0x00000400		CPU 10
+ 2947827	0x00000800		CPU 11
+ 2947828	0x00001000		CPU 12
+ 2947829	0x00002000		CPU 13
+ 2947830	0x00004000		CPU 14
+ 2947831	0x00008000		CPU 15
+ 2947832	0x00010000		CPU 16
+ 2947833	0x00020000		CPU 17
+ 2947834	0x00040000		CPU 18
+ 2947835	0x00080000		CPU 19
+ 2947836	0x00100000		CPU 20
+ 2947837	0x00200000		CPU 21
+ 2947838	0x00400000		CPU 22
+ 2947839	0x00800000		CPU 23
+ 2947840	0x01000000		CPU 24
+ 2947841	0x02000000		CPU 25
+ 2947842	0x04000000		CPU 26
+ 2947843	0x08000000		CPU 27
+ 2947844	0x10000000		CPU 28
+ 2947845	0x20000000		CPU 29
+ 2947846	0x40000000		CPU 30
+ 2947847	0x80000000		CPU 31
+ 2947848	0x00000001		MPI
+2947849	0xffffffff		sh
+2947850	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;32;0;1;1;0;1024;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.263315e+02;1.485360e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2947856	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2947856	0xffffffff		chameleon_stest
+ 2947857	0xffffffff		chameleon_stest
+ 2947858	0xffffffff		cuda0000380000f
+ 2947862	0x00000001		CPU 0
+ 2947863	0x00000004		CPU 1
+ 2947864	0x00000010		CPU 2
+ 2947865	0x00000040		CPU 3
+ 2947866	0x00000100		CPU 4
+ 2947867	0x00000400		CPU 5
+ 2947868	0x00001000		CPU 6
+ 2947869	0x00004000		CPU 7
+ 2947870	0x00000001		MPI
+2947871	0xffffffff		sh
+2947872	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;8;0;1;1;0;256;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.688888e+02;1.111073e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2947898	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2947898	0xffffffff		chameleon_stest
+ 2947899	0xffffffff		chameleon_stest
+ 2947900	0xffffffff		cuda0000380000f
+ 2947904	0x00000001		CPU 0
+ 2947905	0x00000002		CPU 1
+ 2947906	0x00000004		CPU 2
+ 2947907	0x00000008		CPU 3
+ 2947908	0x00000010		CPU 4
+ 2947909	0x00000020		CPU 5
+ 2947910	0x00000040		CPU 6
+ 2947911	0x00000080		CPU 7
+ 2947912	0x00000100		CPU 8
+ 2947913	0x00000200		CPU 9
+ 2947914	0x00000400		CPU 10
+ 2947915	0x00000800		CPU 11
+ 2947916	0x00001000		CPU 12
+ 2947917	0x00002000		CPU 13
+ 2947918	0x00004000		CPU 14
+ 2947919	0x00008000		CPU 15
+ 2947920	0x00000001		MPI
+2947921	0xffffffff		sh
+2947922	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;16;0;1;1;0;256;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.556658e+02;1.205453e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2947934	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2947934	0xffffffff		chameleon_stest
+ 2947935	0xffffffff		chameleon_stest
+ 2947936	0xffffffff		cuda0000380000f
+ 2947940	0x00000001		CPU 0
+ 2947941	0x00000002		CPU 1
+ 2947942	0x00000004		CPU 2
+ 2947943	0x00000008		CPU 3
+ 2947944	0x00000010		CPU 4
+ 2947945	0x00000020		CPU 5
+ 2947946	0x00000040		CPU 6
+ 2947947	0x00000080		CPU 7
+ 2947948	0x00000100		CPU 8
+ 2947949	0x00000200		CPU 9
+ 2947950	0x00000400		CPU 10
+ 2947951	0x00000800		CPU 11
+ 2947952	0x00001000		CPU 12
+ 2947953	0x00002000		CPU 13
+ 2947954	0x00004000		CPU 14
+ 2947955	0x00008000		CPU 15
+ 2947956	0x00010000		CPU 16
+ 2947957	0x00020000		CPU 17
+ 2947958	0x00040000		CPU 18
+ 2947959	0x00080000		CPU 19
+ 2947960	0x00100000		CPU 20
+ 2947961	0x00200000		CPU 21
+ 2947962	0x00400000		CPU 22
+ 2947963	0x00800000		CPU 23
+ 2947964	0x01000000		CPU 24
+ 2947965	0x02000000		CPU 25
+ 2947966	0x04000000		CPU 26
+ 2947967	0x08000000		CPU 27
+ 2947968	0x10000000		CPU 28
+ 2947969	0x20000000		CPU 29
+ 2947970	0x40000000		CPU 30
+ 2947971	0x80000000		CPU 31
+ 2947972	0x00000001		MPI
+2947973	0xffffffff		sh
+2947974	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;32;0;1;1;0;4096;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.258120e+02;1.491494e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2947984	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2947984	0xffffffff		chameleon_stest
+ 2947985	0xffffffff		chameleon_stest
+ 2947986	0xffffffff		cuda0000380000f
+ 2947990	0x00000001		CPU 0
+ 2947991	0x00000004		CPU 1
+ 2947992	0x00000010		CPU 2
+ 2947993	0x00000040		CPU 3
+ 2947994	0x00000100		CPU 4
+ 2947995	0x00000400		CPU 5
+ 2947996	0x00001000		CPU 6
+ 2947997	0x00004000		CPU 7
+ 2947998	0x00000001		MPI
+2947999	0xffffffff		sh
+2948000	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;8;0;1;1;0;512;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.534615e+02;1.222769e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2948010	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2948010	0xffffffff		chameleon_stest
+ 2948011	0xffffffff		chameleon_stest
+ 2948012	0xffffffff		cuda0000380000f
+ 2948016	0x00000001		CPU 0
+ 2948017	0x00000002		CPU 1
+ 2948018	0x00000004		CPU 2
+ 2948019	0x00000008		CPU 3
+ 2948020	0x00000010		CPU 4
+ 2948021	0x00000020		CPU 5
+ 2948022	0x00000040		CPU 6
+ 2948023	0x00000080		CPU 7
+ 2948024	0x00000100		CPU 8
+ 2948025	0x00000200		CPU 9
+ 2948026	0x00000400		CPU 10
+ 2948027	0x00000800		CPU 11
+ 2948028	0x00001000		CPU 12
+ 2948029	0x00002000		CPU 13
+ 2948030	0x00004000		CPU 14
+ 2948031	0x00008000		CPU 15
+ 2948032	0x00010000		CPU 16
+ 2948033	0x00020000		CPU 17
+ 2948034	0x00040000		CPU 18
+ 2948035	0x00080000		CPU 19
+ 2948036	0x00100000		CPU 20
+ 2948037	0x00200000		CPU 21
+ 2948038	0x00400000		CPU 22
+ 2948039	0x00800000		CPU 23
+ 2948040	0x01000000		CPU 24
+ 2948041	0x02000000		CPU 25
+ 2948042	0x04000000		CPU 26
+ 2948043	0x08000000		CPU 27
+ 2948044	0x10000000		CPU 28
+ 2948045	0x20000000		CPU 29
+ 2948046	0x40000000		CPU 30
+ 2948047	0x80000000		CPU 31
+ 2948048	0x00000001		MPI
+2948049	0xffffffff		sh
+2948050	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;32;0;1;1;0;2048;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.145068e+02;1.638748e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2948058	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2948058	0xffffffff		chameleon_stest
+ 2948059	0xffffffff		chameleon_stest
+ 2948060	0xffffffff		cuda0000380000f
+ 2948064	0x00000001		CPU 0
+ 2948065	0x00000004		CPU 1
+ 2948066	0x00000010		CPU 2
+ 2948067	0x00000040		CPU 3
+ 2948068	0x00000100		CPU 4
+ 2948069	0x00000400		CPU 5
+ 2948070	0x00001000		CPU 6
+ 2948071	0x00004000		CPU 7
+ 2948072	0x00000001		MPI
+2948073	0xffffffff		sh
+2948074	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;8;0;1;1;0;2048;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.493829e+02;1.256153e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2948084	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2948084	0xffffffff		chameleon_stest
+ 2948085	0xffffffff		chameleon_stest
+ 2948086	0xffffffff		cuda0000380000f
+ 2948090	0x00000001		CPU 0
+ 2948091	0x00000004		CPU 1
+ 2948092	0x00000010		CPU 2
+ 2948093	0x00000040		CPU 3
+ 2948094	0x00000100		CPU 4
+ 2948095	0x00000400		CPU 5
+ 2948096	0x00001000		CPU 6
+ 2948097	0x00004000		CPU 7
+ 2948098	0x00000001		MPI
+2948099	0xffffffff		sh
+2948100	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;8;0;1;1;0;4096;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.484875e+02;1.263728e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2948125	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2948125	0xffffffff		chameleon_stest
+ 2948126	0xffffffff		chameleon_stest
+ 2948127	0xffffffff		cuda0000380000f
+ 2948131	0x00000001		CPU 0
+ 2948132	0x00000004		CPU 1
+ 2948133	0x00000010		CPU 2
+ 2948134	0x00000040		CPU 3
+ 2948135	0x00000100		CPU 4
+ 2948136	0x00000400		CPU 5
+ 2948137	0x00001000		CPU 6
+ 2948138	0x00004000		CPU 7
+ 2948139	0x00008000		CPU 8
+ 2948140	0x00010000		CPU 9
+ 2948141	0x00020000		CPU 10
+ 2948142	0x00040000		CPU 11
+ 2948143	0x00080000		CPU 12
+ 2948144	0x00100000		CPU 13
+ 2948145	0x00200000		CPU 14
+ 2948146	0x00400000		CPU 15
+ 2948147	0x00800000		CPU 16
+ 2948148	0x01000000		CPU 17
+ 2948149	0x02000000		CPU 18
+ 2948150	0x04000000		CPU 19
+ 2948151	0x08000000		CPU 20
+ 2948152	0x10000000		CPU 21
+ 2948153	0x20000000		CPU 22
+ 2948154	0x40000000		CPU 23
+ 2948155	0x80000000		MPI
+2948156	0xffffffff		sh
+2948157	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;24;0;1;1;0;2048;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.164677e+02;1.611158e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2948164	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2948164	0xffffffff		chameleon_stest
+ 2948165	0xffffffff		chameleon_stest
+ 2948166	0xffffffff		cuda0000380000f
+ 2948170	0x00000001		CPU 0
+ 2948171	0x00000002		CPU 1
+ 2948172	0x00000004		CPU 2
+ 2948173	0x00000008		CPU 3
+ 2948174	0x00000010		CPU 4
+ 2948175	0x00000020		CPU 5
+ 2948176	0x00000040		CPU 6
+ 2948177	0x00000080		CPU 7
+ 2948178	0x00000100		CPU 8
+ 2948179	0x00000200		CPU 9
+ 2948180	0x00000400		CPU 10
+ 2948181	0x00000800		CPU 11
+ 2948182	0x00001000		CPU 12
+ 2948183	0x00002000		CPU 13
+ 2948184	0x00004000		CPU 14
+ 2948185	0x00008000		CPU 15
+ 2948186	0x00000001		MPI
+2948187	0xffffffff		sh
+2948188	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;16;0;1;1;0;1024;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.489724e+02;1.259614e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2948206	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2948206	0xffffffff		chameleon_stest
+ 2948207	0xffffffff		chameleon_stest
+ 2948208	0xffffffff		cuda0000380000f
+ 2948212	0x00000001		CPU 0
+ 2948213	0x00000002		CPU 1
+ 2948214	0x00000004		CPU 2
+ 2948215	0x00000008		CPU 3
+ 2948216	0x00000010		CPU 4
+ 2948217	0x00000020		CPU 5
+ 2948218	0x00000040		CPU 6
+ 2948219	0x00000080		CPU 7
+ 2948220	0x00000100		CPU 8
+ 2948221	0x00000200		CPU 9
+ 2948222	0x00000400		CPU 10
+ 2948223	0x00000800		CPU 11
+ 2948224	0x00001000		CPU 12
+ 2948225	0x00002000		CPU 13
+ 2948226	0x00004000		CPU 14
+ 2948227	0x00008000		CPU 15
+ 2948228	0x00000001		MPI
+2948229	0xffffffff		sh
+2948230	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;16;0;1;1;0;1024;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.480099e+02;1.267806e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2948238	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2948238	0xffffffff		chameleon_stest
+ 2948239	0xffffffff		chameleon_stest
+ 2948240	0xffffffff		cuda0000380000f
+ 2948244	0x00000001		CPU 0
+ 2948245	0x00000004		CPU 1
+ 2948246	0x00000010		CPU 2
+ 2948247	0x00000040		CPU 3
+ 2948248	0x00000100		CPU 4
+ 2948249	0x00000400		CPU 5
+ 2948250	0x00001000		CPU 6
+ 2948251	0x00004000		CPU 7
+ 2948252	0x00000001		MPI
+2948253	0xffffffff		sh
+2948254	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;8;0;1;1;0;256;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.673932e+02;1.121001e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2948262	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2948262	0xffffffff		chameleon_stest
+ 2948263	0xffffffff		chameleon_stest
+ 2948264	0xffffffff		cuda0000380000f
+ 2948268	0x00000001		CPU 0
+ 2948269	0x00000002		CPU 1
+ 2948270	0x00000004		CPU 2
+ 2948271	0x00000008		CPU 3
+ 2948272	0x00000010		CPU 4
+ 2948273	0x00000020		CPU 5
+ 2948274	0x00000040		CPU 6
+ 2948275	0x00000080		CPU 7
+ 2948276	0x00000100		CPU 8
+ 2948277	0x00000200		CPU 9
+ 2948278	0x00000400		CPU 10
+ 2948279	0x00000800		CPU 11
+ 2948280	0x00001000		CPU 12
+ 2948281	0x00002000		CPU 13
+ 2948282	0x00004000		CPU 14
+ 2948283	0x00008000		CPU 15
+ 2948284	0x00010000		CPU 16
+ 2948285	0x00020000		CPU 17
+ 2948286	0x00040000		CPU 18
+ 2948287	0x00080000		CPU 19
+ 2948288	0x00100000		CPU 20
+ 2948289	0x00200000		CPU 21
+ 2948290	0x00400000		CPU 22
+ 2948291	0x00800000		CPU 23
+ 2948292	0x01000000		CPU 24
+ 2948293	0x02000000		CPU 25
+ 2948294	0x04000000		CPU 26
+ 2948295	0x08000000		CPU 27
+ 2948296	0x10000000		CPU 28
+ 2948297	0x20000000		CPU 29
+ 2948298	0x40000000		CPU 30
+ 2948299	0x80000000		CPU 31
+ 2948300	0x00000001		MPI
+2948301	0xffffffff		sh
+2948302	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;32;0;1;1;0;4096;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.254400e+02;1.495917e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2948312	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2948312	0xffffffff		chameleon_stest
+ 2948313	0xffffffff		chameleon_stest
+ 2948314	0xffffffff		cuda0000380000f
+ 2948318	0x00000001		CPU 0
+ 2948319	0x00000002		CPU 1
+ 2948320	0x00000004		CPU 2
+ 2948321	0x00000008		CPU 3
+ 2948322	0x00000010		CPU 4
+ 2948323	0x00000020		CPU 5
+ 2948324	0x00000040		CPU 6
+ 2948325	0x00000080		CPU 7
+ 2948326	0x00000100		CPU 8
+ 2948327	0x00000200		CPU 9
+ 2948328	0x00000400		CPU 10
+ 2948329	0x00000800		CPU 11
+ 2948330	0x00001000		CPU 12
+ 2948331	0x00002000		CPU 13
+ 2948332	0x00004000		CPU 14
+ 2948333	0x00008000		CPU 15
+ 2948334	0x00000001		MPI
+2948335	0xffffffff		sh
+2948336	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;16;0;1;1;0;512;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.527086e+02;1.228797e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2948362	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2948362	0xffffffff		chameleon_stest
+ 2948363	0xffffffff		chameleon_stest
+ 2948364	0xffffffff		cuda0000380000f
+ 2948368	0x00000001		CPU 0
+ 2948369	0x00000002		CPU 1
+ 2948370	0x00000004		CPU 2
+ 2948371	0x00000008		CPU 3
+ 2948372	0x00000010		CPU 4
+ 2948373	0x00000020		CPU 5
+ 2948374	0x00000040		CPU 6
+ 2948375	0x00000080		CPU 7
+ 2948376	0x00000100		CPU 8
+ 2948377	0x00000200		CPU 9
+ 2948378	0x00000400		CPU 10
+ 2948379	0x00000800		CPU 11
+ 2948380	0x00001000		CPU 12
+ 2948381	0x00002000		CPU 13
+ 2948382	0x00004000		CPU 14
+ 2948383	0x00008000		CPU 15
+ 2948384	0x00000001		MPI
+2948385	0xffffffff		sh
+2948386	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;16;0;1;1;0;2048;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.468676e+02;1.277667e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2948398	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2948398	0xffffffff		chameleon_stest
+ 2948399	0xffffffff		chameleon_stest
+ 2948400	0xffffffff		cuda0000380000f
+ 2948404	0x00000001		CPU 0
+ 2948405	0x00000004		CPU 1
+ 2948406	0x00000010		CPU 2
+ 2948407	0x00000040		CPU 3
+ 2948408	0x00000100		CPU 4
+ 2948409	0x00000400		CPU 5
+ 2948410	0x00001000		CPU 6
+ 2948411	0x00004000		CPU 7
+ 2948412	0x00000001		MPI
+2948413	0xffffffff		sh
+2948414	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;8;0;1;1;0;512;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.534452e+02;1.222898e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2948424	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2948424	0xffffffff		chameleon_stest
+ 2948425	0xffffffff		chameleon_stest
+ 2948426	0xffffffff		cuda0000380000f
+ 2948430	0x00000001		CPU 0
+ 2948431	0x00000002		CPU 1
+ 2948432	0x00000004		CPU 2
+ 2948433	0x00000008		CPU 3
+ 2948434	0x00000010		CPU 4
+ 2948435	0x00000020		CPU 5
+ 2948436	0x00000040		CPU 6
+ 2948437	0x00000080		CPU 7
+ 2948438	0x00000100		CPU 8
+ 2948439	0x00000200		CPU 9
+ 2948440	0x00000400		CPU 10
+ 2948441	0x00000800		CPU 11
+ 2948442	0x00001000		CPU 12
+ 2948443	0x00002000		CPU 13
+ 2948444	0x00004000		CPU 14
+ 2948445	0x00008000		CPU 15
+ 2948446	0x00010000		CPU 16
+ 2948447	0x00020000		CPU 17
+ 2948448	0x00040000		CPU 18
+ 2948449	0x00080000		CPU 19
+ 2948450	0x00100000		CPU 20
+ 2948451	0x00200000		CPU 21
+ 2948452	0x00400000		CPU 22
+ 2948453	0x00800000		CPU 23
+ 2948454	0x01000000		CPU 24
+ 2948455	0x02000000		CPU 25
+ 2948456	0x04000000		CPU 26
+ 2948457	0x08000000		CPU 27
+ 2948458	0x10000000		CPU 28
+ 2948459	0x20000000		CPU 29
+ 2948460	0x40000000		CPU 30
+ 2948461	0x80000000		CPU 31
+ 2948462	0x00000001		MPI
+2948463	0xffffffff		sh
+2948464	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;32;0;1;1;0;512;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.107205e+02;1.694789e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2948470	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2948470	0xffffffff		chameleon_stest
+ 2948471	0xffffffff		chameleon_stest
+ 2948472	0xffffffff		cuda0000380000f
+ 2948476	0x00000001		CPU 0
+ 2948477	0x00000002		CPU 1
+ 2948478	0x00000004		CPU 2
+ 2948479	0x00000008		CPU 3
+ 2948480	0x00000010		CPU 4
+ 2948481	0x00000020		CPU 5
+ 2948482	0x00000040		CPU 6
+ 2948483	0x00000080		CPU 7
+ 2948484	0x00000100		CPU 8
+ 2948485	0x00000200		CPU 9
+ 2948486	0x00000400		CPU 10
+ 2948487	0x00000800		CPU 11
+ 2948488	0x00001000		CPU 12
+ 2948489	0x00002000		CPU 13
+ 2948490	0x00004000		CPU 14
+ 2948491	0x00008000		CPU 15
+ 2948492	0x00000001		MPI
+2948493	0xffffffff		sh
+2948494	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;16;0;1;1;0;2048;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.459902e+02;1.285345e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2948504	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2948504	0xffffffff		chameleon_stest
+ 2948505	0xffffffff		chameleon_stest
+ 2948506	0xffffffff		cuda0000380000f
+ 2948510	0x00000001		CPU 0
+ 2948511	0x00000004		CPU 1
+ 2948512	0x00000010		CPU 2
+ 2948513	0x00000040		CPU 3
+ 2948514	0x00000100		CPU 4
+ 2948515	0x00000400		CPU 5
+ 2948516	0x00001000		CPU 6
+ 2948517	0x00004000		CPU 7
+ 2948518	0x00000001		MPI
+2948519	0xffffffff		sh
+2948520	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;8;0;1;1;0;256;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.680011e+02;1.116944e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2948545	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2948545	0xffffffff		chameleon_stest
+ 2948546	0xffffffff		chameleon_stest
+ 2948547	0xffffffff		cuda0000380000f
+ 2948551	0x00000001		CPU 0
+ 2948552	0x00000002		CPU 1
+ 2948553	0x00000004		CPU 2
+ 2948554	0x00000008		CPU 3
+ 2948555	0x00000010		CPU 4
+ 2948556	0x00000020		CPU 5
+ 2948557	0x00000040		CPU 6
+ 2948558	0x00000080		CPU 7
+ 2948559	0x00000100		CPU 8
+ 2948560	0x00000200		CPU 9
+ 2948561	0x00000400		CPU 10
+ 2948562	0x00000800		CPU 11
+ 2948563	0x00001000		CPU 12
+ 2948564	0x00002000		CPU 13
+ 2948565	0x00004000		CPU 14
+ 2948566	0x00008000		CPU 15
+ 2948567	0x00010000		CPU 16
+ 2948568	0x00020000		CPU 17
+ 2948569	0x00040000		CPU 18
+ 2948570	0x00080000		CPU 19
+ 2948571	0x00100000		CPU 20
+ 2948572	0x00200000		CPU 21
+ 2948573	0x00400000		CPU 22
+ 2948574	0x00800000		CPU 23
+ 2948575	0x01000000		CPU 24
+ 2948576	0x02000000		CPU 25
+ 2948577	0x04000000		CPU 26
+ 2948578	0x08000000		CPU 27
+ 2948579	0x10000000		CPU 28
+ 2948580	0x20000000		CPU 29
+ 2948581	0x40000000		CPU 30
+ 2948582	0x80000000		CPU 31
+ 2948583	0x00000001		MPI
+2948584	0xffffffff		sh
+2948585	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;32;0;1;1;0;4096;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.262073e+02;1.486822e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2948593	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2948593	0xffffffff		chameleon_stest
+ 2948594	0xffffffff		chameleon_stest
+ 2948595	0xffffffff		cuda0000380000f
+ 2948599	0x00000001		CPU 0
+ 2948600	0x00000002		CPU 1
+ 2948601	0x00000004		CPU 2
+ 2948602	0x00000008		CPU 3
+ 2948603	0x00000010		CPU 4
+ 2948604	0x00000020		CPU 5
+ 2948605	0x00000040		CPU 6
+ 2948606	0x00000080		CPU 7
+ 2948607	0x00000100		CPU 8
+ 2948608	0x00000200		CPU 9
+ 2948609	0x00000400		CPU 10
+ 2948610	0x00000800		CPU 11
+ 2948611	0x00001000		CPU 12
+ 2948612	0x00002000		CPU 13
+ 2948613	0x00004000		CPU 14
+ 2948614	0x00008000		CPU 15
+ 2948615	0x00000001		MPI
+2948616	0xffffffff		sh
+2948617	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;16;0;1;1;0;256;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.557438e+02;1.204850e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2948625	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2948625	0xffffffff		chameleon_stest
+ 2948626	0xffffffff		chameleon_stest
+ 2948627	0xffffffff		cuda0000380000f
+ 2948631	0x00000001		CPU 0
+ 2948632	0x00000002		CPU 1
+ 2948633	0x00000004		CPU 2
+ 2948634	0x00000008		CPU 3
+ 2948635	0x00000010		CPU 4
+ 2948636	0x00000020		CPU 5
+ 2948637	0x00000040		CPU 6
+ 2948638	0x00000080		CPU 7
+ 2948639	0x00000100		CPU 8
+ 2948640	0x00000200		CPU 9
+ 2948641	0x00000400		CPU 10
+ 2948642	0x00000800		CPU 11
+ 2948643	0x00001000		CPU 12
+ 2948644	0x00002000		CPU 13
+ 2948645	0x00004000		CPU 14
+ 2948646	0x00008000		CPU 15
+ 2948647	0x00010000		CPU 16
+ 2948648	0x00020000		CPU 17
+ 2948649	0x00040000		CPU 18
+ 2948650	0x00080000		CPU 19
+ 2948651	0x00100000		CPU 20
+ 2948652	0x00200000		CPU 21
+ 2948653	0x00400000		CPU 22
+ 2948654	0x00800000		CPU 23
+ 2948655	0x01000000		CPU 24
+ 2948656	0x02000000		CPU 25
+ 2948657	0x04000000		CPU 26
+ 2948658	0x08000000		CPU 27
+ 2948659	0x10000000		CPU 28
+ 2948660	0x20000000		CPU 29
+ 2948661	0x40000000		CPU 30
+ 2948662	0x80000000		CPU 31
+ 2948663	0x00000001		MPI
+2948664	0xffffffff		sh
+2948665	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;32;0;1;1;0;256;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.102090e+02;1.702655e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2948676	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2948676	0xffffffff		chameleon_stest
+ 2948677	0xffffffff		chameleon_stest
+ 2948678	0xffffffff		cuda0000380000f
+ 2948682	0x00000001		CPU 0
+ 2948683	0x00000004		CPU 1
+ 2948684	0x00000010		CPU 2
+ 2948685	0x00000040		CPU 3
+ 2948686	0x00000100		CPU 4
+ 2948687	0x00000400		CPU 5
+ 2948688	0x00001000		CPU 6
+ 2948689	0x00004000		CPU 7
+ 2948690	0x00008000		CPU 8
+ 2948691	0x00010000		CPU 9
+ 2948692	0x00020000		CPU 10
+ 2948693	0x00040000		CPU 11
+ 2948694	0x00080000		CPU 12
+ 2948695	0x00100000		CPU 13
+ 2948696	0x00200000		CPU 14
+ 2948697	0x00400000		CPU 15
+ 2948698	0x00800000		CPU 16
+ 2948699	0x01000000		CPU 17
+ 2948700	0x02000000		CPU 18
+ 2948701	0x04000000		CPU 19
+ 2948702	0x08000000		CPU 20
+ 2948703	0x10000000		CPU 21
+ 2948704	0x20000000		CPU 22
+ 2948705	0x40000000		CPU 23
+ 2948706	0x80000000		MPI
+2948707	0xffffffff		sh
+2948708	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;24;0;1;1;0;512;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.053868e+02;1.780564e+03
+2943734	0xffffffff		/lib/systemd/systemd
+2943737	0xffffffff		(sd-pam)
+2943741	0xffffffff		/bin/bash
+2948718	0xffffffff		/home/users/lbassis/spack/opt/spack/linux-debian12-skylake/gcc-
+ 2948718	0xffffffff		chameleon_stest
+ 2948719	0xffffffff		chameleon_stest
+ 2948720	0xffffffff		cuda0000380000f
+ 2948724	0x00000001		CPU 0
+ 2948725	0x00000004		CPU 1
+ 2948726	0x00000010		CPU 2
+ 2948727	0x00000040		CPU 3
+ 2948728	0x00000100		CPU 4
+ 2948729	0x00000400		CPU 5
+ 2948730	0x00001000		CPU 6
+ 2948731	0x00004000		CPU 7
+ 2948732	0x00000001		MPI
+2948733	0xffffffff		sh
+2948734	0xffffffff		hwloc-ps
+== Binding for rank 0 on node tupi3 ==
+== End of bindings ==
+Id;Function;threads;gpus;P;Q;mtxfmt;nb;m;n;lda;seedA;bump;tsub;time;gflops
+0;sgetrf_nopiv;8;0;1;1;0;2048;65536;65536;65536;846930886;0.000000e+00;0.000000e+00;1.490154e+02;1.259252e+03

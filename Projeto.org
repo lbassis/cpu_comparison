@@ -1,0 +1,574 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+
+#+TITLE:  Estudo de técnicas de agregação espaço-temporal para rastros de execução de aplicações com paralelismo de tarefas
+#+AUTHOR: Lucas Barros de Assis
+#+EMAIL: lbassis@inf.ufrgs.br
+#+DATE: Março@@latex:}{@@2024
+#+STARTUP: overview indent
+#+LANGUAGE: pt-br
+#+OPTIONS: H:3 creator:nil timestamp:nil skip:nil toc:nil num:t ^:nil ~:~
+#+OPTIONS: author:nil title:t date:t
+#+TAGS: noexport(n) deprecated(d) ignore(i)
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LaTeX_CLASS: IIUFRGS
+#+LaTeX_CLASS_OPTIONS: [ppgc]
+
+#+LATEX_HEADER: \usepackage{tabularx}
+#+LATEX_HEADER: \usepackage{hyperref}
+
+#+LATEX_HEADER: \usepackage[utf8]{inputenc}
+#+LATEX_HEADER: \usepackage{booktabs}
+#+LATEX_HEADER: \usepackage{enumitem}
+#+LATEX_HEADER: \usepackage[T1]{fontenc}
+
+#+LaTeX_HEADER: \usepackage[linesnumbered,ruled,boxed,commentsnumbered]{algorithm2e}
+
+#+LATEX_HEADER: \usepackage{listings}
+
+#+LATEX_HEADER: \author{Barros de Assis}{Lucas}
+#+LATEX_HEADER: \advisor[Prof.~Dr.]{Mello Schnorr}{Lucas}
+#+LATEX_HEADER: \def\titlepagespecificinfo{Proposta de Projeto de Pesquisa}
+
+#+LaTeX_HEADER: \def\manualleg[#1]{{\centering\legend{#1}\par}}
+#+LATEX_HEADER: \renewcommand{\nominataCoord}{Prof.~Alberto Egon Schaeffer Filho}
+#+LATEX_HEADER: \renewcommand{\nominataCoordname}{Coordenador do PPGC}
+
+#+LaTeX_HEADER: \keyword{x}
+#+LaTeX_HEADER: \translatedkeyword{x}
+#+LaTeX_HEADER: \translatedtitle{x}
+
+* Revisões                                                         :noexport:
+** 2024-03-25
+*** Sugestão de título
+Estudo de técnicas de agregação espaço-temporal para rastros de
+execução de aplicações com paralelismo de tarefas
+
+* Pre Text and configurations                          :noexport:ignore:
+** Latex configurations                                             :ignore:
+#+BEGIN_EXPORT latex
+\def\etal{~\textit{et al.}\xspace}
+\def\ie{i.e.,\xspace}
+\setlist[itemize]{noitemsep}
+#+END_EXPORT
+
+** Pre Text                                                :noexport:ignore:
+*** Cover                                                 :noexport:ignore:
+#+BEGIN_EXPORT latex
+% folha de rosto
+% às vezes é necessário redefinir algum comando logo antes de produzir
+% a folha de rosto:
+% \renewcommand{\coordname}{Coordenadora do Curso}
+% \maketitle
+#+END_EXPORT
+*** Dedic                                                 :noexport:ignore:
+#+BEGIN_EXPORT latex
+\clearpage
+\begin{flushright}
+\mbox{}\vfill
+{\sffamily\itshape
+``A emancipação dos trabalhadores será obra dos próprios trabalhadores.''\\}
+--- \textsc{Karl Marx}
+\end{flushright}
+#+END_EXPORT
+*** Thanks                                                :noexport:ignore:
+#+BEGIN_EXPORT latex
+%\chapter*{Acknowledgements}
+\chapter*{Agradecimentos}
+#+END_EXPORT
+
+#+LaTeX: \def\ACKLINE{\\}
+
+*** Resumo                                                :noexport:ignore:
+
+#+LaTeX: \begin{abstract}
+x
+#+LaTeX: \end{abstract}
+
+*** Abstract                                              :noexport:ignore:
+
+#+LaTeX: \begin{translatedabstract}
+#+LaTeX: \end{translatedabstract}
+
+*** Lists                                                 :noexport:ignore:
+#+BEGIN_EXPORT latex
+
+% lista de abreviaturas e siglas
+% o parametro deve ser a abreviatura mais longa
+% A NBR 14724:2011 estipula que a ordem das abreviações
+% na lista deve ser alfabética (como no exemplo abaixo).
+\begin{listofabbrv}{CSEM}
+        \item[AMR] \textit{Adaptive Mesh Refinement}
+        \item[ANP] Agência Nacional do Petróleo, Gás Natural e Biocombustíveis
+        \item[CSEM] \textit{Controlled Source Electromagnetics}
+        \item[mCSEM] \textit{Marine Controlled Source Electromagnetics}
+        \item[MARE2DEM] \textit{Modeling with Adaptively Refined Elements for 2D Electromagetics}
+        \item[MR3D] Marlim R3D
+\end{listofabbrv}
+
+% idem para a lista de símbolos
+%\begin{listofsymbols}{$\alpha\beta\pi\omega$}
+%       \item[$\sum{\frac{a}{b}}$] Somatório do produtório
+%       \item[$\alpha\beta\pi\omega$] Fator de inconstância do resultado
+%\end{listofsymbols}
+
+% lista de figuras
+\listoffigures
+
+% lista de tabelas
+\listoftables
+
+% sumario
+\tableofcontents
+#+END_EXPORT
+* Introdução
+
+A computação de alto desempenho consiste em um conjunto de técnicas
+utilizadas para a resolução de problemas computacionais que exigem um
+volumoso processamento de dados, como ferramentas de simulação de
+fenômenos físicos cite:ondes, de exploração de gás e petróleo
+cite:AlvesS23, ou de análise de dados geoestatísticos cite:NesiLS21.
+
+Para extrair o máximo de desempenho possível em computações de alto desempenho,
+diferentes modelos de programação foram elaborados para permitir o
+desenvolvimento de aplicações paralelas. Simulações físicas, por exemplo,
+costumam alternar entre fases de comunicação e de cálculo.
+Depois de inicializar os dados, essas aplicações passam por uma fase de comunicação, em
+que cada computador recebe uma parte dos dados do problema, seguida por uma fase
+de cálculo simultânea e paralela, até que haja a necessidade de sincronizar os dados novamente.
+De maneira similar, os aceleradores de cálculo, como por exemplo as GPUs, necessitam de uma
+fase inicial de transferência de dados para sua memória local para então iniciarem suas execuções
+massivamente paralelas.
+Esse modelo de programação é chamado de /fork-and-join/, em que uma execução sequencial
+em um dado momento se divide em diversos fluxos paralelos que, ao concluírem suas
+tarefas, são sincronizados no fluxo principal novamente.
+Nesses casos, existe um comportamento bem definido constituído por fases de divisão e sincronização
+facilmente identificáveis.
+
+Técnicas alternativas, como o paralelismo por tarefas dependentes
+cite:subhlok1993exploiting cite:starpu, não apresentam um
+comportamento tão uniforme. Esse modelo conta com trechos adicionais
+de código usados para descrever as tarefas a serem executadas em
+função das dependências dos dados utilizados. A partir dessas
+descrições, um suporte de execução cite:starpu decide, a
+cada momento em que uma unidade se torna disponível, qual a tarefa
+mais apropriada para ser nela executada. Através da alocação dinâmica de
+tarefas, coordenada pelo escalonador do suporte de execução, deixam de existir
+etapas bem definidas em tempo de execução, já que cálculos de uma etapa posterior de um
+algoritmo podem ser executados simultaneamente a outros mais iniciais desde que suas
+dependências sejam respeitadas.
+
+# Rastreamento
+
+Uma das maneiras de analisar aplicações paralelas é através do rastreamento de
+suas execuções. A partir da instrumentação do código é possível identificar quais funções
+foram executadas e quando. Essas informações podem ser visualizadas posteriormente a
+partir de ferramentas especializadas, como por exemplo o StarVZ cite:starvz.
+No caso de aplicações paralelas, essa visualização costuma separar o fluxo
+registrado em função das unidades de cálculo disponíveis, e através
+desse registro torna-se possível identificar, por exemplo, períodos de ociosidade em
+determinados processadores, que resultam em um desempenho aquém do desejado.
+   
+Os avanços da área permitiram que computadores de maior porte fossem construídos, o que
+resulta em cálculos mais extensos. Com isso, a análise dos rastros de execução se tornou
+mais difícil, já que é necessário visualizar mais componentes simultaneamente. A visualização
+de rastros parciais comprometeria a análise do comportamento geral da execução, então é
+necessário empregar uma solução capaz de capturar toda a duração da aplicação de uma única vez cite:nesi.
+
+A Figura [[img.gantt]] apresenta o rastro de execução de uma aplicação de
+geoestatística, onde cada tarefa a ser executada é representada por
+uma cor ao longo de uma linha do tempo. Nesi et al cite:nesi apontam que existem
+diversos períodos de ociosidade na execução dos núcleos CUDA que são pouco
+visíveis na visualização convencional.
+
+#+NAME: img.gantt
+#+ATTR_LATEX: :width 0.98\linewidth
+#+CAPTION: Fonte: cite:nesi.
+[[./gantt.png]]
+
+# Trabalhos relacionados
+
+Ferramentas como Vampir cite:vampir e Paraver cite:paraver buscam aperfeiçoar a
+visualização de rastros associando cada pixel a um conjunto de dados e
+delegando a seu algoritmo a decisão de quais informações representar,
+um procedimento pouco transparente e fortemente dependente da
+quantidade de pixels disponíveis. Em outros casos, como no Pajé cite:paje e o
+LTTng Eclipse Viewer cite:lttng, informações muito próximas são agregadas para
+facilitar sua visualização, porém sem manter o conteúdo que seria
+originalmente representado.
+
+Damien cite:damien propõe uma ferramenta de visualização em que é possível
+determinar um compromisso entre a fidelidade das informações mostradas
+e a complexidade do rastro resultante, utilizando conceitos de
+entropia para determinar regiões de interesse e agregando aquelas de
+comportamento semelhante cite:perrin. Depois de apresentar resultados promissores
+analisando execuções de aplicações distribuídas desenvolvidas em MPI,
+torna-se necessária a realização de um estudo da aplicabilidade dessa técnica em outros
+contextos. Com o frequente uso de /clusters/ heterogêneos na computação de alto desempenho,
+o paralelismo de tarefas passa a ser um candidato interessante para esse tipo de análise
+graças à sua versatilidade ao trabalhar com esse tipo de arquitetura cite:nesi:ipdps.
+
+# Motivação e objetivos
+
+Esse trabalho tem como objetivo utilizar as técnicas implementadas por
+Damien cite:damien em rastros de execução oriundos do StarPU cite:starpu, um suporte de
+execução baseado em paralelismo de tarefas.
+Na Seção 2 é apresentada a metodologia
+usada para que ela seja aplicada nesse outro contexto e, por fim, um
+cronograma de atividades é apresentado com as tarefas previstas
+para a execução desse projeto.
+
+* Metodologia
+
+Nesi et al cite:nesi realizaram um estudo sobre rastros de execução de
+aplicações desenvolvidas com a ferramenta StarPU cite:starpu cujo desempenho dos
+diferentes núcleos de cada processador foi agregado. Os rastros de
+execução utilizados foram produto de uma fatorização LU implementada
+pela biblioteca de álgebra linear densa Chameleon cite:chameleon e de uma execução
+da aplicação de geoestatística ExaGeoStat cite:exageostat e foram fornecidos
+juntamente ao artigo publicando seus achados cite:zenodo. Esses dados
+serão utilizados na elaboração desse novo estudo relacionando às
+técnicas de agregação propostas por Damien, já que são produtos de uma
+execução paralela heterogênea produzida pelo StarPU cujo comportamento
+já foi estudado a partir de outras técnicas.
+
+Para a elaboração desse projeto, inicialmente será necessário entender
+e caracterizar as aplicações executadas e seus rastros de execução. Em
+seguida, será necessário realizar uma adaptação dos rastros para que
+eles sejam compreendidos pela ferramenta desenvolvida por Damien et
+al, que parte de um formato diferente do utilizado por Nesi et al.
+
+Com as aplicações compreendidas e os dados corretamente formatados,
+duas formas de agregação serão testadas: a primeira delas, puramente
+temporal, agregando apenas o comportamento interno de cada unidade de
+cálculo em função de fatias de tempo; a segunda, espaço-temporal,
+agregando também comportamentos similares entre unidades de cálculo
+distintas. No caso da agregação espaço-temporal, será possível também
+empregar hierarquias de arquiteturas distintas para verificar a
+capacidade de agregação da ferramenta desenvolvida.
+
+Obtidos os resultados das aplicações propostas, sua eficácia será
+analisada comparando o resultado obtido contra a visualização
+miscroscópica clássica do rastreamento de aplicações de alto
+desempenho e também com a técnica de agregação utilizada por Nesi et
+al.
+
+* Cronograma de atividades
+
+O cronograma da elaboração desse estudo é apresentado na Tabela [[tab.cronograma]].
+
+#+name: tab.cronograma
+#+caption: Cronograma de atividades.
+| N | Atividade                                                         | Quinzena |
+|---+-------------------------------------------------------------------+----------|
+| 1 | Estudar as aplicações e os rastros por elas produzidos            | Abril/1  |
+| 2 | Compreender o formato utilizado pela ferramenta a ser estudada    | Abril/2  |
+| 3 | Desenvolver uma ferramenta para formatação necessária             | Maio/1   |
+| 4 | Produzir e analisar os resultados da agregação puramente temporal | Maio/2   |
+| 5 | Produzir e analisar os resultados da agregação espaço-temporal    | Junho/1  |
+| 6 | Produzir e analisar os resultados da agregação espaço-temporal    | Junho/2  |
+| 7 | Elaborar o relatório das atividades desenvolvidas                 | Julho/1  |
+| 8 | Elaborar a apresentação do estudo realizado                       | Julho/2  |
+|---+-------------------------------------------------------------------+----------|
+
+** Conclusão :noexport:
+** Exemplo citação e figuras                               :noexport:ignore:
+Exemplo citação cite:schnorr2013visualizing
+
+
+Exemplo Figura [[img.example]]
+
+#+NAME: img.example
+#+ATTR_LATEX: :width 0.98\linewidth
+#+CAPTION: Example\legend{Source: Author.}
+[[./picture.pdf]]
+
+* Referências                                                        :ignore:
+#+LATEX: \bibliographystyle{abntex2-alf}
+#+LATEX: \bibliography{refs.bib}
+
+* Pre Appendix                                              :noexport:ignore:
+#+BEGIN_EXPORT latex
+\appendix
+\begin{otherlanguage}{brazilian}
+#+END_EXPORT
+* Post Appendix                                             :noexport:ignore:
+#+BEGIN_EXPORT latex
+\end{otherlanguage}
+#+END_EXPORT
+
+* Bibtex                                                           :noexport:
+
+Tangle this file with C-c C-v t
+
+#+begin_src bibtex :tangle refs.bib
+@inproceedings{AlvesS23,
+  author       = {Bruno da Silva Alves and
+Lucas Mello Schnorr},
+  title        = {Performance Modeling of MARE2DEM's Adaptive Mesh Refinement for
+Makespan Estimation},
+  booktitle    = {35th {IEEE} International Symposium on Computer Architecture and High
+Performance Computing, {SBAC-PAD} 2023, Porto Alegre, Brazil, October
+17-20, 2023},
+  pages        = {119--128},
+  publisher    = {{IEEE}},
+  year         = {2023},
+  url          = {https://doi.org/10.1109/SBAC-PAD59825.2023.00021},
+  doi          = {10.1109/SBAC-PAD59825.2023.00021},
+  timestamp    = {Sat, 18 Nov 2023 11:47:49 +0100},
+  biburl       = {https://dblp.org/rec/conf/sbac-pad/AlvesS23.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{paje,
+title = {Pajé, an interactive visualization tool for tuning multi-threaded parallel applications},
+journal = {Parallel Computing},
+volume = {26},
+number = {10},
+pages = {1253-1274},
+year = {2000},
+issn = {0167-8191},
+doi = {https://doi.org/10.1016/S0167-8191(00)00010-7},
+url = {https://www.sciencedirect.com/science/article/pii/S0167819100000107},
+author = {J. {Chassin de Kergommeaux} and B. Stein and P.E. Bernard},
+keywords = {Performance and correctness debugging, Parallel program visualization, Threads, Interactivity, Scalability, Modularity},
+abstract = {This paper describes Pajé, an interactive visualization tool for displaying the execution of parallel applications where a potentially large number of communicating threads of various life-times execute on each node of a distributed memory parallel system. Pajé is capable of representing a wide variety of interactions between threads. The main characteristics of Pajé, interactivity and scalability, are exemplified by the performance tuning of a molecular dynamics application. In order to be easily extensible, the architecture of the system was based on components which are connected in a data flow graph to produce a given visualization tool. Innovative components were designed, in addition to “classical” components existing in similar visualization systems, to support scalability and interactivity.}
+}
+
+@inproceedings{paraver,
+  title={Paraver: A tool to visualize and analyze parallel code},
+  author={Pillet, Vincent and Labarta, Jes{\'u}s and Cortes, Toni and Girona, Sergi},
+  booktitle={Proceedings of WoTUG-18: transputer and occam developments},
+  volume={44},
+  number={1},
+  pages={17--31},
+  year={1995}
+}
+
+@article{vampir,
+  title={VAMPIR: Visualization and analysis of MPI resources},
+  author={Nagel, Wolfgang E and Arnold, Alfred and Weber, Michael and Hoppe, Hans-Christian and Solchenbach, Karl},
+  year={1996}
+}
+
+@inproceedings{nesi,
+  TITLE = {{Summarizing task-based applications behavior over many nodes through progression clustering}},
+  AUTHOR = {Leandro Nesi, Lucas and Garcia Pinto, Vinicius and Schnorr, Lucas Mello and Legrand, Arnaud},
+  URL = {https://hal.science/hal-04005071},
+  BOOKTITLE = {{PDP 2023 - 31st Euromicro International Conference on Parallel, Distributed, and Network-Based Processing}},
+  ADDRESS = {Naples, Italy},
+  PAGES = {1-8},
+  YEAR = {2023},
+  MONTH = Mar,
+  KEYWORDS = {HPC ; Visualization ; Performance Analysis ; Task-Based ; Heterogeneity},
+  PDF = {https://hal.science/hal-04005071/file/PDP.pdf},
+  HAL_ID = {hal-04005071},
+  HAL_VERSION = {v1},
+}
+
+@article{ondes,
+  title={High-performance finite-element simulations of seismic wave propagation in three-dimensional nonlinear inelastic geological media},
+  author={Fabrice Dupros and Florent De Martin and Evelyne Foerster and Dimitri Komatitsch and Jean Roman},
+  journal={Parallel Comput.},
+  year={2010},
+  volume={36},
+  pages={308-325}
+}
+
+@inproceedings{starpu,
+author = {Augonnet, Cédric and Thibault, Samuel and Namyst, Raymond and Wacrenier, Pierre-André},
+year = {2009},
+month = {08},
+pages = {},
+title = {STARPU: A Unified Platform for Task Scheduling on Heterogeneous Multicore Architectures},
+volume = {23},
+isbn = {978-3-642-03868-6},
+journal = {Concurrency and Computation: Practice and Experience},
+doi = {10.1007/978-3-642-03869-3_80}
+}
+
+
+@inproceedings{NesiLS21,
+  author       = {Lucas Leandro Nesi and
+Arnaud Legrand and
+Lucas Mello Schnorr},
+  editor       = {Xian{-}He Sun and
+Sameer Shende and
+Laxmikant V. Kal{\'{e}} and
+Yong Chen},
+  title        = {Exploiting system level heterogeneity to improve the performance of
+a GeoStatistics multi-phase task-based application},
+  booktitle    = {{ICPP} 2021: 50th International Conference on Parallel Processing,
+Lemont, IL, USA, August 9 - 12, 2021},
+  pages        = {4:1--4:10},
+  publisher    = {{ACM}},
+  year         = {2021},
+  url          = {https://doi.org/10.1145/3472456.3472516},
+  doi          = {10.1145/3472456.3472516},
+  timestamp    = {Thu, 07 Oct 2021 14:56:30 +0200},
+  biburl       = {https://dblp.org/rec/conf/icpp/NesiLS21.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
+
+
+@article{schaller1997moore,
+  title={Moore's law: past, present and future},
+  author={Schaller, Robert R},
+  journal={IEEE spectrum},
+  volume={34},
+  number={6},
+  pages={52--59},
+  year={1997},
+  publisher={IEEE}
+}
+
+
+@inproceedings{subhlok1993exploiting,
+  title={Exploiting task and data parallelism on a multicomputer},
+  author={Subhlok, Jaspal and Stichnoth, James M and O'hallaron, David R and Gross, Thomas},
+  booktitle={Proceedings of the fourth ACM SIGPLAN symposium on Principles and practice of parallel programming},
+  pages={13--22},
+  year={1993}
+}
+
+@inproceedings{damien,
+  TITLE = {{A Spatiotemporal Data Aggregation Technique for Performance Analysis of Large-scale Execution Traces}},
+  AUTHOR = {Dosimont, Damien and Lamarche-Perrin, Robin and Mello Schnorr, Lucas and Huard, Guillaume and Vincent, Jean-Marc},
+  URL = {https://inria.hal.science/hal-01065093},
+  BOOKTITLE = {{IEEE Cluster 2014}},
+  ADDRESS = {Madrid, Spain},
+  YEAR = {2014},
+  MONTH = Sep,
+  PDF = {https://inria.hal.science/hal-01065093/file/dlpaggreg.pdf},
+  HAL_ID = {hal-01065093},
+  HAL_VERSION = {v1},
+}
+
+@incollection{chameleon,
+  TITLE = {{Faster, Cheaper, Better -- a Hybridization Methodology to Develop Linear Algebra Software for GPUs}},
+  AUTHOR = {Agullo, Emmanuel and Augonnet, C{\'e}dric and Dongarra, Jack and Ltaief, Hatem and Namyst, Raymond and Thibault, Samuel and Tomov, Stanimire},
+  URL = {https://inria.hal.science/inria-00547847},
+  BOOKTITLE = {{GPU Computing Gems}},
+  EDITOR = {Wen-mei W. Hwu},
+  PUBLISHER = {{Morgan Kaufmann}},
+  VOLUME = {2},
+  YEAR = {2010},
+  MONTH = Sep,
+  PDF = {https://inria.hal.science/inria-00547847/file/gpucomputinggems_plagma.pdf},
+  HAL_ID = {inria-00547847},
+  HAL_VERSION = {v1},
+}
+
+@ARTICLE{exageostat,
+  author={Abdulah, Sameh and Ltaief, Hatem and Sun, Ying and Genton, Marc G. and Keyes, David E.},
+  journal={IEEE Transactions on Parallel and Distributed Systems}, 
+  title={ExaGeoStat: A High Performance Unified Software for Geostatistics on Manycore Systems}, 
+  year={2018},
+  volume={29},
+  number={12},
+  pages={2771-2784},
+  keywords={Computational modeling;Mathematical model;Covariance matrices;Geospatial analysis;Task analysis;Geophysical measurements;Maximum likelihood optimization;Matérn covariance function;high performance computing;climate/environment applications;prediction},
+  doi={10.1109/TPDS.2018.2850749}
+}
+
+@dataset{zenodo,
+  author       = {Leandro Nesi, Lucas and
+                  Garcia Pinto, Vinícius and
+                  Mello Schnorr, Lucas and
+                  Legrand, Arnaud},
+  title        = {{Companion data of Summarizing task-based 
+                   applications behavior over many nodes through
+                   progression clustering}},
+  month        = feb,
+  year         = 2023,
+  publisher    = {Zenodo},
+  version      = {v1},
+  doi          = {10.5281/zenodo.7649490},
+  url          = {https://doi.org/10.5281/zenodo.7649490}
+}
+
+@INPROCEEDINGS{starvz,
+author={Pinto, Vinícius Garcia and Stanisic, Luka and Legrand, Arnaud and Schnorr, Lucas Mello and Thibault, Samuel and Danjean, Vincent},
+booktitle={2016 Third Workshop on Visual Performance Analysis (VPA)},
+title={Analyzing Dynamic Task-Based Applications on Hybrid Platforms: An Agile Scripting Approach},
+year={2016},
+volume={},
+number={},
+pages={17-24},
+doi={10.1109/VPA.2016.008}
+}
+
+@techreport{perrin,
+  TITLE = {{The Best-partitions Problem: How to Build Meaningful Aggregations ?}},
+  AUTHOR = {Lamarche-Perrin, Robin and Demazeau, Yves and Vincent, Jean-Marc},
+  URL = {https://inria.hal.science/hal-00947934},
+  TYPE = {Research Report},
+  NUMBER = {RR-LIG-044},
+  PAGES = {18},
+  YEAR = {2013},
+  KEYWORDS = {Data aggregation ; multi-agent systems ; algorithmic complexity ; spatial and temporal analysis ; news analysis},
+  PDF = {https://inria.hal.science/hal-00947934/file/RR-LIG-044_orig.pdf},
+  HAL_ID = {hal-00947934},
+  HAL_VERSION = {v1},
+}
+
+@manual{lttng,
+title = {The LTTng Documentation},
+url = {https://lttng.org/docs/v2.13/},
+edition = {2.13},
+year = {2023},
+month = {11},
+}
+
+@inproceedings{mpi,
+  title={MPI: a message passing interface},
+  author={The MPI Forum, CORPORATE},
+  booktitle={Proceedings of the 1993 ACM/IEEE Conference on Supercomputing},
+  pages={878--883},
+  year={1993}
+}
+
+@inproceedings{nesi:ipdps,
+  TITLE = {{Multi-Phase Task-Based HPC Applications: Quickly Learning how to Run Fast}},
+  AUTHOR = {Nesi, Lucas and Mello Schnorr, Lucas and Legrand, Arnaud},
+  URL = {https://inria.hal.science/hal-03608579},
+  BOOKTITLE = {{IPDPS 2022 - 36th IEEE International Parallel \& Distributed Processing Symposium}},
+  ADDRESS = {Lyon, France},
+  PUBLISHER = {{IEEE}},
+  PAGES = {1-11},
+  YEAR = {2022},
+  MONTH = May,
+  KEYWORDS = {HPC ; Heterogeneous ; Task-Based ; Distribution ; Load Balancing},
+  PDF = {https://inria.hal.science/hal-03608579/file/2022029591.pdf},
+  HAL_ID = {hal-03608579},
+  HAL_VERSION = {v1},
+}
+
+#+end_src
+
+* Emacs Setup                                                      :noexport:
+
+# Local Variables:
+# eval: (add-to-list 'load-path ".")
+# eval: (require 'ox-extra)
+# eval: (ox-extras-activate '(ignore-headlines))
+# eval: (require 'org-ref)
+# eval: (require 'doi-utils)
+# eval: (setq ispell-local-dictionary "pt-br")
+# eval: (eval (flyspell-mode t))
+# eval: (setq org-latex-pdf-process (list "TEXINPUTS=$TEXINPUTS:./inputs/ BSTINPUTS=$BSTINPUTS:$TEXINPUTS BIBINPUTS=$BIBINPUTS:$TEXINPUTS latexmk -pdf %f"))
+# eval: (add-to-list 'org-export-before-processing-hook (lambda (be) (org-babel-tangle)))
+# eval: (setq org-latex-caption-above nil)
+# eval: (setq org-latex-default-packages-alist nil)
+# eval: (require 'ox)
+# eval: (add-to-list 'org-latex-classes
+#             '("IIUFRGS"
+#               "\\documentclass{iiufrgs}" ; São permitidas subdivisões até o 5º nível (onde o capítulo é o 1º nível)
+#               ("\\chapter{%s}" . "\\chapter*{%s}")  
+#               ("\\section{%s}" . "\\section*{%s}")
+#               ("\\subsection{%s}" . "\\subsection*{%s}")
+#               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+#               ("\\paragraph{%s}" . "\\paragraph*{%s}")
+# ))
+# End:

@@ -1,0 +1,444 @@
+# -*- coding: utf-8 -*-
+# -*- mode: org -*-
+
+#+TITLE:   Analysing the CPU's influence on GPU equipped nodes
+#+AUTHOR: Lucas Barros de Assis
+#+EMAIL: lbassis@inf.ufrgs.br
+#+DATE: Agosto@@latex:}{@@2024
+#+STARTUP: overview indent
+#+OPTIONS: H:3 creator:nil timestamp:nil skip:nil toc:nil num:t ^:nil ~:~
+#+OPTIONS: author:nil title:t date:t
+#+TAGS: noexport(n) deprecated(d) ignore(i)
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LaTeX_CLASS: IIUFRGS
+#+LaTeX_CLASS_OPTIONS: [ppgc,english]
+
+#+LATEX_HEADER: \usepackage{tabularx}
+#+LATEX_HEADER: \usepackage{hyperref}
+
+#+LATEX_HEADER: \usepackage[utf8]{inputenc}
+#+LATEX_HEADER: \usepackage{booktabs}
+#+LATEX_HEADER: \usepackage{enumitem}
+#+LATEX_HEADER: \usepackage[T1]{fontenc}
+
+#+LaTeX_HEADER: \usepackage[linesnumbered,ruled,boxed,commentsnumbered]{algorithm2e}
+
+#+LATEX_HEADER: \usepackage{listings}
+
+#+LATEX_HEADER: \author{Barros de Assis}{Lucas}
+#+LATEX_HEADER: \advisor[Prof.~Dr.]{Mello Schnorr}{Lucas}
+#+LATEX_HEADER: \def\titlepagespecificinfo{Introduction to High-Performance Computing}
+
+#+LaTeX_HEADER: \def\manualleg[#1]{{\centering\legend{#1}\par}}
+#+LATEX_HEADER: \renewcommand{\nominataCoord}{Prof.~Alberto Egon Schaeffer Filho}
+#+LATEX_HEADER: \renewcommand{\nominataCoordname}{Coordenador do PPGC}
+
+#+LaTeX_HEADER: \keyword{x}
+#+LaTeX_HEADER: \translatedkeyword{x}
+#+LaTeX_HEADER: \translatedtitle{x}
+
+* Pre Text and configurations                          :noexport:ignore:
+** Latex configurations                                             :ignore:
+#+BEGIN_EXPORT latex
+\def\etal{~\textit{et al.}\xspace}
+\def\ie{i.e.,\xspace}
+\setlist[itemize]{noitemsep}
+#+END_EXPORT
+
+** Pre Text                                                :noexport:ignore:
+*** Cover                                                 :noexport:ignore:
+#+BEGIN_EXPORT latex
+% folha de rosto
+% às vezes é necessário redefinir algum comando logo antes de produzir
+% a folha de rosto:
+% \renewcommand{\coordname}{Coordenadora do Curso}
+% \maketitle
+#+END_EXPORT
+*** Dedic                                                 :noexport:ignore:
+#+BEGIN_EXPORT latex
+\clearpage
+\begin{flushright}
+\mbox{}\vfill
+{\sffamily\itshape
+``A emancipação dos trabalhadores será obra dos próprios trabalhadores.''\\}
+--- \textsc{Karl Marx}
+\end{flushright}
+#+END_EXPORT
+*** Thanks                                                :noexport:ignore:
+#+BEGIN_EXPORT latex
+%\chapter*{Acknowledgements}
+\chapter*{Agradecimentos}
+#+END_EXPORT
+
+#+LaTeX: \def\ACKLINE{\\}
+
+*** Resumo                                                :noexport:ignore:
+
+#+LaTeX: \begin{abstract}
+x
+#+LaTeX: \end{abstract}
+
+*** Abstract                                              :noexport:ignore:
+
+#+LaTeX: \begin{translatedabstract}
+#+LaTeX: \end{translatedabstract}
+
+*** Lists                                                 :noexport:ignore:
+#+BEGIN_EXPORT latex
+
+% lista de abreviaturas e siglas
+% o parametro deve ser a abreviatura mais longa
+% A NBR 14724:2011 estipula que a ordem das abreviações
+% na lista deve ser alfabética (como no exemplo abaixo).
+\begin{listofabbrv}{CSEM}
+        \item[AMR] \textit{Adaptive Mesh Refinement}
+        \item[ANP] Agência Nacional do Petróleo, Gás Natural e Biocombustíveis
+        \item[CSEM] \textit{Controlled Source Electromagnetics}
+        \item[mCSEM] \textit{Marine Controlled Source Electromagnetics}
+        \item[MARE2DEM] \textit{Modeling with Adaptively Refined Elements for 2D Electromagetics}
+        \item[MR3D] Marlim R3D
+\end{listofabbrv}
+
+% idem para a lista de símbolos
+%\begin{listofsymbols}{$\alpha\beta\pi\omega$}
+%       \item[$\sum{\frac{a}{b}}$] Somatório do produtório
+%       \item[$\alpha\beta\pi\omega$] Fator de inconstância do resultado
+%\end{listofsymbols}
+
+% lista de figuras
+\listoffigures
+
+% lista de tabelas
+\listoftables
+
+% sumario
+\tableofcontents
+#+END_EXPORT
+* Introduction
+
+Heterogeneous architectures seem to be the default configuration for clusters dealing with HPC. Hardware accelerators such as
+GPUs achieve parallelism levels way beyond those attainable by general computing cores, and dense linear algebra libraries such
+as Chameleon cite:chameleon provide kernels to extract maximum performance on such architectures.
+
+Although the CPU is absolutely necessary no matter the programming model being used, when dealing with task-based runtime systems
+such as StarPU cite:starpu, capable of exploiting such powerful accelerators on top of the conventional cores, its influence on the
+total computation time can be questioned.
+
+Kestur et al. cite:kestur compared a matrix-vector multiplication on CPU, GPU and FPGA and
+found a better performance on a parallel CPU implementation. However, due to their FPGA limitations, this work was limited to small
+matrices (around 65536 elements) that could not profit from all the power available. Xiong and Xu cite:xiong did similar comparisons
+with the matrix multiplication operation and bigger matrices. Their study shows that the difference in performance increases with
+the matrix size, and for their biggest matrices the GPU implementation took about 20% of the duration of the CPU implementation.
+
+In this study, we used the LU factorization implementation from the Chameleon library to compare two nodes with the same GPU but different
+CPUs in hope of providing some insight on the matter. We used matrices bigger than the ones employed on the previously cited works and
+added both Intel's Hyper-threading technology and i9's P-cores and E-cores architecture into the equation.
+
+* Materials and Methods
+** Introduction                                                     :ignore:
+
+The experiments were run on the /tupi/ machines, part of the cluster maintained by the /UFRGS/ university.
+The nodes /tupi1/ and /tupi2/ have each an /Intel Xeon E5-2620 v4/ and nodes /tupi3/ and /tupi4/ are each equipped with
+an /Intel Core i9-14900KF/. Each of these nodes has also a /GeForce RTX 4090/, but the /Xeon/ equipped nodes use
+/PCI-e 3.0/ while the /i9/ use /PCI-e 4.0/.
+
+We used the spack cite:spack application to control the software stack, allowing it to be compiled
+for each CPU's own microarchitecture - /Broadwell/ on the /Xeon/ and /Skylake/ on the /i9/. We used the StarPU runtime
+system on commit 146ce9d8 and the Chameleon library on commit 3e958439.
+
+/StarPU/ creates performance models for the available hardware during its runs, which allows it to properly apply its scheduling techniques.
+Each configuration was repeated 6 times and had its worst performance removed to mitigate the effects of the calibration performed.
+The resulting graphs were drawn by plotting the average time of each configuration and its standard deviation.
+
+** Input data
+
+The Chameleon library provides testing binaries used for both numerical verification of its methods and performance analysis. In this study,
+we employed these binaries to execute the LU factorisation of single precision matrices with sizes 65,536x65,536 and 100,000x100,000.
+
+The execution parameters were the matrix size, the tile's block size, the amount of CPU and GPU workers and the existence of a /CUDA/ exclusive
+core when using GPU. Each configuration was repeated 5 times on shuffled scripts, trying to scatter the execution of same configuration runs.
+All of the matrices were created by Chameleon's matrix generation algorithm with the same seed.
+
+** CPU-only experiments
+
+As a starting point, we ran experiments without employing the GPUs computational power, which proved to be an opportunity to take a look at
+their individual performance.
+
+/Intel/'s /Hyper-threading/ technology consists in using one single physical core to run the threads assigned to a
+second virtual core. This technique aims to make better use of the superscalar hardware to dispatch more than one instruction simultaneously.
+In this case, however, the /Hyper-threaded/ cores share the same available memory between the pair, instead of each one having its own cache.
+
+The /Intel Core i9/ CPU has 24 cores separated in two categories: Performance-cores (/P-cores/) and Eficient-cores (/E-cores/). While the
+P-cores are larger, capable of /Hyper-threading/ and designed for raw speed, the E-cores are smaller and designed to maximize efficiency cite:intel-hybrid.
+
+When working with the runtime system /StarPU/, we need to define a strategy for the scheduler to assign the tasks to the available hardware. The
+CPU-only experiments employed the /dmda/ strategy, meaning that the tasks are scheduled as soon as they become available to the core where their
+termination time will be minimal taking in account the transfer time.
+
+** Tupi experiments
+
+Adding the GPUs to the pool of available resources allowed us to actually check the CPU's influence on the full node's performance. When working with
+/CUDA/, /StarPU/'s configuration let us determine which thread will perform the /CUDA/ operations and if it will work exclusively on these instructions or it will
+receive its share of tasks. This option added a new variation for the experiments, that were run both with a /CUDA/ exclusive thread and without it. The /i9/'s
+runs with this dedicated thread had it always on one of its P-cores.
+
+Another modification was the scheduling strategy that was changed to the /dmdas/, similar to the /dmda/ employed on the CPU-only experiments except it sorts the
+available tasks by priority.
+
+After running the first experiments on the full nodes, we realized the GPU was not using all of its memory, so new experiments were added with 100,000x100,000
+matrices, achieving around 90% of the /GeForce RTX 4090/ available memory.
+
+* Results
+
+As expected, Figure [[cpu_only]] shows the /i9/'s performance is considerably better than the /Xeon/'s. Regarding the /Hyper-threading/, it appears to
+improves both CPU's performance as long as we use small enough blocks. The simultaneous multithreading technique stops being worth it when
+their blocks get big enough to need memory from outside their caches.
+
+#+NAME: cpu_only
+#+CAPTION: Comparison between the CPU-only experiments
+[[./figures/cpu_only.pdf]]
+
+Adding the /i9/'s E-cores brought some variability to the performance. This is probably explained by the fact that /StarPU/'s performance models
+considered both P-cores and E-cores as computing unities with the same capabilities.
+
+When looking at the execution times of each CPU's best experiment, the /i9/ performs around 3.64 times faster than the /Xeon/.
+
+The performance analysed with the GPUs available is shown in Figure [[tupi_gpu]]. The first aspect to observe is that the experiments
+with a /CUDA/ dedicated core performed better than the ones without it.
+
+#+NAME: tupi_gpu
+#+CAPTION: Comparison between the full node experiments
+[[./figures/tupi.pdf]]
+
+When there is no exclusive /CUDA/ thread the /Xeon/ nodes once again profited from the /Hyper-threading/ technology as long as their block
+sizes were small enough. However, the /i9/'s performance seems to be always negatively affected by both the /Hyper-threading/ and the
+addition of E-cores. One possible explanation is once again the performance models not properly adapted to such different workers.
+
+Including a thread for the /CUDA/ operations we can see the same behavior on both /Xeon/ and /i9/, extracting the best performance when
+there are no logical nor efficient cores involved.
+
+While using only the CPU the /i9/'s best case was around 3.64 times faster than /Xeon/'s. When the GPUs were added, this difference
+decreased to around 1.34 times, which shows that the employ of accelerators reduce the significance of the CPU's capacities.
+
+Figure [[tupi_100k]] shows the results when achieving 90% of the GPU's memory usage. In this case, the /Hyper-threading/ technique decreased
+the performance even with small blocks on the /Xeon/ without a dedicated /CUDA/ core, possibly because of the bigger amount of /CUDA/ operations
+to be performed on larger matrices. Other than that, the E-cores seemed to slightly increase the performance, which could indicate that
+their extra memory cache compensates for the performance model's issues.
+
+Finally, by exploiting more of the GPU's memory, the speed ratio between the /Xeon/ and the /i9/ CPUs increased to around 1.77, reinforcing
+the hypothesis that an increase on the amount of /CUDA/ operations requires more from the CPU.
+
+#+NAME: tupi_100k
+#+CAPTION: Comparison between the full node experiments with 100kx100k matrices
+[[./figures/tupi_100k.pdf]]
+
+
+* Conclusion
+
+In this study, we verified the CPU's influence when working with parallel dense linear algebra operations assisted by
+GPUs. We compared the performances when employing /Intel/'s /Hyper-threading/ and P-cores/E-cores technologies with and without
+the accelerators involved. Even though the accelerators presence decreased the performance difference between the CPUs studied,
+the gap was increased when we exploited better the GPU's memory, suggesting that larger GPUs require faster CPUs.
+
+** Future Works
+
+By studying the /i9/ CPU, we realized that the /Hybrid design/ concept of having performance and efficient cores can be further
+analysed in order to extract all of the potential it may have. Trying to differentiate their behavior with the runtime system
+is a possible way of doing this, as well as employing them as /CUDA/ dedicated cores to check their performance at it.
+
+
+* Referências                                                        :ignore:
+#+LATEX: \bibliographystyle{abntex2-alf}
+#+LATEX: \bibliography{refs.bib}
+
+* Pre Appendix                                              :noexport:ignore:
+#+BEGIN_EXPORT latex
+#+END_EXPORT
+* Post Appendix                                             :noexport:ignore:
+#+BEGIN_EXPORT latex
+\end{otherlanguage}
+#+END_EXPORT
+
+* Bibtex                                                           :noexport:
+
+Tangle this file with C-c C-v t
+
+#+begin_src bibtex :tangle refs.bib
+@inproceedings{spack,
+    address = {Austin, Texas, USA},
+    author = {Gamblin, Todd and LeGendre, Matthew and
+              Collette, Michael R. and Lee, Gregory L. and
+              Moody, Adam and de Supinski, Bronis R. and Futral, Scott},
+    doi = {10.1145/2807591.2807623},
+    month = {November 15-20},
+    note = {LLNL-CONF-669890},
+    series = {Supercomputing 2015 (SC’15)},
+    title = {{The Spack Package Manager: Bringing Order to HPC Software Chaos}},
+    url = {https://github.com/spack/spack},
+    year = {2015}
+}
+@INPROCEEDINGS{xiong,
+
+  author={Xiong, Chong and Xu, Ning},
+
+  booktitle={2020 IEEE 9th Joint International Information Technology and Artificial Intelligence Conference (ITAIC)}, 
+
+  title={Performance Comparison of BLAS on CPU, GPU and FPGA}, 
+
+  year={2020},
+
+  volume={9},
+
+  number={},
+
+  pages={193-197},
+
+  keywords={Performance evaluation;Graphics processing units;Throughput;Libraries;Kernel;Field programmable gate arrays;Standards;BLAS;FPGA;dot-product;matrix-vector multiplication;matrix-matrix multiplication},
+
+  doi={10.1109/ITAIC49862.2020.9338793}}
+
+@INPROCEEDINGS{kestur,
+
+  author={Kestur, Srinidhi and Davis, John D. and Williams, Oliver},
+
+  booktitle={2010 IEEE Computer Society Annual Symposium on VLSI}, 
+
+  title={BLAS Comparison on FPGA, CPU and GPU}, 
+
+  year={2010},
+
+  volume={},
+
+  number={},
+
+  pages={288-293},
+
+  keywords={Field programmable gate arrays;Adders;Random access memory;Kernel;Pipelines;Graphics processing unit;Libraries},
+
+  doi={10.1109/ISVLSI.2010.84}}
+
+@misc{intel-hybrid,
+  title        = "How Intel® Core™ Processors Work",
+  author       = "{Intel}",
+  howpublished = "\url{https://www.intel.com/content/www/us/en/gaming/resources/how-hybrid-design-works.html}",
+  note         = "Accessed: 2024-27-08"
+}
+
+@inproceedings{nesi,
+  TITLE = {{Summarizing task-based applications behavior over many nodes through progression clustering}},
+  AUTHOR = {Leandro Nesi, Lucas and Garcia Pinto, Vinicius and Schnorr, Lucas Mello and Legrand, Arnaud},
+  URL = {https://hal.science/hal-04005071},
+  BOOKTITLE = {{PDP 2023 - 31st Euromicro International Conference on Parallel, Distributed, and Network-Based Processing}},
+  ADDRESS = {Naples, Italy},
+  PAGES = {1-8},
+  YEAR = {2023},
+  MONTH = Mar,
+  KEYWORDS = {HPC ; Visualization ; Performance Analysis ; Task-Based ; Heterogeneity},
+  PDF = {https://hal.science/hal-04005071/file/PDP.pdf},
+  HAL_ID = {hal-04005071},
+  HAL_VERSION = {v1},
+}
+
+@inproceedings{starpu,
+author = {Augonnet, Cédric and Thibault, Samuel and Namyst, Raymond and Wacrenier, Pierre-André},
+year = {2009},
+month = {08},
+pages = {},
+title = {STARPU: A Unified Platform for Task Scheduling on Heterogeneous Multicore Architectures},
+volume = {23},
+isbn = {978-3-642-03868-6},
+journal = {Concurrency and Computation: Practice and Experience},
+doi = {10.1007/978-3-642-03869-3_80}
+}
+
+@inproceedings{NesiLS21,
+  author       = {Lucas Leandro Nesi and
+Arnaud Legrand and
+Lucas Mello Schnorr},
+  editor       = {Xian{-}He Sun and
+Sameer Shende and
+Laxmikant V. Kal{\'{e}} and
+Yong Chen},
+  title        = {Exploiting system level heterogeneity to improve the performance of
+a GeoStatistics multi-phase task-based application},
+  booktitle    = {{ICPP} 2021: 50th International Conference on Parallel Processing,
+Lemont, IL, USA, August 9 - 12, 2021},
+  pages        = {4:1--4:10},
+  publisher    = {{ACM}},
+  year         = {2021},
+  url          = {https://doi.org/10.1145/3472456.3472516},
+  doi          = {10.1145/3472456.3472516},
+  timestamp    = {Thu, 07 Oct 2021 14:56:30 +0200},
+  biburl       = {https://dblp.org/rec/conf/icpp/NesiLS21.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{subhlok1993exploiting,
+  title={Exploiting task and data parallelism on a multicomputer},
+  author={Subhlok, Jaspal and Stichnoth, James M and O'hallaron, David R and Gross, Thomas},
+  booktitle={Proceedings of the fourth ACM SIGPLAN symposium on Principles and practice of parallel programming},
+  pages={13--22},
+  year={1993}
+}
+
+@incollection{chameleon,
+  TITLE = {{Faster, Cheaper, Better -- a Hybridization Methodology to Develop Linear Algebra Software for GPUs}},
+  AUTHOR = {Agullo, Emmanuel and Augonnet, C{\'e}dric and Dongarra, Jack and Ltaief, Hatem and Namyst, Raymond and Thibault, Samuel and Tomov, Stanimire},
+  URL = {https://inria.hal.science/inria-00547847},
+  BOOKTITLE = {{GPU Computing Gems}},
+  EDITOR = {Wen-mei W. Hwu},
+  PUBLISHER = {{Morgan Kaufmann}},
+  VOLUME = {2},
+  YEAR = {2010},
+  MONTH = Sep,
+  PDF = {https://inria.hal.science/inria-00547847/file/gpucomputinggems_plagma.pdf},
+  HAL_ID = {inria-00547847},
+  HAL_VERSION = {v1},
+}
+
+
+@inproceedings{nesi:ipdps,
+  TITLE = {{Multi-Phase Task-Based HPC Applications: Quickly Learning how to Run Fast}},
+  AUTHOR = {Nesi, Lucas and Mello Schnorr, Lucas and Legrand, Arnaud},
+  URL = {https://inria.hal.science/hal-03608579},
+  BOOKTITLE = {{IPDPS 2022 - 36th IEEE International Parallel \& Distributed Processing Symposium}},
+  ADDRESS = {Lyon, France},
+  PUBLISHER = {{IEEE}},
+  PAGES = {1-11},
+  YEAR = {2022},
+  MONTH = May,
+  KEYWORDS = {HPC ; Heterogeneous ; Task-Based ; Distribution ; Load Balancing},
+  PDF = {https://inria.hal.science/hal-03608579/file/2022029591.pdf},
+  HAL_ID = {hal-03608579},
+  HAL_VERSION = {v1},
+}
+
+
+#+end_src
+
+* Emacs Setup                                                      :noexport:
+
+# Local Variables:
+# eval: (add-to-list 'load-path ".")
+# eval: (require 'ox-extra)
+# eval: (ox-extras-activate '(ignore-headlines))
+# eval: (require 'org-ref)
+# eval: (require 'doi-utils)
+# eval: (setq ispell-local-dictionary "pt-br")
+# eval: (eval (flyspell-mode t))
+# eval: (setq org-latex-pdf-process (list "TEXINPUTS=$TEXINPUTS:./inputs/ BSTINPUTS=$BSTINPUTS:$TEXINPUTS BIBINPUTS=$BIBINPUTS:$TEXINPUTS latexmk -pdf %f"))
+# eval: (add-to-list 'org-export-before-processing-hook (lambda (be) (org-babel-tangle)))
+# eval: (setq org-latex-caption-above nil)
+# eval: (setq org-latex-default-packages-alist nil)
+# eval: (require 'ox)
+# eval: (add-to-list 'org-latex-classes
+#             '("IIUFRGS"
+#               "\\documentclass{iiufrgs}" ; São permitidas subdivisões até o 5º nível (onde o capítulo é o 1º nível)
+#               ("\\chapter{%s}" . "\\chapter*{%s}")  
+#               ("\\section{%s}" . "\\section*{%s}")
+#               ("\\subsection{%s}" . "\\subsection*{%s}")
+#               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+#               ("\\paragraph{%s}" . "\\paragraph*{%s}")
+# ))
+# End:

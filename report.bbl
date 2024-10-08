@@ -1,0 +1,47 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.1 }
+
+\bibitem[Agullo et al. 2010]{chameleon}
+\abntrefinfo{Agullo et al.}{AGULLO et al.}{2010}
+{AGULLO, E. et al. {Faster, Cheaper, Better -- a Hybridization Methodology to
+  Develop Linear Algebra Software for GPUs}. In:  HWU, W. mei W. (Ed.).
+  \textbf{{GPU Computing Gems}}. {Morgan Kaufmann}, 2010. v.~2.
+Available from Internet: \url{https://inria.hal.science/inria-00547847}.}
+
+\bibitem[Augonnet et al. 2009]{starpu}
+\abntrefinfo{Augonnet et al.}{AUGONNET et al.}{2009}
+{AUGONNET, C. et al. Starpu: A unified platform for task scheduling on
+  heterogeneous multicore architectures. In:  . [S.l.: s.n.], 2009. v.~23.
+ISBN 978-3-642-03868-6.}
+
+\bibitem[Gamblin et al. 2015]{spack}
+\abntrefinfo{Gamblin et al.}{GAMBLIN et al.}{2015}
+{GAMBLIN, T. et al. {The Spack Package Manager: Bringing Order to HPC Software
+  Chaos}. In:  . Austin, Texas, USA: [s.n.], 2015.  (Supercomputing 2015
+  (SC’15)). LLNL-CONF-669890. Available from Internet:
+  \url{https://github.com/spack/spack}.}
+
+\bibitem[{Intel}]{intel-hybrid}
+\abntrefinfo{{Intel}}{{Intel}}{}
+{{Intel}. \textbf{How Intel® Core™ Processors Work}.
+  \url{https://www.intel.com/content/www/us/en/gaming/resources/how-hybrid-design-works.html}.
+Accessed: 2024-27-08.}
+
+\bibitem[Kestur, Davis and Williams 2010]{kestur}
+\abntrefinfo{Kestur, Davis and Williams}{KESTUR; DAVIS; WILLIAMS}{2010}
+{KESTUR, S.; DAVIS, J.~D.; WILLIAMS, O. Blas comparison on fpga, cpu and gpu.
+  In:  \textbf{2010 IEEE Computer Society Annual Symposium on VLSI}. [S.l.:
+  s.n.], 2010. p. 288--293.}
+
+\bibitem[Xiong and Xu 2020]{xiong}
+\abntrefinfo{Xiong and Xu}{XIONG; XU}{2020}
+{XIONG, C.; XU, N. Performance comparison of blas on cpu, gpu and fpga. In:
+  \textbf{2020 IEEE 9th Joint International Information Technology and
+  Artificial Intelligence Conference (ITAIC)}. [S.l.: s.n.], 2020. v.~9, p.
+  193--197.}
+
+\end{thebibliography}
