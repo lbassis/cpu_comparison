@@ -3062,8 +3062,8 @@ best_row_tupi1$time/best_row_tupi4$time
 : Error: object 'best_row_tupi4' not found
 : Error: object 'best_row_tupi1' not found
 
-* Script extra
-** GPU i9 CUDA E-core
+* CUDA E-core
+** GPU i9 CUDA E-core slurm
 #+begin_src bash
 NODE="tupi4"
 JOB_NAME="gpu_ecore_performance"
@@ -3139,3 +3139,68 @@ rsync --verbose --progress --recursive ${SCRIPT_NAME} lbassis@gppd-hpc.inf.ufrgs
 | sent                                | 35,722      | bytes | received |      35 | bytes | 14,302.80 | bytes/sec |          |         |         |             |
 | total                               | size        | is    | 35,598   | speedup | is    | 1.0       |           |          |         |         |             |
 
+
+** Análise
+#+begin_src bash :results silent
+EXP='tupi4_gpu_ecore_performance_1'
+echo "Id,Function,threads,gpus,P,Q,mtxfmt,nb,m,n,lda,seedA,bump,tsub,time,gflops" > experiments/${EXP}.csv && sed '/;/!d;/Id/d;s/;/,/g' experiments/${EXP}.ou >> experiments/${EXP}.csv
+#+end_src
+
+#+begin_src R :results output :session *R* :exports both
+library(dplyr)
+library(ggplot2)
+
+general_title <- 'tupi4_gpu_performance_4'
+gpu_general <- read.csv(paste0('experiments/', general_title, '.csv'))
+gpu_general$cuda_node = 'pcore'
+
+gpu_general |> mutate(config = case_when(
+                        threads == 7 ~ "7 P-cores + 1 CUDA",
+                        threads == 8 ~ "8 P-cores + 0 CUDA",
+                        threads == 15 ~ "7 P-cores + HT + 1 CUDA",
+                        threads == 16 ~ "8 P-cores + HT + 0 CUDA",
+                        threads == 23 ~ "7 P-cores + 16 E-cores + 1 CUDA",
+                        threads == 24 ~ "8 P-cores + 16 E-cores + 0 CUDA",
+                        threads == 31 ~ "7 P-cores + HT + 16 E-cores + 1 CUDA",
+                        threads == 32 ~ "8 P-cores + HT + 16 E-cores + 0 CUDA")) -> gpu_general
+
+
+ecore_title <- 'tupi4_gpu_ecore_performance_1'
+gpu_ecore <- read.csv(paste0('experiments/', ecore_title, '.csv'))
+gpu_ecore$cuda_node = 'ecore'
+
+
+gpu_ecore |> mutate(config = case_when(
+                        threads == 8 ~ "8 P-cores + 1 CUDA E-core",
+                        threads == 16 ~ "8 P-cores + HT + 1 CUDA E-core",
+                        threads == 23 ~ "8 P-cores + 15 E-cores + 1 CUDA E-core",
+                        threads == 31 ~ "8 P-cores + HT + 15 E-cores + 1 CUDA E-core")) -> gpu_ecore
+gpu <- bind_rows(gpu_general, gpu_ecore)
+#+end_src
+
+#+RESULTS:
+
+#+begin_src R :results silent :session *R* :exports both
+gpu |>
+  filter(nb < 8000) |>
+  select(threads, gpus, nb, m, n, config, time) |>
+  group_by(threads, gpus, nb, m, n, config) |>
+  mutate(avg_time = mean(time),
+         sd = sd(time)) -> gpu_df_sd
+
+gpu_df_sd$nb = as.factor(gpu_df_sd$nb)
+
+gpu_df_sd |>
+  filter(grepl("1 CUDA", config)) |>
+  ggplot(aes(x = nb, y=avg_time, fill=config)) +
+  geom_bar(stat='identity', color='black', linewidth=0.2,  position=position_dodge()) +
+  geom_errorbar(aes(ymin=avg_time-sd, ymax=avg_time+sd),
+                width=.5,
+                linewidth=.3,
+                position=position_dodge(0.9)) +
+#  scale_fill_manual(values=c('#8dd3c7','#ffffb3','#bebada','#fb8072','#80b1d3','#fdb462','#8dd3c7','#ffffb3','#bebada','#fb8072','#80b1d3','#fdb462')) +
+  theme_bw(base_size=12) +
+  theme(legend.key.size=unit(.75, "line"), legend.title=element_text(size=10), legend.text=element_text(size=9)) +
+  labs(title = "Tupi performance", x = "Block size", y = "Execution time (s)") +
+  guides(fill = guide_legend(title = "Configuration"),)
+#+end_src
