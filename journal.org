@@ -3062,7 +3062,9 @@ best_row_tupi1$time/best_row_tupi4$time
 : Error: object 'best_row_tupi4' not found
 : Error: object 'best_row_tupi1' not found
 
-* CUDA E-core
+
+
+* 23/10 CUDA E-core
 ** GPU i9 CUDA E-core slurm
 #+begin_src bash
 NODE="tupi4"
@@ -3203,4 +3205,475 @@ gpu_df_sd |>
   theme(legend.key.size=unit(.75, "line"), legend.title=element_text(size=10), legend.text=element_text(size=9)) +
   labs(title = "Tupi performance", x = "Block size", y = "Execution time (s)") +
   guides(fill = guide_legend(title = "Configuration"),)
+#+end_src
+
+* 23/10 Cholesky scripts
+** CPU Xeon
+#+begin_src bash :results silent
+NODE="tupi2"
+CPU="xeon"
+JOB_NAME="cpu_only_performance_cholesky"
+TESTING_DIR="~/spack/opt/spack/linux-debian12-broadwell/gcc-11.3.0/chameleon-1.2.0-ieer6l5tfxxxrnnfbjdgqa2q5xfrxy32/bin"
+VERSION=1 # remember to increment if needed
+SCRIPT_NAME="scripts/${NODE}_${JOB_NAME}_${VERSION}.slurm"
+
+# slurm section
+echo "#!/bin/bash"                            > ${SCRIPT_NAME}
+echo "#SBATCH --job-name=${JOB_NAME}"          >> ${SCRIPT_NAME}
+echo "#SBATCH --partition=tupi"                >> ${SCRIPT_NAME}
+echo "#SBATCH --nodelist=${NODE}"              >> ${SCRIPT_NAME}
+echo "#SBATCH --time=14:00:00  "               >> ${SCRIPT_NAME}
+echo "#SBATCH --output=experiments/${NODE}_${JOB_NAME}_${VERSION}.ou" >> ${SCRIPT_NAME}
+echo "#SBATCH --error=experiments/${NODE}_${JOB_NAME}_${VERSION}.err" >> ${SCRIPT_NAME}
+
+
+echo "export STARPU_DISPLAY_BINDINGS=1" >> ${SCRIPT_NAME}
+echo "export STARPU_SCHED=dmda" >> ${SCRIPT_NAME}
+
+echo "rm ~/.starpu/sampling/codelets/45/*" >> ${SCRIPT_NAME}
+
+# No HT
+
+for i in 256 512 1024 2048 4096
+do
+    for j in 1 2 3 4 5 6
+    do
+	echo "STARPU_WORKERS_CPUID=\"0 2 4 6 8 10 12 14\" ${TESTING_DIR}/chameleon_stesting -o potrf -t 8 -g 0 -n 65536 -b ${i}" >> temp
+    done
+done
+
+# With HT
+for i in 256 512 1024 2048 4096
+do
+    for j in 1 2 3 4 5 6
+    do
+	echo "STARPU_WORKERS_CPUID=\"0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15\" ${TESTING_DIR}/chameleon_stesting -o potrf -t 16 -g 0 -n 65536 -b ${i}" >> temp
+    done
+done
+
+
+cat temp | shuf >> ${SCRIPT_NAME}
+rm temp
+
+rsync --verbose --progress --recursive ${SCRIPT_NAME} lbassis@gppd-hpc.inf.ufrgs.br:~/scripts
+#+end_src
+** CPU i9
+#+begin_src bash :results silent
+NODE="tupi3"
+CPU="i9"
+JOB_NAME="cpu_only_performance_cholesky"
+TESTING_DIR="~/spack/opt/spack/linux-debian12-skylake/gcc-11.3.0/chameleon-1.2.0-vlmjaqjmrhhqbpocl7utrsvlxfbnutfm/bin"
+VERSION=1 # remember to increment if needed
+SCRIPT_NAME="scripts/${NODE}_${JOB_NAME}_${VERSION}.slurm"
+
+# slurm section
+echo "#!/bin/bash"                            > ${SCRIPT_NAME}
+echo "#SBATCH --job-name=${JOB_NAME}"          >> ${SCRIPT_NAME}
+echo "#SBATCH --partition=tupi"                >> ${SCRIPT_NAME}
+echo "#SBATCH --nodelist=${NODE}"              >> ${SCRIPT_NAME}
+echo "#SBATCH --time=18:00:00  "               >> ${SCRIPT_NAME}
+echo "#SBATCH --output=experiments/${NODE}_${JOB_NAME}_${VERSION}.ou" >> ${SCRIPT_NAME}
+echo "#SBATCH --error=experiments/${NODE}_${JOB_NAME}_${VERSION}.err" >> ${SCRIPT_NAME}
+
+echo "export STARPU_DISPLAY_BINDINGS=1" >> ${SCRIPT_NAME}
+echo "export STARPU_SCHED=dmda" >> ${SCRIPT_NAME}
+
+echo "rm ~/.starpu/sampling/codelets/45/*" >> ${SCRIPT_NAME}
+
+# 8 P-cores
+
+for i in 256 512 1024 2048 4096
+do
+    for j in 1 2 3 4 5 6
+    do
+	echo "STARPU_WORKERS_CPUID=\"0 2 4 6 8 10 12 14\" ${TESTING_DIR}/chameleon_stesting -o potrf -t 8 -g 0 -n 65536 -b ${i}" >> temp
+    done
+done
+
+# 8 P-cores with HT
+for i in 256 512 1024 2048 4096
+do
+    for j in 1 2 3 4 5 6
+    do
+	echo "STARPU_WORKERS_CPUID=\"0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15\" ${TESTING_DIR}/chameleon_stesting -o potrf -t 16 -g 0 -n 65536 -b ${i}" >> temp
+    done
+done
+
+# 8 P-cores + 16 E-cores
+for i in 256 512 1024 2048 4096
+do
+    for j in 1 2 3 4 5 6
+    do
+	echo "STARPU_WORKERS_CPUID=\"0 2 4 6 8 10 12 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31\" ${TESTING_DIR}/chameleon_stesting -o potrf -t 24 -g 0 -n 65536 -b ${i}" >> temp
+    done
+done
+
+# 8 P-cores with HT + 16 E-cores
+for i in 256 512 1024 2048 4096
+do
+    for j in 1 2 3 4 5 6
+    do
+	echo "STARPU_WORKERS_CPUID=\"0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31\" ${TESTING_DIR}/chameleon_stesting -o potrf -t 32 -g 0 -n 65536 -b ${i}" >> temp
+    done
+done
+
+
+cat temp | shuf >> ${SCRIPT_NAME}
+rm temp
+
+rsync --verbose --progress --recursive ${SCRIPT_NAME} lbassis@gppd-hpc.inf.ufrgs.br:~/scripts
+#+end_src
+
+
+** GPU Xeon
+#+begin_src bash :results silent
+NODE="tupi1"
+CPU="xeon"
+JOB_NAME="gpu_performance_cholesky"
+TESTING_DIR="~/spack/opt/spack/linux-debian12-broadwell/gcc-11.3.0/chameleon-1.2.0-ieer6l5tfxxxrnnfbjdgqa2q5xfrxy32/bin"
+VERSION=1 # remember to increment if needed
+SCRIPT_NAME="scripts/${NODE}_${JOB_NAME}_${VERSION}.slurm"
+
+# slurm section
+echo "#!/bin/bash"                            > ${SCRIPT_NAME}
+echo "#SBATCH --job-name=${JOB_NAME}"          >> ${SCRIPT_NAME}
+echo "#SBATCH --partition=tupi"                >> ${SCRIPT_NAME}
+echo "#SBATCH --nodelist=${NODE}"              >> ${SCRIPT_NAME}
+echo "#SBATCH --time=23:55:00  "               >> ${SCRIPT_NAME}
+echo "#SBATCH --output=experiments/${NODE}_${JOB_NAME}_${VERSION}.ou" >> ${SCRIPT_NAME}
+echo "#SBATCH --error=experiments/${NODE}_${JOB_NAME}_${VERSION}.err" >> ${SCRIPT_NAME}
+
+
+echo "export STARPU_DISPLAY_BINDINGS=1" >> ${SCRIPT_NAME}
+echo "export STARPU_SCHED=dmdas" >> ${SCRIPT_NAME}
+
+echo "rm ~/.starpu/sampling/codelets/45/*.tupi1" >> ${SCRIPT_NAME}
+
+# 7 cores + 1 GPU core
+
+for i in 512 1024 2048 4096 8192 16384
+do
+    for j in 1 2 3 4 5 6
+    do
+	echo "STARPU_WORKERS_CPUID=\"0 2 4 6 8 10 12 14\" ${TESTING_DIR}/chameleon_stesting \
+	-o potrf -t 7 -g 1 -n 65536 -b ${i} && echo \";7+1\"" >> temp
+    done
+done
+
+# 8 cores without GPU-only core
+for i in 512 1024 2048 4096 8192 16384
+do
+    for j in 1 2 3 4 5 6
+    do
+	echo "STARPU_WORKERS_CPUID=\"0 0 2 4 6 8 10 12 14\" ${TESTING_DIR}/chameleon_stesting \
+	-o potrf -t 8 -g 1 -n 65536 -b ${i} && echo \";8\"" >> temp
+    done
+done
+
+# 7 cores + HT + 1 GPU core
+
+for i in 512 1024 2048 4096 8192 16384
+do
+    for j in 1 2 3 4 5 6
+    do
+	echo "STARPU_WORKERS_CPUID=\"15 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 0\" ${TESTING_DIR}/chameleon_stesting \
+	-o potrf -t 15 -g 1 -n 65536 -b ${i} && echo \";15+1\"" >> temp
+    done
+done
+
+# 8 cores + HT without GPU-only core
+for i in 512 1024 2048 4096 8192 16384
+do
+    for j in 1 2 3 4 5 6
+    do
+	echo "STARPU_WORKERS_CPUID=\"15 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15\" ${TESTING_DIR}/chameleon_stesting \
+	-o potrf -t 16 -g 1 -n 65536 -b ${i} && echo \";16\"" >> temp
+    done
+done
+
+
+cat temp | shuf >> ${SCRIPT_NAME}
+rm temp
+
+rsync --verbose --progress --recursive ${SCRIPT_NAME} lbassis@gppd-hpc.inf.ufrgs.br:~/scripts
+#+end_src
+** GPU i9
+#+begin_src bash
+NODE="tupi3"
+CPU="i9"
+JOB_NAME="gpu_performance_cholesky"
+VERSION=1 # remember to increment if needed
+SCRIPT_NAME="scripts/${NODE}_${JOB_NAME}_${VERSION}.slurm"
+TESTING_DIR="~/spack/opt/spack/linux-debian12-skylake/gcc-11.3.0/chameleon-1.2.0-vlmjaqjmrhhqbpocl7utrsvlxfbnutfm/bin"
+
+# slurm section
+echo "#!/bin/bash"                            > ${SCRIPT_NAME}
+echo "#SBATCH --job-name=${JOB_NAME}"          >> ${SCRIPT_NAME}
+echo "#SBATCH --partition=tupi"                >> ${SCRIPT_NAME}
+echo "#SBATCH --nodelist=${NODE}"              >> ${SCRIPT_NAME}
+echo "#SBATCH --time=23:30:00  "               >> ${SCRIPT_NAME}
+echo "#SBATCH --output=experiments/${NODE}_${JOB_NAME}_${VERSION}.ou" >> ${SCRIPT_NAME}
+echo "#SBATCH --error=experiments/${NODE}_${JOB_NAME}_${VERSION}.err" >> ${SCRIPT_NAME}
+
+echo "export STARPU_DISPLAY_BINDINGS=1" >> ${SCRIPT_NAME}
+echo "export STARPU_SCHED=dmdas" >> ${SCRIPT_NAME}
+
+echo "rm ~/.starpu/sampling/codelets/45/*.tupi4" >> ${SCRIPT_NAME}
+
+# 8 P-cores + 0 CUDA P-core
+
+for i in 512 1024 2048 4096 8192 16384
+do
+    for j in 1 2 3 4 5 6
+    do
+	echo "STARPU_WORKERS_CPUID=\"0 0 2 4 6 8 10 12 14\" ${TESTING_DIR}/chameleon_stesting \
+	-o potrf -t 8 -g 1 -n 65536 -b ${i} && echo \"8+0P\"" >> temp
+    done
+done
+
+# 8 P-cores with HT + 0 CUDA P-core
+for i in 512 1024 2048 4096 8192 16384
+do
+    for j in 1 2 3 4 5 6
+    do
+	echo "STARPU_WORKERS_CPUID=\"0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15\" ${TESTING_DIR}/chameleon_stesting \
+	-o potrf -t 16 -g 1 -n 65536 -b ${i} && echo \"8+HT+0P\"" >> temp
+    done
+done
+
+# 8 P-cores + 16 E-cores + 0 CUDA P-core
+for i in 512 1024 2048 4096 8192 16384
+do
+    for j in 1 2 3 4 5 6
+    do
+	echo "STARPU_WORKERS_CPUID=\"0 0 2 4 6 8 10 12 14 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31\" ${TESTING_DIR}/chameleon_stesting \
+	-o potrf -t 24 -g 1 -n 65536 -b ${i} && echo \"8+16+0P\"" >> temp
+    done
+done
+
+# 8 P-cores with HT + 16 E-cores + 0 CUDA P-core
+for i in 512 1024 2048 4096 8192 16384
+do
+    for j in 1 2 3 4 5 6
+    do
+	echo "STARPU_WORKERS_CPUID=\"0 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31\" ${TESTING_DIR}/chameleon_stesting -o \
+	potrf -t 32 -g 1 -n 65536 -b ${i} && echo \"8+HT+16+0P\"" >> temp
+    done
+done
+
+
+# 7 P-cores + 1 CUDA P-core
+for i in 512 1024 2048 4096 8192 16384
+do
+    for j in 1 2 3 4 5 6
+    do
+	echo "STARPU_WORKERS_CPUID=\"0 2 4 6 8 10 12 14\" ${TESTING_DIR}/chameleon_stesting \
+	-o potrf -t 7 -g 1 -n 65536 -b ${i} && echo \"7+1P\"" >> temp
+    done
+done
+
+# 7 P-cores with HT + 1 CUDA P-core
+for i in 512 1024 2048 4096 8192 16384
+do
+    for j in 1 2 3 4 5 6
+    do
+	echo "STARPU_WORKERS_CPUID=\"0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15\" ${TESTING_DIR}/chameleon_stesting \
+	-o potrf -t 15 -g 1 -n 65536 -b ${i} && echo \"7+HT+1P\"" >> temp
+    done
+done
+
+# 7 P-cores + 16 E-cores + 1 CUDA P-core
+for i in 512 1024 2048 4096 8192 16384
+do
+    for j in 1 2 3 4 5 6
+    do
+	echo "STARPU_WORKERS_CPUID=\"0 2 4 6 8 10 12 14 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31\" ${TESTING_DIR}/chameleon_stesting \
+	-o potrf -t 23 -g 1 -n 65536 -b ${i} && echo \"7+16+1P\"" >> temp
+    done
+done
+
+# 7 P-cores with HT + 16 E-cores + 1 CUDA P-core
+for i in 512 1024 2048 4096 8192 16384
+do
+    for j in 1 2 3 4 5 6
+    do
+	echo "STARPU_WORKERS_CPUID=\"0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31\" ${TESTING_DIR}/chameleon_stesting -o \
+	potrf -t 31 -g 1 -n 65536 -b ${i} && echo \"7+HT+16+1P\"" >> temp
+    done
+done
+
+cat temp | shuf >> ${SCRIPT_NAME}
+rm temp
+
+rsync --verbose --progress --recursive ${SCRIPT_NAME} lbassis@gppd-hpc.inf.ufrgs.br:~/scripts
+#+end_src
+
+#+RESULTS:
+| sending                                | incremental | file  | list     |         |       |            |           |           |         |         |             |
+| tupi3_gpu_performance_cholesky_1.slurm |             |       |          |         |       |            |           |           |         |         |             |
+|                                      | 32,768      | 44%   | 0.00kB/s | 0:00:00 |     | 74,163     |      100% | 39.48MB/s | 0:00:00 | (xfr#1, | to-chk=0/1) |
+|                                        |             |       |          |         |       |            |           |           |         |         |             |
+| sent                                   | 74,297      | bytes | received |      35 | bytes | 148,664.00 | bytes/sec |           |         |         |             |
+| total                                  | size        | is    | 74,163   | speedup | is    | 1.0        |           |           |         |         |             |
+
+
+
+** GPU i9 CUDA E-core
+#+begin_src bash
+NODE="tupi4"
+JOB_NAME="gpu_ecore_performance_cholesky"
+VERSION=1 # remember to increment if needed
+SCRIPT_NAME="scripts/${NODE}_${JOB_NAME}_${VERSION}.slurm"
+TESTING_DIR="~/spack/opt/spack/linux-debian12-skylake/gcc-11.3.0/chameleon-1.2.0-vlmjaqjmrhhqbpocl7utrsvlxfbnutfm/bin"
+
+# slurm section
+echo "#!/bin/bash"                            > ${SCRIPT_NAME}
+echo "#SBATCH --job-name=${JOB_NAME}"          >> ${SCRIPT_NAME}
+echo "#SBATCH --partition=tupi"                >> ${SCRIPT_NAME}
+echo "#SBATCH --nodelist=${NODE}"              >> ${SCRIPT_NAME}
+echo "#SBATCH --time=23:30:00  "               >> ${SCRIPT_NAME}
+echo "#SBATCH --output=experiments/${NODE}_${JOB_NAME}_${VERSION}.ou" >> ${SCRIPT_NAME}
+echo "#SBATCH --error=experiments/${NODE}_${JOB_NAME}_${VERSION}.err" >> ${SCRIPT_NAME}
+
+echo "export STARPU_DISPLAY_BINDINGS=1" >> ${SCRIPT_NAME}
+echo "export STARPU_SCHED=dmdas" >> ${SCRIPT_NAME}
+
+echo "rm ~/.starpu/sampling/codelets/45/*.tupi4" >> ${SCRIPT_NAME}
+
+# 8 P-cores + 1 CUDA E-core
+for i in 512 1024 2048 4096 8192 16384
+do
+    for j in 1 2 3 4 5 6
+    do
+	echo "STARPU_WORKERS_CPUID=\"16 0 2 4 6 8 10 12 14\" ${TESTING_DIR}/chameleon_stesting \
+	-o potrf -t 8 -g 1 -n 65536 -b ${i}" >> temp
+    done
+done
+
+# 8 P-cores with HT + 1 CUDA E-core
+for i in 512 1024 2048 4096 8192 16384
+do
+    for j in 1 2 3 4 5 6
+    do
+	echo "STARPU_WORKERS_CPUID=\"16 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15\" ${TESTING_DIR}/chameleon_stesting \
+	-o potrf -t 16 -g 1 -n 65536 -b ${i}" >> temp
+    done
+done
+
+# 8 P-cores + 15 E-cores + 1 CUDA E-core
+for i in 512 1024 2048 4096 8192 16384
+do
+    for j in 1 2 3 4 5 6
+    do
+	echo "STARPU_WORKERS_CPUID=\"16 0 2 4 6 8 10 12 14 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31\" ${TESTING_DIR}/chameleon_stesting \
+	-o potrf -t 23 -g 1 -n 65536 -b ${i}" >> temp
+    done
+done
+
+# 8 P-cores with HT + 15 E-cores + 1 CUDA E-core
+for i in 512 1024 2048 4096 8192 16384
+do
+    for j in 1 2 3 4 5 6
+    do
+	echo "STARPU_WORKERS_CPUID=\"16 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31\" ${TESTING_DIR}/chameleon_stesting -o \
+	potrf -t 31 -g 1 -n 65536 -b ${i}" >> temp
+    done
+done
+
+cat temp | shuf >> ${SCRIPT_NAME}
+rm temp
+
+rsync --verbose --progress --recursive ${SCRIPT_NAME} lbassis@gppd-hpc.inf.ufrgs.br:~/scripts
+#+end_src
+
+#+RESULTS:
+| sending                                      | incremental | file  | list     |         |       |           |           |          |         |         |             |
+| tupi4_gpu_ecore_performance_cholesky_1.slurm |             |       |          |         |       |           |           |          |         |         |             |
+|                                            | 32,768      | 94%   | 0.00kB/s | 0:00:00 |     | 34,761    |      100% | 1.90MB/s | 0:00:00 | (xfr#1, | to-chk=0/1) |
+|                                              |             |       |          |         |       |           |           |          |         |         |             |
+| sent                                         | 34,894      | bytes | received |      35 | bytes | 23,286.00 | bytes/sec |          |         |         |             |
+| total                                        | size        | is    | 34,761   | speedup | is    | 1.0       |           |          |         |         |             |
+
+
+* Combinando experimentos (menos 100k)
+
+#+begin_src R :results output :session *R* :exports both
+latest_files = list(cpu_lu_xeon = 'tupi1_cpu_only_performance_4', cpu_lu_i9 = 'tupi4_cpu_only_performance_4',
+                    cpu_ch_xeon = 'tupi2_cpu_only_performance_cholesky_1', cpu_ch_i9 = 'tupi3_cpu_only_performance_cholesky_1',
+                    gpu_lu_xeon = 'tupi1_gpu_performance_3', gpu_lu_i9 = 'tupi4_gpu_performance_4',
+                    gpu_ch_xeon = 'tupi1_gpu_performance_cholesky_1', gpu_ch_i9 = 'tupi3_gpu_performance_cholesky_1',
+                    gpu_lu_ecore = 'tupi4_gpu_ecore_performance_1', gpu_ch_ecore = 'tupi4_gpu_ecore_performance_cholesky_1')
+#+end_src
+
+#+RESULTS:
+** Criando csvs
+#+begin_src R :results silent :session *R* :exports both
+for (exp in latest_files) {
+  if (grepl("ch", exp)) {
+    header = 'echo "Id,Function,threads,gpus,P,Q,mtxfmt,nb,uplo,n,lda,seedA,tsub,time,gflops" > experiments/csv/'
+  }
+  else {
+    header = 'echo "Id,Function,threads,gpus,P,Q,mtxfmt,nb,m,n,lda,seedA,bump,tsub,time,gflops" > experiments/csv/'
+  }
+  if (grepl("gpu", exp) && !grepl("ecore", exp)) {
+    command = paste0(header, exp, ".csv && sed '/;/!d;/Id/d;s/;/,/g' experiments/", exp, ".ou | sed -n '0~2!p' >> experiments/csv/", exp, ".csv")
+  }
+  else {
+    command = paste0(header, exp, ".csv && sed '/;/!d;/Id/d;s/;/,/g' experiments/", exp, ".ou >> experiments/csv/", exp, ".csv")
+  }
+  system(command)
+}
+#+end_src
+
+#+RESULTS:
+
+** Tratando csvs
+*** Xeon
+#+begin_src R :results silent :session *R* :exports both
+library(dplyr)
+library(ggplot2)
+
+cpu_lu_xeon <- read.csv(paste0('experiments/csv/', latest_files['cpu_lu_xeon'], '.csv'))
+cpu_lu_xeon$setup = 'cpu only'
+cpu_lu_xeon <- cpu_lu_xeon |> select(Function, threads, gpus, nb, n, time, gflops, setup)
+
+cpu_ch_xeon <- read.csv(paste0('experiments/csv/', latest_files['cpu_ch_xeon'], '.csv'))
+cpu_ch_xeon$setup = 'cpu only'
+cpu_ch_xeon <- cpu_ch_xeon |> select(Function, threads, gpus, nb, n, time, gflops, setup)
+
+cpu_xeon <- rbind(cpu_lu_xeon, cpu_ch_xeon)
+cpu_xeon |>
+  group_by(threads) |>
+  mutate(config = case_when(
+           threads == 8 ~ "8 Cores",
+           threads == 16 ~ "8 Cores + HT"),
+         HT = case_when(
+           threads == 8 ~ 0,
+           threads == 16 ~ 1)) -> cpu_xeon
+cpu_xeon$CUDA = "Nenhuma"
+
+gpu_lu_xeon <- read.csv(paste0('experiments/csv/', latest_files['gpu_lu_xeon'], '.csv'))
+gpu_lu_xeon$setup = 'cpu+gpu'
+gpu_lu_xeon <- gpu_lu_xeon |> select(Function, threads, gpus, nb, n, time, gflops, setup)
+
+gpu_ch_xeon <- read.csv(paste0('experiments/csv/', latest_files['gpu_ch_xeon'], '.csv'))
+gpu_ch_xeon$setup = 'cpu+gpu'
+gpu_ch_xeon <- gpu_ch_xeon |> select(Function, threads, gpus, nb, n, time, gflops, setup)
+
+gpu_xeon <- rbind(gpu_lu_xeon, gpu_ch_xeon)
+gpu_xeon |>
+  group_by(threads) |>
+  mutate(config = case_when(
+           threads == 7 ~ "7 Cores + 1 CUDA",
+           threads == 8 ~ "8 Cores + 0 CUDA",
+           threads == 15 ~ "7 Cores + HT + 1 CUDA",
+           threads == 16 ~ "8 Cores + HT + 0 CUDA"),
+         HT = case_when(
+           threads == 7 ~ 0,
+           threads == 8 ~ 0,
+           threads == 15 ~ 1,
+           threads == 16 ~ 1)) -> gpu_xeon
+gpu_xeon$CUDA = as.factor(ifelse(gpu_xeon$threads %% 2, "Thread CUDA", "Sem thread CUDA"))
+
+xeon <- rbind(cpu_xeon, gpu_xeon)
 #+end_src
