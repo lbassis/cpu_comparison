@@ -3595,7 +3595,7 @@ rsync --verbose --progress --recursive ${SCRIPT_NAME} lbassis@gppd-hpc.inf.ufrgs
 | total                                        | size        | is    | 34,761   | speedup | is    | 1.0       |           |          |         |         |             |
 
 
-* Combinando experimentos (menos 100k)
+* Combinando experimentos (exceto 100k)
 
 #+begin_src R :results output :session *R* :exports both
 latest_files = list(cpu_lu_xeon = 'tupi1_cpu_only_performance_4', cpu_lu_i9 = 'tupi4_cpu_only_performance_4',
@@ -3676,4 +3676,75 @@ gpu_xeon |>
 gpu_xeon$CUDA = as.factor(ifelse(gpu_xeon$threads %% 2, "Thread CUDA", "Sem thread CUDA"))
 
 xeon <- rbind(cpu_xeon, gpu_xeon)
+#+end_src
+
+*** i9
+#+begin_src R :results silent :session *R* :exports both
+library(dplyr)
+library(ggplot2)
+
+cpu_lu_i9 <- read.csv(paste0('experiments/csv/', latest_files['cpu_lu_i9'], '.csv'))
+cpu_lu_i9$setup = 'cpu only'
+cpu_lu_i9 <- cpu_lu_i9 |> select(Function, threads, gpus, nb, n, time, gflops, setup)
+
+cpu_ch_i9 <- read.csv(paste0('experiments/csv/', latest_files['cpu_ch_i9'], '.csv'))
+cpu_ch_i9$setup = 'cpu only'
+cpu_ch_i9 <- cpu_ch_i9 |> select(Function, threads, gpus, nb, n, time, gflops, setup)
+
+cpu_i9 <- rbind(cpu_lu_i9, cpu_ch_i9)
+cpu_i9 |>
+  group_by(threads) |>
+  mutate(config = case_when(
+           threads == 7 ~ "7 P-cores + 1 CUDA",
+           threads == 8 ~ "8 P-cores + 0 CUDA",
+           threads == 15 ~ "7 P-cores + HT + 1 CUDA",
+           threads == 16 ~ "8 P-cores + HT + 0 CUDA",
+           threads == 23 ~ "7 P-cores + 16 E-cores + 1 CUDA",
+           threads == 24 ~ "8 P-cores + 16 E-cores + 0 CUDA",
+           threads == 31 ~ "7 P-cores + HT + 16 E-cores + 1 CUDA",
+           threads == 32 ~ "8 P-cores + HT + 16 E-cores + 0 CUDA"),
+         HT = case_when(
+           threads == 7 ~ 0,
+           threads == 8 ~ 0,
+           threads == 15 ~ 1,
+           threads == 16 ~ 1,
+           threads == 23 ~ 0,
+           threads == 24 ~ 0,
+           threads == 31 ~ 1,
+           threads == 32 ~ 1)) -> cpu_i9
+cpu_i9$CUDA = "Nenhuma"
+
+gpu_lu_i9 <- read.csv(paste0('experiments/csv/', latest_files['gpu_lu_i9'], '.csv'))
+gpu_lu_i9$setup = 'cpu+gpu'
+gpu_lu_i9 <- gpu_lu_i9 |> select(Function, threads, gpus, nb, n, time, gflops, setup)
+
+gpu_ch_i9 <- read.csv(paste0('experiments/csv/', latest_files['gpu_ch_i9'], '.csv'))
+gpu_ch_i9$setup = 'cpu+gpu'
+gpu_ch_i9 <- gpu_ch_i9 |> select(Function, threads, gpus, nb, n, time, gflops, setup)
+
+gpu_i9 <- rbind(gpu_lu_i9, gpu_ch_i9)
+gpu_i9 |>
+  group_by(threads) |>
+  mutate(config = case_when(
+           threads == 7 ~ "7 P-cores + 1 CUDA",
+           threads == 8 ~ "8 P-cores + 0 CUDA",
+           threads == 15 ~ "7 P-cores + HT + 1 CUDA",
+           threads == 16 ~ "8 P-cores + HT + 0 CUDA",
+           threads == 23 ~ "7 P-cores + 16 E-cores + 1 CUDA",
+           threads == 24 ~ "8 P-cores + 16 E-cores + 0 CUDA",
+           threads == 31 ~ "7 P-cores + HT + 16 E-cores + 1 CUDA",
+           threads == 32 ~ "8 P-cores + HT + 16 E-cores + 0 CUDA"),
+         HT = case_when(
+                  threads == 7 ~ 0,
+                  threads == 8 ~ 0,
+                  threads == 15 ~ 1,
+                  threads == 16 ~ 1,
+                  threads == 23 ~ 0,
+                  threads == 24 ~ 0,
+                  threads == 31 ~ 1,
+                  threads == 32 ~ 1,
+                  threads == 16 ~ 1)) -> gpu_i9
+         gpu_i9$CUDA = as.factor(ifelse(gpu_i9$threads %% 2, "Thread CUDA P-core", "Sem thread CUDA"))
+
+i9_pcore <- rbind(cpu_i9, gpu_i9)
 #+end_src
