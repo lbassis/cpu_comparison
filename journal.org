@@ -3597,6 +3597,7 @@ rsync --verbose --progress --recursive ${SCRIPT_NAME} lbassis@gppd-hpc.inf.ufrgs
 
 * Combinando experimentos (exceto 100k)
 
+
 #+begin_src R :results output :session *R* :exports both
 latest_files = list(cpu_lu_xeon = 'tupi1_cpu_only_performance_4', cpu_lu_i9 = 'tupi4_cpu_only_performance_4',
                     cpu_ch_xeon = 'tupi2_cpu_only_performance_cholesky_1', cpu_ch_i9 = 'tupi3_cpu_only_performance_cholesky_1',
@@ -3635,11 +3636,11 @@ library(ggplot2)
 
 cpu_lu_xeon <- read.csv(paste0('experiments/csv/', latest_files['cpu_lu_xeon'], '.csv'))
 cpu_lu_xeon$setup = 'cpu only'
-cpu_lu_xeon <- cpu_lu_xeon |> select(Function, threads, gpus, nb, n, time, gflops, setup)
+cpu_lu_xeon <- cpu_lu_xeon |> select(Function, threads, gpus, nb, n, time, setup)
 
 cpu_ch_xeon <- read.csv(paste0('experiments/csv/', latest_files['cpu_ch_xeon'], '.csv'))
 cpu_ch_xeon$setup = 'cpu only'
-cpu_ch_xeon <- cpu_ch_xeon |> select(Function, threads, gpus, nb, n, time, gflops, setup)
+cpu_ch_xeon <- cpu_ch_xeon |> select(Function, threads, gpus, nb, n, time, setup)
 
 cpu_xeon <- rbind(cpu_lu_xeon, cpu_ch_xeon)
 cpu_xeon |>
@@ -3651,6 +3652,11 @@ cpu_xeon |>
            threads == 8 ~ 0,
            threads == 16 ~ 1)) -> cpu_xeon
 cpu_xeon$CUDA = "Nenhuma"
+cpu_xeon$cpu = 'xeon'
+
+# excluindo pior desempenho
+cpu_xeon |> group_by(Function, threads, gpus, nb, n, setup, config, CUDA, cpu) |> arrange(time) |> slice(0:(n()-1)) -> cpu_xeon
+
 
 gpu_lu_xeon <- read.csv(paste0('experiments/csv/', latest_files['gpu_lu_xeon'], '.csv'))
 gpu_lu_xeon$setup = 'cpu+gpu'
@@ -3665,15 +3671,20 @@ gpu_xeon |>
   group_by(threads) |>
   mutate(config = case_when(
            threads == 7 ~ "7 Cores + 1 CUDA",
-           threads == 8 ~ "8 Cores + 0 CUDA",
+           threads == 8 ~ "8 Cores",
            threads == 15 ~ "7 Cores + HT + 1 CUDA",
-           threads == 16 ~ "8 Cores + HT + 0 CUDA"),
+           threads == 16 ~ "8 Cores + HT"),
          HT = case_when(
            threads == 7 ~ 0,
            threads == 8 ~ 0,
            threads == 15 ~ 1,
            threads == 16 ~ 1)) -> gpu_xeon
 gpu_xeon$CUDA = as.factor(ifelse(gpu_xeon$threads %% 2, "Thread CUDA", "Sem thread CUDA"))
+gpu_xeon$cpu = 'xeon'
+
+# excluindo pior desempenho
+gpu_xeon |> group_by(Function, threads, gpus, nb, n, setup, config, CUDA, cpu) |> arrange(time) |> slice(0:(n()-1)) -> gpu_xeon
+
 
 xeon <- rbind(cpu_xeon, gpu_xeon)
 #+end_src
@@ -3685,24 +3696,24 @@ library(ggplot2)
 
 cpu_lu_i9 <- read.csv(paste0('experiments/csv/', latest_files['cpu_lu_i9'], '.csv'))
 cpu_lu_i9$setup = 'cpu only'
-cpu_lu_i9 <- cpu_lu_i9 |> select(Function, threads, gpus, nb, n, time, gflops, setup)
+cpu_lu_i9 <- cpu_lu_i9 |> select(Function, threads, gpus, nb, n, time, setup)
 
 cpu_ch_i9 <- read.csv(paste0('experiments/csv/', latest_files['cpu_ch_i9'], '.csv'))
 cpu_ch_i9$setup = 'cpu only'
-cpu_ch_i9 <- cpu_ch_i9 |> select(Function, threads, gpus, nb, n, time, gflops, setup)
+cpu_ch_i9 <- cpu_ch_i9 |> select(Function, threads, gpus, nb, n, time, setup)
 
 cpu_i9 <- rbind(cpu_lu_i9, cpu_ch_i9)
 cpu_i9 |>
   group_by(threads) |>
   mutate(config = case_when(
            threads == 7 ~ "7 P-cores + 1 CUDA",
-           threads == 8 ~ "8 P-cores + 0 CUDA",
+           threads == 8 ~ "8 P-cores",
            threads == 15 ~ "7 P-cores + HT + 1 CUDA",
-           threads == 16 ~ "8 P-cores + HT + 0 CUDA",
+           threads == 16 ~ "8 P-cores + HT",
            threads == 23 ~ "7 P-cores + 16 E-cores + 1 CUDA",
-           threads == 24 ~ "8 P-cores + 16 E-cores + 0 CUDA",
+           threads == 24 ~ "8 P-cores + 16 E-cores",
            threads == 31 ~ "7 P-cores + HT + 16 E-cores + 1 CUDA",
-           threads == 32 ~ "8 P-cores + HT + 16 E-cores + 0 CUDA"),
+           threads == 32 ~ "8 P-cores + HT + 16 E-cores"),
          HT = case_when(
            threads == 7 ~ 0,
            threads == 8 ~ 0,
@@ -3713,27 +3724,31 @@ cpu_i9 |>
            threads == 31 ~ 1,
            threads == 32 ~ 1)) -> cpu_i9
 cpu_i9$CUDA = "Nenhuma"
+cpu_i9$cpu = 'i9'
+
+# excluindo pior desempenho
+cpu_i9 |> group_by(Function, threads, gpus, nb, n, setup, config, CUDA, cpu) |> arrange(time) |> slice(0:(n()-1)) -> cpu_i9
 
 gpu_lu_i9 <- read.csv(paste0('experiments/csv/', latest_files['gpu_lu_i9'], '.csv'))
 gpu_lu_i9$setup = 'cpu+gpu'
-gpu_lu_i9 <- gpu_lu_i9 |> select(Function, threads, gpus, nb, n, time, gflops, setup)
+gpu_lu_i9 <- gpu_lu_i9 |> select(Function, threads, gpus, nb, n, time, setup)
 
 gpu_ch_i9 <- read.csv(paste0('experiments/csv/', latest_files['gpu_ch_i9'], '.csv'))
 gpu_ch_i9$setup = 'cpu+gpu'
-gpu_ch_i9 <- gpu_ch_i9 |> select(Function, threads, gpus, nb, n, time, gflops, setup)
+gpu_ch_i9 <- gpu_ch_i9 |> select(Function, threads, gpus, nb, n, time, setup)
 
 gpu_i9 <- rbind(gpu_lu_i9, gpu_ch_i9)
 gpu_i9 |>
   group_by(threads) |>
   mutate(config = case_when(
            threads == 7 ~ "7 P-cores + 1 CUDA",
-           threads == 8 ~ "8 P-cores + 0 CUDA",
+           threads == 8 ~ "8 P-cores",
            threads == 15 ~ "7 P-cores + HT + 1 CUDA",
-           threads == 16 ~ "8 P-cores + HT + 0 CUDA",
+           threads == 16 ~ "8 P-cores + HT",
            threads == 23 ~ "7 P-cores + 16 E-cores + 1 CUDA",
-           threads == 24 ~ "8 P-cores + 16 E-cores + 0 CUDA",
+           threads == 24 ~ "8 P-cores + 16 E-cores",
            threads == 31 ~ "7 P-cores + HT + 16 E-cores + 1 CUDA",
-           threads == 32 ~ "8 P-cores + HT + 16 E-cores + 0 CUDA"),
+           threads == 32 ~ "8 P-cores + HT + 16 E-cores"),
          HT = case_when(
                   threads == 7 ~ 0,
                   threads == 8 ~ 0,
@@ -3745,6 +3760,11 @@ gpu_i9 |>
                   threads == 32 ~ 1,
                   threads == 16 ~ 1)) -> gpu_i9
          gpu_i9$CUDA = as.factor(ifelse(gpu_i9$threads %% 2, "Thread CUDA P-core", "Sem thread CUDA"))
+gpu_i9$cpu = 'i9'
+
+# excluindo pior desempenho
+gpu_i9 |> group_by(Function, threads, gpus, nb, n, setup, config, CUDA, cpu) |> arrange(time) |> slice(0:(n()-1)) -> gpu_i9
+
 
 i9_pcore <- rbind(cpu_i9, gpu_i9)
 #+end_src
@@ -3756,24 +3776,24 @@ library(ggplot2)
 
 gpu_lu_ecore <- read.csv(paste0('experiments/csv/', latest_files['gpu_lu_ecore'], '.csv'))
 gpu_lu_ecore$setup = 'cpu+gpu'
-gpu_lu_ecore <- gpu_lu_ecore |> select(Function, threads, gpus, nb, n, time, gflops, setup)
+gpu_lu_ecore <- gpu_lu_ecore |> select(Function, threads, gpus, nb, n, time, setup)
 
 gpu_ch_ecore <- read.csv(paste0('experiments/csv/', latest_files['gpu_ch_ecore'], '.csv'))
 gpu_ch_ecore$setup = 'cpu+gpu'
-gpu_ch_ecore <- gpu_ch_ecore |> select(Function, threads, gpus, nb, n, time, gflops, setup)
+gpu_ch_ecore <- gpu_ch_ecore |> select(Function, threads, gpus, nb, n, time, setup)
 
 gpu_ecore <- rbind(gpu_lu_ecore, gpu_ch_ecore)
 gpu_ecore |>
   group_by(threads) |>
   mutate(config = case_when(
            threads == 7 ~ "7 P-cores + 1 CUDA",
-           threads == 8 ~ "8 P-cores + 0 CUDA",
+           threads == 8 ~ "8 P-cores",
            threads == 15 ~ "7 P-cores + HT + 1 CUDA",
-           threads == 16 ~ "8 P-cores + HT + 0 CUDA",
+           threads == 16 ~ "8 P-cores + HT",
            threads == 23 ~ "7 P-cores + 16 E-cores + 1 CUDA",
-           threads == 24 ~ "8 P-cores + 16 E-cores + 0 CUDA",
+           threads == 24 ~ "8 P-cores + 16 E-cores",
            threads == 31 ~ "7 P-cores + HT + 16 E-cores + 1 CUDA",
-           threads == 32 ~ "8 P-cores + HT + 16 E-cores + 0 CUDA"),
+           threads == 32 ~ "8 P-cores + HT + 16 E-cores"),
          HT = case_when(
                   threads == 7 ~ 0,
                   threads == 8 ~ 0,
@@ -3785,13 +3805,202 @@ gpu_ecore |>
                   threads == 32 ~ 1,
                   threads == 16 ~ 1)) -> gpu_ecore
 gpu_ecore$CUDA = as.factor(ifelse(gpu_ecore$threads %% 2, "Thread CUDA E-core", "Sem thread CUDA"))
+gpu_ecore$cpu = 'i9'
+
+# excluindo pior desempenho
+gpu_ecore |> group_by(Function, threads, gpus, nb, n, setup, config, CUDA, cpu) |> arrange(time) |> slice(0:(n()-1)) -> gpu_ecore
 
 #+end_src
 
 *** Junção
 #+begin_src R :results output :session *R* :exports both
+i9 <- rbind(i9_pcore, gpu_ecore)
 all_experiments <- rbind(xeon, i9, gpu_ecore)
 write.csv(all_experiments, 'experiments/csv/all_experiments.csv')
 #+end_src
 
 #+RESULTS:
+
+
+* Experimentos com perf-stat
+Hipótese: HT deixa de valer a pena quando a divisão em dois núcleos faz com que os dados excedam a capacidade da cache
+Testando cache misses:
+** Caso Xeon: NB > 2048 piora com HT
+#+begin_src bash :results silent
+NODE="tupi1"
+JOB_NAME="perf_stat_xeon_cpu_only"
+TESTING_DIR="~/spack/opt/spack/linux-debian12-broadwell/gcc-11.3.0/chameleon-1.2.0-ieer6l5tfxxxrnnfbjdgqa2q5xfrxy32/bin"
+VERSION=1 # remember to increment if needed
+SCRIPT_NAME="scripts/${NODE}_${JOB_NAME}_${VERSION}.slurm"
+
+# slurm section
+echo "#!/bin/bash"                            > ${SCRIPT_NAME}
+echo "#SBATCH --job-name=${JOB_NAME}"          >> ${SCRIPT_NAME}
+echo "#SBATCH --partition=tupi"                >> ${SCRIPT_NAME}
+echo "#SBATCH --nodelist=${NODE}"              >> ${SCRIPT_NAME}
+echo "#SBATCH --time=12:00:00  "               >> ${SCRIPT_NAME}
+echo "#SBATCH --output=experiments/${NODE}_${JOB_NAME}_${VERSION}.ou" >> ${SCRIPT_NAME}
+echo "#SBATCH --error=experiments/${NODE}_${JOB_NAME}_${VERSION}.err" >> ${SCRIPT_NAME}
+
+echo "export STARPU_DISPLAY_BINDINGS=1" >> ${SCRIPT_NAME}
+echo "export STARPU_SCHED=dmda" >> ${SCRIPT_NAME}
+
+echo "rm ~/.starpu/sampling/codelets/45/*" >> ${SCRIPT_NAME}
+
+# No HT
+
+for op in 'getrf_nopiv' 'potrf'
+do
+    for i in 2048 4096
+    do
+	for j in 1 2 3 4
+	do
+	    echo "STARPU_WORKERS_CPUID=\"0 2 4 6 8 10 12 14\" perf stat -e cache-references,cache-misses ${TESTING_DIR}/chameleon_stesting -o ${op} -t 8 -g 0 -n 65536 -b ${i}" >> temp
+	done
+    done
+done
+
+# With HT
+for op in 'getrf_nopiv' 'potrf'
+do
+    for i in 2048 4096
+    do
+	for j in 1 2 3 4
+	    do
+		echo "STARPU_WORKERS_CPUID=\"0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15\" -e cache-references,cache-misses ${TESTING_DIR}/chameleon_stesting -o ${op} -t 16 -g 0 -n 65536 -b ${i}" >> temp
+	    done
+    done
+done
+
+cat temp | shuf >> ${SCRIPT_NAME}
+rm temp
+
+rsync --verbose --progress --recursive ${SCRIPT_NAME} lbassis@gppd-hpc.inf.ufrgs.br:~/scripts
+#+end_src
+
+** Caso i9: NB > 2048 piora com HT
+#+begin_src bash :results silent
+NODE="tupi5"
+JOB_NAME="perf_stat_i9_cpu_only"
+TESTING_DIR="~/spack/opt/spack/linux-debian12-skylake/gcc-11.3.0/chameleon-1.2.0-vlmjaqjmrhhqbpocl7utrsvlxfbnutfm/bin"
+VERSION=1 # remember to increment if needed
+SCRIPT_NAME="scripts/${NODE}_${JOB_NAME}_${VERSION}.slurm"
+
+# slurm section
+echo "#!/bin/bash"                            > ${SCRIPT_NAME}
+echo "#SBATCH --job-name=${JOB_NAME}"          >> ${SCRIPT_NAME}
+echo "#SBATCH --partition=tupi"                >> ${SCRIPT_NAME}
+echo "#SBATCH --nodelist=${NODE}"              >> ${SCRIPT_NAME}
+echo "#SBATCH --time=12:00:00  "               >> ${SCRIPT_NAME}
+echo "#SBATCH --output=experiments/${NODE}_${JOB_NAME}_${VERSION}.ou" >> ${SCRIPT_NAME}
+echo "#SBATCH --error=experiments/${NODE}_${JOB_NAME}_${VERSION}.err" >> ${SCRIPT_NAME}
+
+echo "export STARPU_DISPLAY_BINDINGS=1" >> ${SCRIPT_NAME}
+echo "export STARPU_SCHED=dmda" >> ${SCRIPT_NAME}
+
+echo "rm ~/.starpu/sampling/codelets/45/*" >> ${SCRIPT_NAME}
+
+# 8 P-cores
+
+for op in 'getrf_nopiv' 'potrf'
+do
+    for i in 2048 4096
+    do
+        for j in 1 2 3 4
+        do
+    	echo "STARPU_WORKERS_CPUID=\"0 2 4 6 8 10 12 14\" perf stat -e cache-references,cache-misses ${TESTING_DIR}/chameleon_stesting -o ${op} -t 8 -g 0 -n 65536 -b ${i}" >> temp
+        done
+    done
+done
+
+# 8 P-cores with HT
+for op in 'getrf_nopiv' 'potrf'
+do
+    for i in 2048 4096
+    do
+        for j in 1 2 3 4
+        do
+    	echo "STARPU_WORKERS_CPUID=\"0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15\" perf stat -e cache-references,cache-misses ${TESTING_DIR}/chameleon_stesting -o ${op} -t 16 -g 0 -n 65536 -b ${i}" >> temp
+        done
+    done
+done
+
+cat temp | shuf >> ${SCRIPT_NAME}
+rm temp
+
+rsync --verbose --progress --recursive ${SCRIPT_NAME} lbassis@gppd-hpc.inf.ufrgs.br:~/scripts
+#+end_src
+
+
+* Análises com experimentos combinados
+
+#+begin_src R :results output :session *R* :exports both
+suppressMessages(library(ggh4x))
+suppressMessages(library(dplyr))
+
+df <- read.csv('experiments/csv/all_experiments.csv')
+
+df |>
+  group_by(Function, threads, gpus, nb, n, setup, config, HT, CUDA, cpu) |>
+  summarise(avg_time = mean(time)) -> df_avg_t
+
+df_avg_t$nb = as.factor(df_avg_t$nb)
+
+df_avg_t |>
+  filter(setup == 'cpu only') |>
+  ggplot(aes(x = nb, y=avg_time, fill=config)) +
+  geom_bar(stat='identity', color='black', linewidth=0.2,  position=position_dodge()) +
+  scale_fill_manual(values=c('#8dd3c7','#ffffb3','#bebada','#fb8072','#80b1d3','#fdb462','#b3de69','#fccde5','#d9d9d9','#bc80bd','#ccebc5','#ffed6f')) +
+  theme_bw(base_size=12) +
+  theme(legend.text=element_text(size=11)) +
+  labs(title = 'CPU-only performance', x = "Block size", y = "Execution time (s)") +
+  guides(fill = guide_legend(title = "Configuration"),
+         shape = guide_legend(title = "Node")) +
+  facet_grid2(vars(Function), vars(cpu)) -> cpu_only_plot
+
+df_avg_t |>
+  filter(setup == 'cpu+gpu' & cpu == 'xeon') |>
+  ggplot(aes(x = nb, y=avg_time, fill=config)) +
+  geom_bar(stat='identity', color='black', linewidth=0.2,  position=position_dodge()) +
+  scale_fill_manual(values=c('#8dd3c7','#ffffb3','#bebada','#fb8072','#80b1d3','#fdb462','#b3de69','#fccde5','#d9d9d9','#bc80bd','#ccebc5','#ffed6f')) +
+  theme_bw(base_size=22) +
+  theme(legend.text=element_text(size=18),
+        plot.margin = unit(c(0,0,0,0), "cm")) +
+  labs(title = 'CPU + GPU Xeon', x = "Block size", y = "Execution time (s)") +
+  guides(fill = guide_legend(title = "Configuration"),
+         shape = guide_legend(title = "Node")) +
+  facet_grid2(vars(Function), vars(CUDA)) -> gpu_xeon_plot
+
+df_avg_t |>
+  filter(setup == 'cpu+gpu' & cpu == 'i9' & CUDA != 'Sem thread CUDA') |>
+  ggplot(aes(x = nb, y=avg_time, fill=config)) +
+  geom_bar(stat='identity', color='black', linewidth=0.2,  position=position_dodge()) +
+  scale_fill_manual(values=c('#8dd3c7','#ffffb3','#bebada','#fb8072','#80b1d3','#fdb462','#b3de69','#fccde5','#d9d9d9','#bc80bd','#ccebc5','#ffed6f')) +
+  theme_bw(base_size=12) +
+  theme(legend.text=element_text(size=11)) +
+  labs(title = 'CPU + GPU i9 P-core x E-core', x = "Block size", y = "Execution time (s)") +
+  guides(fill = guide_legend(title = "Configuration"),
+         shape = guide_legend(title = "Node")) +
+
+  geom_text(aes(x = nb, y = as.numeric(avg_time), label = format(avg_time, digits = 2)),
+            size = 2.5,
+            position = position_dodge(.9),
+            inherit.aes = TRUE,
+            na.rm = TRUE, vjust = -1)+
+
+  facet_grid2(vars(Function), vars(CUDA))
+
+#+end_src
+
+#+RESULTS:
+: [1m[22m`summarise()` has grouped output by 'Function', 'threads', 'gpus', 'nb', 'n', 'setup', 'config', 'HT', 'CUDA'. You
+: can override using the `.groups` argument.
+
+** Revisão de afirmações:
+*** HT deixa de valer a pena quando a cache não dá conta (página 6): perf-stat
+*** Modelos de performance do StarPU consideraram que todos os núcleos tem o mesmo desempenho (página 6): confirmado
+*** i9 com E-cores perdeu desempenho por causa dos modelos de diferença (página 7): faltam os testes com STARPU_PERF_MODEL_HOMOGENEOUS_CPU  
+*** HT tem desempenho inferior no Xeon sem CUDA dedicated core mesmo com matrizes menores porque precisa de mais operações CUDA (página 8): usar perf pra verificar se a aplicaçao é memory ou cpu bound, pq o HT é pensado pra memory bound
+*** Mais operações CUDA exigem mais da CPU (página 8): a diferença de speedup nos dois processadores aumentou em 75% ao usar mais a GPU, então parece que quanto mais o trabalho, mais diferença a CPU faz
+
+  
